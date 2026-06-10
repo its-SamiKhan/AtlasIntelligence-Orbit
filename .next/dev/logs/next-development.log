@@ -1,0 +1,37 @@
+{"timestamp":"00:00:00.787","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:08.218","source":"Server","level":"ERROR","message":"Invalid DOM property `stroke-width`. Did you mean `strokeWidth`?"}
+{"timestamp":"00:00:08.218","source":"Server","level":"ERROR","message":"Invalid DOM property `stroke-linecap`. Did you mean `strokeLinecap`?"}
+{"timestamp":"00:00:08.218","source":"Server","level":"ERROR","message":"Invalid DOM property `stroke-linejoin`. Did you mean `strokeLinejoin`?"}
+{"timestamp":"00:00:08.360","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:08.397","source":"Browser","level":"ERROR","message":"Invalid DOM property `%s`. Did you mean `%s`? stroke-width strokeWidth"}
+{"timestamp":"00:00:08.397","source":"Browser","level":"ERROR","message":"Invalid DOM property `%s`. Did you mean `%s`? stroke-linecap strokeLinecap"}
+{"timestamp":"00:00:08.397","source":"Browser","level":"ERROR","message":"Invalid DOM property `%s`. Did you mean `%s`? stroke-linejoin strokeLinejoin"}
+{"timestamp":"00:00:08.402","source":"Server","level":"ERROR","message":"[browser] \"Invalid DOM property `stroke-width`. Did you mean `strokeWidth`?\" \"\""}
+{"timestamp":"00:00:08.402","source":"Browser","level":"ERROR","message":"Invalid DOM property `stroke-width`. Did you mean `strokeWidth`? \"\""}
+{"timestamp":"00:00:08.402","source":"Server","level":"ERROR","message":"[browser] \"Invalid DOM property `stroke-linecap`. Did you mean `strokeLinecap`?\" \"\""}
+{"timestamp":"00:00:08.402","source":"Browser","level":"ERROR","message":"Invalid DOM property `stroke-linecap`. Did you mean `strokeLinecap`? \"\""}
+{"timestamp":"00:00:08.403","source":"Server","level":"ERROR","message":"[browser] \"Invalid DOM property `stroke-linejoin`. Did you mean `strokeLinejoin`?\" \"\""}
+{"timestamp":"00:00:08.403","source":"Browser","level":"ERROR","message":"Invalid DOM property `stroke-linejoin`. Did you mean `strokeLinejoin`? \"\""}
+{"timestamp":"00:02:39.261","source":"Server","level":"LOG","message":"✓ Compiled in 92ms"}
+{"timestamp":"00:03:31.699","source":"Server","level":"LOG","message":"✓ Compiled in 33ms"}
+{"timestamp":"00:04:51.234","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:07:33.987","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:09:43.422","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"00:10:09.350","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:11:28.485","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
+{"timestamp":"00:14:10.507","source":"Server","level":"LOG","message":"✓ Compiled in 35ms"}
+{"timestamp":"00:15:04.756","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:15:46.343","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
+{"timestamp":"00:15:51.685","source":"Server","level":"LOG","message":"✓ Compiled in 31ms"}
+{"timestamp":"00:18:52.588","source":"Server","level":"LOG","message":"✓ Compiled in 41ms"}
+{"timestamp":"00:19:05.271","source":"Server","level":"LOG","message":"✓ Compiled in 21ms"}
+{"timestamp":"00:19:37.130","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"00:29:08.810","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:32:19.629","source":"Server","level":"LOG","message":"✓ Compiled in 39ms"}
+{"timestamp":"00:37:28.774","source":"Server","level":"LOG","message":"✓ Compiled in 27ms"}
+{"timestamp":"00:37:37.709","source":"Server","level":"LOG","message":"✓ Compiled in 37ms"}
+{"timestamp":"00:37:43.764","source":"Server","level":"LOG","message":"✓ Compiled in 32ms"}
+{"timestamp":"00:37:54.687","source":"Server","level":"LOG","message":"✓ Compiled in 37ms"}
+{"timestamp":"00:39:47.536","source":"Server","level":"LOG","message":"✓ Compiled in 40ms"}
+{"timestamp":"00:39:52.645","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"00:39:59.094","source":"Server","level":"LOG","message":"✓ Compiled in 28ms"}

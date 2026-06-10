@@ -1,0 +1,3 @@
+module.exports=[38878,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(5657);a.n(d("[project]/Projects/Orbit-Internship/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},98828,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(5657);a.n(d("[project]/Projects/Orbit-Internship/node_modules/next/dist/client/components/builtin/global-error.js"))},7791,a=>{"use strict";a.i(38878);var b=a.i(98828);a.n(b)},37952,a=>{a.n(a.i(7791))}];
+
+//# sourceMappingURL=0m-v_next_dist_client_components_builtin_global-error_1ralbyh.js.map
