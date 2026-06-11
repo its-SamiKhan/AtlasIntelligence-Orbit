@@ -81,6 +81,8 @@ export default function HomePage() {
   const [currentFilter, setCurrentFilter] = useState("all");
   const [showingAllNews, setShowingAllNews] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showAllStartups, setShowAllStartups] = useState(false);
+  const [modalQuery, setModalQuery] = useState("");
   
   const [toast, setToast] = useState({ show: false, message: "" });
   const toastTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -303,6 +305,16 @@ export default function HomePage() {
   const isSearchActive = query.trim() !== "" || currentFilter !== "all";
   
   const newsList = showingAllNews ? NEWS : NEWS.slice(0, 5);
+  
+  const filteredStartups = STARTUPS.filter((startup) => {
+    const term = modalQuery.toLowerCase().trim();
+    if (!term) return true;
+    return (
+      startup.name.toLowerCase().includes(term) ||
+      startup.description.toLowerCase().includes(term) ||
+      startup.category.toLowerCase().includes(term)
+    );
+  });
 
   return (
     <div className="app-container">
@@ -330,7 +342,7 @@ export default function HomePage() {
                   <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
               )},
-              { id: "news", label: "News", badge: "NEW", icon: (
+              { id: "news", label: "News", icon: (
                 <svg viewBox="0 0 24 24" className="nav-icon" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <path d="M16 8h2M16 12h2M16 16h2M6 8h6M6 12h6M6 16h6" />
@@ -459,11 +471,11 @@ export default function HomePage() {
       <div className="main-layout">
         {/* Top Header */}
         <header className="topbar">
-          <button className="btn-wishlist" onClick={() => showToast("Wishlist updated. Tracking 5 products.")}>
+          <button className="btn-watchlist" onClick={() => showToast("Watchlist updated. Tracking 5 products.")}>
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
             </svg>
-            <span>Wishlist</span>
+            <span>Watchlist</span>
           </button>
           <button className="mobile-menu-toggle" aria-label="Toggle Navigation" onClick={() => setSidebarOpen(true)}>
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -507,11 +519,9 @@ export default function HomePage() {
               <div className="search-pills">
                 {[
                   { id: "all", label: "All", icon: (
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="3" y="3" width="7" height="9" />
-                      <rect x="14" y="3" width="7" height="5" />
-                      <rect x="14" y="12" width="7" height="9" />
-                      <rect x="3" y="16" width="7" height="5" />
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                     </svg>
                   )},
                   { id: "startups", label: "Startups", icon: (
@@ -617,7 +627,7 @@ export default function HomePage() {
               <section className="dashboard-section">
                 <div className="section-header">
                   <h2 className="section-title">Featured AI Companies</h2>
-                  <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); showToast("Viewing all startups..."); }}>
+                  <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); setShowAllStartups(true); }}>
                     View all startups <span>&rarr;</span>
                   </a>
                 </div>
@@ -666,7 +676,7 @@ export default function HomePage() {
                           showToast(`Filtering markets for ${market.name}`);
                         }}
                       >
-                        <div className="market-icon-wrapper">
+                        <div className="market-icon-wrapper" style={{ backgroundColor: market.bgColor, color: market.color, borderColor: market.bgColor }}>
                           {MARKET_ICONS[market.id] || market.icon}
                         </div>
                         <span className="market-name">{market.name}</span>
@@ -737,33 +747,77 @@ export default function HomePage() {
                 </div>
               </section>
 
-              {/* Research & Reports */}
+              {/* Founder Spotlight */}
               <section className="dashboard-section">
                 <div className="section-header">
-                  <h2 className="section-title">Research & Reports</h2>
-                  <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); showToast("Viewing all research reports..."); }}>
-                    View all reports <span>&rarr;</span>
-                  </a>
+                  <h2 className="section-title">Founder Spotlight</h2>
                 </div>
-                <div className="reports-grid">
-                  {REPORTS.map((report, idx) => (
+                <div className="spotlight-row">
+                  {[
+                    {
+                      name: "Sam Altman",
+                      role: "CEO, OpenAI",
+                      quote: "The future belongs to AI-native companies.",
+                      details: "Founded OpenAI in 2015 and raised over $17B to build AGI.",
+                      image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Disrupt_SF_TechCrunch_Disrupt_San_Francisco_2019_-_Day_2_%2848838377432%29.jpg",
+                      profileUrl: "https://en.wikipedia.org/wiki/Sam_Altman",
+                      objectPosition: "center 15%"
+                    },
+                    {
+                      name: "Dario Amodei",
+                      role: "Co-founder & CEO, Anthropic",
+                      quote: "AI safety is the core of our development.",
+                      details: "Co-founded Anthropic in 2021 to build reliable, beneficial AGI, raising over $7B.",
+                      image: "https://upload.wikimedia.org/wikipedia/commons/d/da/Dario_Amodei_at_TechCrunch_Disrupt_2023_01.jpg",
+                      profileUrl: "https://en.wikipedia.org/wiki/Dario_Amodei",
+                      objectPosition: "center 10%"
+                    },
+                    {
+                      name: "Aravind Srinivas",
+                      role: "Co-founder & CEO, Perplexity",
+                      quote: "We are building the answer engine for everyone.",
+                      details: "Co-founded Perplexity in 2022 to revolutionize search, raising over $500M.",
+                      image: "https://upload.wikimedia.org/wikipedia/commons/6/65/Aravind_Srinivas_TC_Day_3.jpg",
+                      profileUrl: "https://en.wikipedia.org/wiki/Perplexity_AI",
+                      objectPosition: "center 20%"
+                    },
+                    {
+                      name: "Elon Musk",
+                      role: "Founder, xAI",
+                      quote: "Understand the true nature of the universe.",
+                      details: "Founded xAI in 2023 to build Grok and accelerate scientific discovery.",
+                      image: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg",
+                      profileUrl: "https://en.wikipedia.org/wiki/Elon_Musk",
+                      objectPosition: "center 15%"
+                    }
+                  ].map((founder, idx) => (
                     <div
                       key={idx}
-                      className="report-card"
-                      style={{ background: report.gradient, border: `1px solid rgba(255,255,255,0.03)` }}
-                      onClick={() => showToast(`Preparing download for: ${report.title}...`)}
+                      className="spotlight-card"
+                      onClick={() => {
+                        showToast(`Redirecting to ${founder.name}'s biography...`);
+                        window.open(founder.profileUrl, "_blank", "noopener,noreferrer");
+                      }}
                     >
-                      <span className="report-badge">{report.badge}</span>
-                      <h3 className="report-title">{report.title}</h3>
-                      <p className="report-desc">{report.description}</p>
-                      <div className="report-card-footer">
-                        <span className="report-meta-tag">PDF Report</span>
-                        <div className="report-arrow-icon">
-                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <polyline points="12 5 19 12 12 19" />
-                          </svg>
-                        </div>
+                      <div className="spotlight-photo-container" style={{ backgroundColor: founder.bgColor || "#0f172a" }}>
+                        <img 
+                          src={founder.image} 
+                          alt={founder.name} 
+                          loading="lazy" 
+                          style={{ 
+                            objectPosition: founder.objectPosition || "center 25%",
+                            objectFit: (founder.objectFit as any) || "cover"
+                          }} 
+                        />
+                      </div>
+                      <div className="spotlight-content">
+                        <h3 className="spotlight-name">{founder.name}</h3>
+                        <p className="spotlight-role">{founder.role}</p>
+                        <blockquote className="spotlight-quote">"{founder.quote}"</blockquote>
+                        <p className="spotlight-details">{founder.details}</p>
+                        <a href={founder.profileUrl} className="spotlight-link" onClick={(e) => { e.stopPropagation(); showToast(`Redirecting to ${founder.name}'s biography...`); }} target="_blank" rel="noopener noreferrer">
+                          View Profile <span>&rarr;</span>
+                        </a>
                       </div>
                     </div>
                   ))}
@@ -775,7 +829,7 @@ export default function HomePage() {
                 <div className="section-header-group">
                   <div className="section-header">
                     <h2 className="section-title">AI Pulse</h2>
-                    <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); showToast("Viewing all pulse entries..."); }}>
+                    <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("news"); }}>
                       View all news <span>&rarr;</span>
                     </a>
                   </div>
@@ -789,12 +843,7 @@ export default function HomePage() {
                         className="pulse-item"
                         onClick={() => showToast(`Opening article: "${item.title}"`)}
                       >
-                        <div className="pulse-icon">
-                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                            <path d="M16 8h2M16 12h2M16 16h2M6 8h6M6 12h6M6 16h6" />
-                          </svg>
-                        </div>
+                        <div className="pulse-icon" dangerouslySetInnerHTML={{ __html: item.logo }} />
                         <span className="pulse-time">{item.time}</span>
                         <div className="pulse-tag-wrapper">
                           <span className={`pulse-tag ${item.typeClass}`}>{item.type}</span>
@@ -809,8 +858,8 @@ export default function HomePage() {
                       </div>
                     ))}
                   </div>
-                  <button className="btn-show-more" onClick={() => setShowingAllNews(!showingAllNews)}>
-                    <span>{showingAllNews ? "Show less" : "Show more"}</span>
+                  <button className="btn-show-more" onClick={() => handleSidebarClick("news")}>
+                    <span>View all news</span>
                     <svg
                       viewBox="0 0 24 24"
                       width="16"
@@ -820,9 +869,8 @@ export default function HomePage() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      style={{ transform: showingAllNews ? "rotate(180deg)" : "rotate(0deg)", transition: "transform var(--transition-fast)" }}
                     >
-                      <polyline points="6 9 12 15 18 9" />
+                      <polyline points="9 18 15 12 9 6" />
                     </svg>
                   </button>
                 </div>
@@ -883,39 +931,19 @@ export default function HomePage() {
               </ul>
             </div>
 
-            {/* Column 3: Resources Links */}
+            {/* Column 3: Resources & Company Links */}
             <div className="footer-col">
               <h3 className="footer-col-title">Resources</h3>
               <ul>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); handleSidebarClick("research"); }}>Research</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); showToast("Opening Reports archive..."); }}>Reports</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); showToast("Exploring AI Market categories..."); }}>Markets</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); showToast("Opening API Reference documentation..."); }}>API</a></li>
-              </ul>
-            </div>
-
-            {/* Column 4: Company Links */}
-            <div className="footer-col">
-              <h3 className="footer-col-title">Company</h3>
-              <ul>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); showToast("About Us page..."); }}>About Us</a></li>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); showToast("Careers opportunities page..."); }}>Careers</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); showToast("Atlas Blog articles..."); }}>Blog</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); showToast("Opening Contact modal..."); }}>Contact Us</a></li>
-              </ul>
-            </div>
-
-            {/* Column 5: Legal Links */}
-            <div className="footer-col">
-              <h3 className="footer-col-title">Legal</h3>
-              <ul>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); showToast("Terms of Service..."); }}>Terms of Service</a></li>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); showToast("Privacy Policy statement..."); }}>Privacy Policy</a></li>
-                <li><a href="#" onClick={(e) => { e.preventDefault(); showToast("Security standards handbook..."); }}>Security</a></li>
               </ul>
             </div>
 
-            {/* Column 6: Stay Updated Form */}
+            {/* Column 4: Stay Updated Form */}
             <div className="footer-subscribe">
               <h3 className="subscribe-title">Stay Updated</h3>
               <p className="subscribe-text">Get the latest AI economy insights in your inbox.</p>
@@ -940,6 +968,73 @@ export default function HomePage() {
           </div>
         </footer>
       </div>
+
+      {/* All Startups Popup Modal */}
+      {showAllStartups && (
+        <div className="modal-overlay" onClick={() => { setShowAllStartups(false); setModalQuery(""); }}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <div>
+                <h2 className="modal-title">All AI Startups</h2>
+                <p className="modal-subtitle">Browse and filter the complete database of active AI companies</p>
+              </div>
+              <button className="modal-close-btn" aria-label="Close" onClick={() => { setShowAllStartups(false); setModalQuery(""); }}>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="modal-search-bar">
+              <svg viewBox="0 0 24 24" className="modal-search-icon" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <input
+                type="text"
+                placeholder="Filter startups by name, description, or category..."
+                value={modalQuery}
+                onChange={(e) => setModalQuery(e.target.value)}
+              />
+            </div>
+
+            <div className="modal-grid">
+              {filteredStartups.map((startup) => (
+                <div
+                  key={startup.id}
+                  className="company-card modal-company-card"
+                  onClick={() => {
+                    showToast(`Redirecting to ${startup.name} profile...`);
+                    setShowAllStartups(false);
+                    setModalQuery("");
+                  }}
+                >
+                  <div className="company-logo" dangerouslySetInnerHTML={{ __html: startup.logo }} />
+                  <h3 className="company-name">{startup.name}</h3>
+                  <p className="company-desc">{startup.description}</p>
+                  <div className="company-metadata">
+                    <div className="company-meta-item">
+                      <span>Funding</span>
+                      <span className="company-meta-val">{startup.funding}</span>
+                    </div>
+                    <div className="company-meta-item">
+                      <span>Founded</span>
+                      <span className="company-meta-val">{startup.founded}</span>
+                    </div>
+                    <span className="company-tag">{startup.category}</span>
+                  </div>
+                </div>
+              ))}
+              {filteredStartups.length === 0 && (
+                <div className="modal-no-results">
+                  <p>No startups found matching your filter terms.</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Notification Toast Alert */}
       <div className={`toast ${toast.show ? "show" : ""}`} id="notification-toast">

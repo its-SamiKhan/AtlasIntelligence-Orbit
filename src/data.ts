@@ -70,6 +70,7 @@ export interface NewsItem {
   typeClass: string;
   title: string;
   comments: number;
+  logo: string;
 }
 
 export interface JobItem {
@@ -102,8 +103,11 @@ export const STARTUPS: Startup[] = [
     category: 'Foundation',
     categoryClass: 'foundation',
     website: 'https://openai.com',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
-      <path d="M21.7,11.2c0.2-1.3-0.2-2.7-1.1-3.6c-0.6-0.7-1.5-1.1-2.4-1.2c-0.4-0.8-1.1-1.5-2-1.8c-1.3-0.5-2.8-0.3-3.9,0.5C11.5,4.5,10.2,4.3,9,4.8C7.9,5.2,7,6.1,6.6,7.2C5.3,7.4,4.2,8.2,3.6,9.4c-0.6,1.2-0.6,2.7-0.1,3.9c-0.2,1.3,0.2,2.7,1.1,3.6c0.6,0.7,1.5,1.1,2.4,1.2c0.4,0.8,1.1,1.5,2,1.8c0.7,0.3,1.4,0.4,2.2,0.2c0.6,0.5,1.3,0.7,2.1,0.7c0.8,0,1.6-0.3,2.2-0.8c0.8,0.3,1.6,0.3,2.4,0c0.9-0.4,1.6-1.1,2-2c1.3-0.2,2.4-1,2.9-2.2C22,14.5,22,12.8,21.7,11.2z M12,14.6c-0.4,0-0.7-0.1-1-0.3l-4.4-2.5c-0.5-0.3-0.7-0.9-0.4-1.4c0.3-0.5,0.9-0.7,1.4-0.4l4.4,2.5V7.4c0-0.6,0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1v5.1l4.4-2.5c0.5-0.3,1.1-0.1,1.4,0.4c0.3,0.5,0.1,1.1-0.4,1.4l-4.4,2.5c-0.3,0.2-0.6,0.3-1,0.3V14.6z" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#000000">
+        <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z" />
+      </g>
     </svg>`
   },
   {
@@ -115,9 +119,11 @@ export const STARTUPS: Startup[] = [
     category: 'AI Safety',
     categoryClass: 'safety',
     website: 'https://www.anthropic.com',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
-      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4.5 14h-5v-2h5v2zm2-4h-9v-2h9v2zm0-4h-9V7h9v2z" />
-      <text x="12" y="16.5" font-family="sans-serif" font-size="11" font-weight="900" text-anchor="middle" fill="#000">AI</text>
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#EAD9C9" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#191919">
+        <path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z" />
+      </g>
     </svg>`
   },
   {
@@ -129,10 +135,11 @@ export const STARTUPS: Startup[] = [
     category: 'AI Coding',
     categoryClass: 'coding',
     website: 'https://cursor.com',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="m8 3 4 8 4-8" />
-      <path d="m4 21 8-10 8 10" />
-      <line x1="12" y1="11" x2="12" y2="21" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#000000">
+        <path d="M22.106 5.68L12.5.135a.998.998 0 00-.998 0L1.893 5.68a.84.84 0 00-.419.726v11.186c0 .3.16.577.42.727l9.607 5.547a.999.999 0 00.998 0l9.608-5.547a.84.84 0 00.42-.727V6.407a.84.84 0 00-.42-.726zm-.603 1.176L12.228 22.92c-.063.108-.228.064-.228-.061V12.34a.59.59 0 00-.295-.51l-9.11-5.26c-.107-.062-.063-.228.062-.228h18.55c.264 0 .428.286.296.514z" />
+      </g>
     </svg>`
   },
   {
@@ -144,9 +151,11 @@ export const STARTUPS: Startup[] = [
     category: 'Search',
     categoryClass: 'search',
     website: 'https://www.perplexity.ai',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="3" />
-      <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#E2F6F3" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#139D8C">
+        <path d="M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z" />
+      </g>
     </svg>`
   },
   {
@@ -158,9 +167,22 @@ export const STARTUPS: Startup[] = [
     category: 'Generative AI',
     categoryClass: 'generative',
     website: 'https://www.midjourney.com',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M2 17c5-3 8-3 13 0M4 14c3-1.5 6-1.5 9 0M2 11c7-3 12-3 18 0M8 6l3 4M15 6l-2 4M3 21h18" />
-      <path d="M12 2v4M8 6h8" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="mj-grad-card" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFE259" />
+          <stop offset="50%" stop-color="#FFA751" />
+          <stop offset="100%" stop-color="#FF6584" />
+        </linearGradient>
+      </defs>
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <g transform="translate(4, 4) scale(0.66)" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M2 16.5c4-2 7-2 11 0c2.5 1.25 5 1.25 7 0L20 19H4L2 16.5z" fill="#000000" />
+        <path d="M11.5 2L4 14.5h7.5V2z" fill="url(#mj-grad-card)" stroke="#000000" />
+        <path d="M12.5 4l5.5 10.5h-5.5V4z" fill="url(#mj-grad-card)" stroke="#000000" />
+        <path d="M1 21.5c3-1 6-1 9 0s6 1 9 0" stroke="#000000" stroke-width="1.2" />
+        <path d="M3 23c2.5-0.8 5-0.8 7.5 0s5 0.8 7.5 0" stroke="#000000" stroke-width="0.8" />
+      </g>
     </svg>`
   },
   {
@@ -172,8 +194,11 @@ export const STARTUPS: Startup[] = [
     category: 'Generative AI',
     categoryClass: 'generative',
     website: 'https://elevenlabs.io',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M3 10h4v4H3zM10 6h4v12h-4zM17 10h4v4h-4z" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#000000">
+        <path d="M4 18h3V6H4v12zm6-4h3V6h-3v8zm6 4h3V6h-3v12z" />
+      </g>
     </svg>`
   },
   {
@@ -185,8 +210,11 @@ export const STARTUPS: Startup[] = [
     category: 'Foundation',
     categoryClass: 'foundation',
     website: 'https://x.ai',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
-      <path d="M18.2 3h-2.5l-4.5 6.3L6.8 3H4.3l5.6 7.8L4 19h2.5l5-7 5.4 7h2.5l-6-8.2z" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#000000" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#ffffff">
+        <path d="M18.2 3h-2.5l-4.5 6.3L6.8 3H4.3l5.6 7.8L4 19h2.5l5-7 5.4 7h2.5l-6-8.2z" />
+      </g>
     </svg>`
   },
   {
@@ -198,8 +226,11 @@ export const STARTUPS: Startup[] = [
     category: 'Foundation',
     categoryClass: 'foundation',
     website: 'https://mistral.ai',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
-      <path d="M12 2L2 7l10 5 10-5-10-5zm0 10L2 17l10 5 10-5-10-5z" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#FF5F1F">
+        <path d="M12 2L2 7l10 5 10-5-10-5zm0 10L2 17l10 5 10-5-10-5z" />
+      </g>
     </svg>`
   },
   {
@@ -211,11 +242,12 @@ export const STARTUPS: Startup[] = [
     category: 'AI Agents',
     categoryClass: 'agents',
     website: 'https://www.adept.ai',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="11" width="18" height="10" rx="2" />
-      <path d="M12 2v4M8 5h8" />
-      <circle cx="8" cy="16" r="1" />
-      <circle cx="16" cy="16" r="1" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <g transform="translate(4, 4) scale(0.66)" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <rect x="3" y="11" width="18" height="10" rx="2" />
+        <path d="M12 2v4M8 5h8" />
+      </g>
     </svg>`
   },
   {
@@ -227,10 +259,12 @@ export const STARTUPS: Startup[] = [
     category: 'AI Robotics',
     categoryClass: 'robotics',
     website: 'https://www.figure.ai',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="11" width="18" height="10" rx="2" />
-      <circle cx="12" cy="5" r="2" />
-      <path d="M12 7v8M8 10h8M10 21v-6h4v6" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <g transform="translate(4, 4) scale(0.66)" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <circle cx="12" cy="5" r="2" />
+        <path d="M12 7v8M8 10h8M10 21v-6h4v6" />
+      </g>
     </svg>`
   },
   {
@@ -242,8 +276,11 @@ export const STARTUPS: Startup[] = [
     category: 'AI Security',
     categoryClass: 'security',
     website: 'https://abnormalsecurity.com',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#0F172A" />
+      <g transform="translate(4, 4) scale(0.66)" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </g>
     </svg>`
   },
   {
@@ -255,8 +292,11 @@ export const STARTUPS: Startup[] = [
     category: 'AI Healthcare',
     categoryClass: 'healthcare',
     website: 'https://www.tempus.com',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#000000" />
+      <g transform="translate(4, 4) scale(0.66)" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+      </g>
     </svg>`
   },
   {
@@ -268,9 +308,12 @@ export const STARTUPS: Startup[] = [
     category: 'AI Finance',
     categoryClass: 'finance',
     website: 'https://www.alpha-sense.com',
-    logo: `<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="12" y1="1" x2="12" y2="23" />
-      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#0B132B" />
+      <g transform="translate(4, 4) scale(0.66)" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <line x1="12" y1="1" x2="12" y2="23" />
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+      </g>
     </svg>`
   }
 ];
@@ -411,20 +454,24 @@ export const FUNDINGS: Funding[] = [
     stage: 'Series C',
     investor: 'Sequoia Capital',
     date: '2h ago',
-    logo: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="fund-logo">
-      <circle cx="12" cy="12" r="3" />
-      <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#E2F6F3" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#139D8C">
+        <path d="M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z" />
+      </g>
     </svg>`
   },
   {
-    company: 'Thinking Machines Lab',
-    amount: '$2.0B',
-    stage: 'Series A',
-    investor: 'Andreessen Horowitz',
+    company: 'Scale AI',
+    amount: '$1.0B',
+    stage: 'Series F',
+    investor: 'Accel',
     date: '1d ago',
-    logo: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="fund-logo">
-      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-      <path d="M12 6v12M6 12h12" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#000000" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#ffffff">
+        <path d="M5 6h14v2H5zm0 4h9v2H5zm0 4h14v4H5z" />
+      </g>
     </svg>`
   },
   {
@@ -433,8 +480,11 @@ export const FUNDINGS: Funding[] = [
     stage: 'Series C',
     investor: 'Lightspeed',
     date: '2d ago',
-    logo: `<svg viewBox="0 0 24 24" fill="currentColor" class="fund-logo">
-      <path d="M12 2L2 7l10 5 10-5-10-5zm0 10L2 17l10 5 10-5-10-5z" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#FF5F1F">
+        <path d="M12 2L2 7l10 5 10-5-10-5zm0 10L2 17l10 5 10-5-10-5z" />
+      </g>
     </svg>`
   },
   {
@@ -443,8 +493,11 @@ export const FUNDINGS: Funding[] = [
     stage: 'Series B',
     investor: 'Valor Equity Partners',
     date: '3d ago',
-    logo: `<svg viewBox="0 0 24 24" fill="currentColor" class="fund-logo">
-      <path d="M18.2 3h-2.5l-4.5 6.3L6.8 3H4.3l5.6 7.8L4 19h2.5l5-7 5.4 7h2.5l-6-8.2z" />
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#000000" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#ffffff">
+        <path d="M18.2 3h-2.5l-4.5 6.3L6.8 3H4.3l5.6 7.8L4 19h2.5l5-7 5.4 7h2.5l-6-8.2z" />
+      </g>
     </svg>`
   }
 ];
@@ -486,72 +539,123 @@ export const NEWS: NewsItem[] = [
     time: '2h ago',
     type: 'PRODUCT LAUNCH',
     typeClass: 'product-launch',
-    title: 'OpenAI launches GPT-4.5 with major reasoning and coding upgrades',
-    comments: 128
+    title: 'Anthropic releases Claude 3.7 Sonnet with hybrid reasoning and coding upgrades',
+    comments: 142,
+    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#EAD9C9" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#191919">
+        <path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z" />
+      </g>
+    </svg>`
   },
   {
     id: 2,
-    time: '4h ago',
-    type: 'FUNDING',
-    typeClass: 'funding',
-    title: 'Anthropic raises $2.5B in Series C at a $18B valuation',
-    comments: 96
+    time: '5h ago',
+    type: 'PRODUCT LAUNCH',
+    typeClass: 'product-launch',
+    title: 'OpenAI introduces GPT-5 preview with advanced multi-step logic and planning',
+    comments: 289,
+    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#10a37f" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#ffffff">
+        <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z" />
+      </g>
+    </svg>`
   },
   {
     id: 3,
-    time: '6h ago',
+    time: '8h ago',
     type: 'PRODUCT LAUNCH',
     typeClass: 'product-launch',
-    title: 'Perplexity unveils Comet, an AI-powered browser for research',
-    comments: 74
+    title: 'Google DeepMind unveils Gemini 2.5 Flash and Pro with near-zero latency',
+    comments: 94,
+    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#0f172a" />
+      <path d="M12 4a8 8 0 0 0 8 8 8 8 0 0 0-8 8 8 8 0 0 0-8-8 8 8 0 0 0 8-8z" fill="url(#gemini-grad)" />
+      <defs>
+        <linearGradient id="gemini-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#93c5fd" />
+          <stop offset="50%" stop-color="#a855f7" />
+          <stop offset="100%" stop-color="#ec4899" />
+        </linearGradient>
+      </defs>
+    </svg>`
   },
   {
     id: 4,
-    time: '9h ago',
-    type: 'PARTNERSHIP',
-    typeClass: 'partnership',
-    title: 'NVIDIA and Microsoft expand AI infrastructure partnership',
-    comments: 62
-  },
-  {
-    id: 5,
     time: '12h ago',
     type: 'PRODUCT LAUNCH',
     typeClass: 'product-launch',
-    title: 'Runway Gen-4 launches with next-gen video generation model',
-    comments: 48
+    title: 'Meta open-sources Llama 3.3 70B matching closed models on core benchmarks',
+    comments: 312,
+    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#0064E0" />
+      <path d="M16.5 8.5c-1.15 0-2.2.53-2.9 1.38-.7-.85-1.75-1.38-2.9-1.38-2.07 0-3.75 1.68-3.75 3.75s1.68 3.75 3.75 3.75c1.15 0 2.2-.53 2.9-1.38.7.85 1.75 1.38 2.9 1.38 2.07 0 3.75-1.68 3.75-3.75s-1.68-3.75-3.75-3.75zm-5.75 5.5c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.8 1.8-1.8 1.8zm5.75 0c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.8 1.8-1.8 1.8z" fill="#ffffff" />
+    </svg>`
   },
   {
-    id: 6,
-    time: '15h ago',
-    type: 'PRODUCT LAUNCH',
-    typeClass: 'product-launch',
-    title: 'ElevenLabs releases new Voice Design API for game developers',
-    comments: 34
-  },
-  {
-    id: 7,
-    time: '18h ago',
-    type: 'FUNDING',
-    typeClass: 'funding',
-    title: 'Scale AI secures $1.2B strategic funding round from technology consortium',
-    comments: 89
-  },
-  {
-    id: 8,
+    id: 5,
     time: '1d ago',
     type: 'PRODUCT LAUNCH',
     typeClass: 'product-launch',
-    title: 'Meta open-sources Llama 4-Dense models with native 1M context length',
-    comments: 215
+    title: 'Perplexity launches Deep Research agent for automated long-form synthesis',
+    comments: 118,
+    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#139D8C" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#ffffff">
+        <path d="M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z" />
+      </g>
+    </svg>`
+  },
+  {
+    id: 6,
+    time: '2d ago',
+    type: 'FUNDING',
+    typeClass: 'funding',
+    title: 'NVIDIA starts shipping Blackwell Ultra GPUs to address enterprise AI training demand',
+    comments: 184,
+    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#000000" />
+      <path d="M12 4C7.58 4 4 7.58 4 12c0 2.97 1.62 5.56 4.03 6.97l.88-1.56C7.26 16.35 6.18 14.3 6.18 12c0-3.21 2.61-5.82 5.82-5.82 2.18 0 4.08 1.2 5.07 2.97h-2.88c-.68-.81-1.7-1.31-2.81-1.31-2.02 0-3.65 1.63-3.65 3.65s1.63 3.65 3.65 3.65c1.47 0 2.73-.87 3.33-2.11h-4.04v-1.71h5.82v5.82h-1.71v-2.08c-1.01 1.22-2.52 1.97-4.22 1.97-3.08 0-5.59-2.51-5.59-5.59S8.92 6.41 12 6.41c2.14 0 4.01 1.21 4.98 3l1.51-.88C17.22 5.92 14.81 4 12 4z" fill="#76B900" />
+    </svg>`
+  },
+  {
+    id: 7,
+    time: '2d ago',
+    type: 'PRODUCT LAUNCH',
+    typeClass: 'product-launch',
+    title: 'xAI releases Grok 3 with live multimodal search and enhanced mathematical logic',
+    comments: 206,
+    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#000000" />
+      <path d="M16.5 4h-2.5l-3.5 5.25L7 4H4.5l4.75 7L4 19h2.5l4-6 4.25 6H17.25l-5.25-7.5z" fill="#ffffff" />
+    </svg>`
+  },
+  {
+    id: 8,
+    time: '3d ago',
+    type: 'PRODUCT LAUNCH',
+    typeClass: 'product-launch',
+    title: 'Mistral AI launches Pixtral Large 123B multimodal model under open weights',
+    comments: 65,
+    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <g fill="#FF5F1F" transform="translate(4, 4) scale(0.66)">
+        <path d="M1 22V2h4l6 8 6-8h4v20h-4V8l-6 8-6-8v14H1z" />
+      </g>
+    </svg>`
   },
   {
     id: 9,
-    time: '2d ago',
-    type: 'PARTNERSHIP',
-    typeClass: 'partnership',
-    title: 'Google Cloud and Mistral AI announce deep hosting agreement',
-    comments: 41
+    time: '4d ago',
+    type: 'PRODUCT LAUNCH',
+    typeClass: 'product-launch',
+    title: 'Apple Intelligence goes live globally with deep Siri and writing tools integration',
+    comments: 177,
+    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#000000" />
+      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.21.67-2.93 1.49-.62.69-1.16 1.84-1.01 2.96 1.1.09 2.26-.54 2.95-1.39z" fill="#ffffff" />
+    </svg>`
   }
 ];
 
