@@ -314,7 +314,7 @@ ul {
   gap: 16px;
 }
 
-.btn-watchlist {
+.btn-wishlist {
   background: white;
   border: 1px solid var(--border-color-hover);
   padding: 8px 16px;
@@ -330,7 +330,7 @@ ul {
   transition: var(--transition-fast);
 }
 
-.btn-watchlist:hover {
+.btn-wishlist:hover {
   border-color: var(--primary);
   color: var(--primary);
 }
@@ -416,7 +416,7 @@ ul {
   align-items: center;
   background: white;
   border: 1px solid var(--border-color-hover);
-  border-radius: var(--border-radius-full);
+  border-radius: 12px;
   padding: 6px;
   box-shadow: var(--shadow-md);
   margin-bottom: 24px;
@@ -460,7 +460,7 @@ ul {
 
 .btn-search {
   padding: 0 32px;
-  border-radius: var(--border-radius-full);
+  border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
   height: 44px;
@@ -471,16 +471,16 @@ ul {
 .search-pills {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: white;
   border: 1px solid var(--border-color-hover);
-  border-radius: var(--border-radius-full);
-  padding: 6px;
+  border-radius: 12px;
+  padding: 6px 16px;
   box-shadow: var(--shadow-sm);
   max-width: 980px;
   width: 100%;
   overflow-x: auto;
   scrollbar-width: none;
-  gap: 8px;
 }
 
 .search-pills::-webkit-scrollbar {
@@ -491,7 +491,7 @@ ul {
   background: transparent;
   border: 1px solid transparent;
   padding: 8px 16px;
-  border-radius: var(--border-radius-full);
+  border-radius: 8px;
   font-size: 13px;
   font-weight: 600;
   color: #1e293b;

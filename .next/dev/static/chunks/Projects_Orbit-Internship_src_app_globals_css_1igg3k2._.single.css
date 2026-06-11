@@ -625,7 +625,7 @@ ul {
   position: absolute;
 }
 
-.btn-watchlist {
+.btn-wishlist {
   border: 1px solid var(--border-color-hover);
   border-radius: var(--border-radius-md);
   color: var(--text-muted);
@@ -641,7 +641,7 @@ ul {
   display: flex;
 }
 
-.btn-watchlist:hover {
+.btn-wishlist:hover {
   border-color: var(--primary);
   color: var(--primary);
 }
@@ -722,10 +722,10 @@ ul {
 
 .search-container {
   border: 1px solid var(--border-color-hover);
-  border-radius: var(--border-radius-full);
   box-shadow: var(--shadow-md);
   transition: var(--transition-normal);
   background: #fff;
+  border-radius: 12px;
   align-items: center;
   width: 100%;
   max-width: 980px;
@@ -768,7 +768,7 @@ ul {
 }
 
 .btn-search {
-  border-radius: var(--border-radius-full);
+  border-radius: 8px;
   min-width: 100px;
   height: 44px;
   padding: 0 32px;
@@ -778,15 +778,15 @@ ul {
 
 .search-pills {
   border: 1px solid var(--border-color-hover);
-  border-radius: var(--border-radius-full);
   box-shadow: var(--shadow-sm);
   scrollbar-width: none;
   background-color: #fff;
+  border-radius: 12px;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
   width: 100%;
   max-width: 980px;
-  padding: 6px;
+  padding: 6px 16px;
   display: flex;
   overflow-x: auto;
 }
@@ -796,13 +796,13 @@ ul {
 }
 
 .pill-btn {
-  border-radius: var(--border-radius-full);
   color: #1e293b;
   cursor: pointer;
   transition: var(--transition-fast);
   white-space: nowrap;
   background: none;
   border: 1px solid #0000;
+  border-radius: 8px;
   flex: none;
   justify-content: center;
   align-items: center;
