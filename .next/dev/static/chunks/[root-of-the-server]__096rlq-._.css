@@ -1061,20 +1061,17 @@ ul {
 
 .orbital-background {
   pointer-events: none;
-  z-index: -1;
-  opacity: .9;
-  mix-blend-mode: multiply;
+  z-index: 0;
+  opacity: 1;
   background-image: url("/assets/hero_globe_bg.png");
-  background-position: 100% 100%;
+  background-position: 100%;
   background-repeat: no-repeat;
   background-size: contain;
   width: 900px;
-  height: 570px;
+  height: 700px;
   position: absolute;
-  bottom: -80px;
-  right: 80px;
-  -webkit-mask-image: linear-gradient(to right, #000 85%, #0000 99%);
-  mask-image: linear-gradient(to right, #000 85%, #0000 99%);
+  top: -160px;
+  right: -60px;
 }
 
 .hero-content {
@@ -1932,9 +1929,12 @@ ul {
 }
 
 .footer {
-  border-top: 1px solid var(--border-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
   background-color: #fafbfc;
   width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 40px;
   padding: 40px 40px 24px;
 }
 
