@@ -1,6 +1,30 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
-    "/_app": []
+    "/_app": [
+      "static/chunks/0m-v_next_dist_compiled_1sfdr69._.js",
+      "static/chunks/0m-v_next_dist_shared_lib_0an3wxn._.js",
+      "static/chunks/0m-v_next_dist_client_1x9q4e0._.js",
+      "static/chunks/0m-v_next_dist_1-596md._.js",
+      "static/chunks/0m-v_next_app_0fdnnvn.js",
+      "static/chunks/[next]_entry_page-loader_ts_1ybsn00._.js",
+      "static/chunks/0m-v_react-dom_1uj-69n._.js",
+      "static/chunks/0m-v_1ckywvf._.js",
+      "static/chunks/[root-of-the-server]__0wub7av._.js",
+      "static/chunks/Projects_Orbit-Internship_pages__app_0du2_q-._.js",
+      "static/chunks/turbopack-Projects_Orbit-Internship_pages__app_0130rjx._.js"
+    ],
+    "/_error": [
+      "static/chunks/0m-v_next_dist_compiled_1sfdr69._.js",
+      "static/chunks/0m-v_next_dist_shared_lib_0re0tf8._.js",
+      "static/chunks/0m-v_next_dist_client_1x9q4e0._.js",
+      "static/chunks/0m-v_next_dist_0gmv4b-._.js",
+      "static/chunks/[next]_entry_page-loader_ts_021gfe6._.js",
+      "static/chunks/0m-v_react-dom_1uj-69n._.js",
+      "static/chunks/0m-v_1ckywvf._.js",
+      "static/chunks/[root-of-the-server]__0ey32k0._.js",
+      "static/chunks/Projects_Orbit-Internship_pages__error_0du2_q-._.js",
+      "static/chunks/turbopack-Projects_Orbit-Internship_pages__error_0bvhpjv._.js"
+    ]
   },
   "devFiles": [],
   "polyfillFiles": [

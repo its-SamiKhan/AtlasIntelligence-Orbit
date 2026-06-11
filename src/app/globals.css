@@ -969,39 +969,86 @@ ul {
   display: none;
 }
 
-.funding-card {
-  flex: 0 0 auto;
-  width: 280px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
-  padding: 20px;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-normal);
+.funding-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.funding-card-wrapper {
+  perspective: 1000px;
+  width: 100%;
+  height: 210px;
   cursor: pointer;
 }
 
-.funding-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(242, 19, 93, 0.35);
-  box-shadow: 0 8px 20px -5px rgba(242, 19, 93, 0.08), 0 6px 12px -5px rgba(242, 19, 93, 0.04);
+.funding-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.funding-card-wrapper:hover .funding-card-inner {
+  transform: rotateY(180deg);
+}
+
+.funding-card-front,
+.funding-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari support */
+  backface-visibility: hidden;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.funding-card-wrapper:hover .funding-card-front,
+.funding-card-wrapper:hover .funding-card-back {
+  border-color: #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.01);
+}
+
+.funding-card-front {
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.funding-card-back {
+  background: #ffffff;
+  padding: 16px 20px;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .funding-card-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
 }
 
 .fund-logo-wrapper {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--border-radius-md);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .fund-logo-wrapper svg {
@@ -1013,25 +1060,30 @@ ul {
 .funding-company-details {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .funding-company-name {
   font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 700;
-  color: var(--text-main);
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .funding-stage {
   font-size: 11px;
-  color: var(--text-light);
-  margin-top: 1px;
+  color: #64748b;
+  margin-top: 2px;
 }
 
 .funding-amount-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  margin-top: 16px;
   margin-bottom: 16px;
 }
 
@@ -1039,163 +1091,171 @@ ul {
   font-family: var(--font-heading);
   font-size: 24px;
   font-weight: 800;
-  color: var(--text-main);
+  color: #0f172a;
   letter-spacing: -0.5px;
 }
 
 .funding-stage-pill {
-  background-color: #f8fafc;
-  border: 1px solid var(--border-color);
-  font-size: 10px;
+  background-color: #f1f5f9;
+  font-size: 10.5px;
   font-weight: 600;
-  color: var(--text-muted);
-  padding: 2px 8px;
-  border-radius: var(--border-radius-full);
+  color: #475569;
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: none;
 }
 
 .funding-investor-details {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 14px;
-  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
 }
 
 .funding-investor-info {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
+  min-width: 0;
 }
 
 .funding-investor-label {
   font-size: 10px;
-  color: var(--text-light);
+  color: #94a3b8;
+  font-weight: 500;
 }
 
 .funding-investor-name {
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 600;
-  color: var(--text-muted);
+  color: #334155;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .funding-time {
   font-size: 11px;
-  color: var(--text-light);
+  color: #94a3b8;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .funding-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .funding-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Founder Spotlight */
 .spotlight-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  gap: 12px;
 }
 
 .spotlight-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
   display: flex;
-  flex-direction: row;
-  height: 190px;
+  flex-direction: column;
   overflow: hidden;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-normal);
   cursor: pointer;
 }
 
 .spotlight-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(242, 19, 93, 0.35);
+  transform: translateY(-4px);
+  border-color: rgba(242, 19, 93, 0.4);
   box-shadow: 0 10px 25px -5px rgba(242, 19, 93, 0.08), 0 8px 16px -6px rgba(242, 19, 93, 0.05);
 }
 
 .spotlight-photo-container {
-  width: 142px;
-  height: 190px;
+  width: 100%;
+  height: 150px;
   background-color: #0f172a;
   overflow: hidden;
   position: relative;
-  flex-shrink: 0;
 }
 
 .spotlight-photo-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.3s ease;
-  filter: grayscale(100%);
+  object-position: center 25%;
+  transition: var(--transition-normal);
 }
 
 .spotlight-card:hover .spotlight-photo-container img {
   transform: scale(1.05);
-  filter: grayscale(0%);
 }
 
 .spotlight-content {
-  padding: 12px 14px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex: 1;
-  min-width: 0;
 }
 
 .spotlight-name {
   font-family: var(--font-heading);
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 700;
-  color: #0f172a;
-  letter-spacing: -0.3px;
-  margin: 0 0 2px 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+  margin-bottom: 2px;
 }
 
 .spotlight-role {
   font-size: 11px;
   font-weight: 600;
-  color: #f2135d;
-  margin: 0 0 6px 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  color: var(--primary);
+  margin-bottom: 6px;
 }
 
 .spotlight-quote {
-  font-size: 10.5px;
+  font-size: 11px;
   font-style: italic;
-  color: #4b5563;
-  margin: 0 0 8px 0;
+  color: var(--text-muted);
+  border-left: 2px solid var(--primary);
+  padding-left: 8px;
+  margin-bottom: 8px;
   line-height: 1.35;
-  border-left: none;
-  padding-left: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+}
+
+.spotlight-details {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin-bottom: 10px;
+  flex: 1;
 }
 
 .spotlight-link {
   font-size: 11px;
-  font-weight: 600;
-  color: #64748b;
+  font-weight: 700;
+  color: var(--text-main);
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  transition: color 0.2s ease;
-  text-decoration: none;
+  transition: var(--transition-fast);
+  margin-top: auto;
 }
 
 .spotlight-link span {
-  transition: transform var(--transition-fast);
+  transition: var(--transition-fast);
 }
 
-.spotlight-link:hover {
-  color: var(--primary);
-}
-
-.spotlight-link:hover span {
+.spotlight-card:hover .spotlight-link span {
   transform: translateX(3px);
 }
 

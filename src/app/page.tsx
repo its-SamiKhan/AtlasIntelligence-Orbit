@@ -923,39 +923,128 @@ export default function HomePage() {
                   </div>
                   <p className="section-subtitle">Largest rounds this week</p>
                 </div>
-                <div className="carousel-wrapper">
-                  <div className="funding-carousel" ref={fundingCarouselRef}>
-                    {FUNDINGS.map((fund, idx) => (
-                      <div
-                        key={idx}
-                        className="funding-card"
-                        onClick={() => {
-                          setQuery(fund.company);
-                          setCurrentFilter("funding");
-                          showToast(`Showing funding round for ${fund.company}`);
-                        }}
-                      >
-                        <div className="funding-card-header">
-                          <div className="fund-logo-wrapper" dangerouslySetInnerHTML={{ __html: fund.logo }} />
-                          <div className="funding-company-details">
-                            <h4 className="funding-company-name">{fund.company}</h4>
-                            <span className="funding-stage">{fund.stage}</span>
+                <div className="funding-grid">
+                  {FUNDINGS.map((fund, idx) => (
+                    <div
+                      key={idx}
+                      className="funding-card-wrapper"
+                      onClick={() => {
+                        setQuery(fund.company);
+                        setCurrentFilter("funding");
+                        showToast(`Showing funding round for ${fund.company}`);
+                      }}
+                    >
+                      <div className="funding-card-inner">
+                        {/* Front Side */}
+                        <div className="funding-card-front" style={{ padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', height: '100%' }}>
+                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
+                            <div className="fund-logo-wrapper" style={{ width: '48px', height: '48px', borderRadius: '12px', border: '1px solid #e2e8f0', padding: '4px', backgroundColor: '#ffffff' }} dangerouslySetInnerHTML={{ __html: fund.logo }} />
+                            <h4 className="funding-company-name" style={{ fontSize: '15px', fontWeight: '800', margin: '8px 0 2px', color: '#0f172a' }}>{fund.company}</h4>
+                            <span style={{ fontSize: '11px', color: '#64748b', fontWeight: '500', display: 'block', minHeight: '16px' }}>
+                              {fund.company === 'Perplexity' ? 'Conversational AI Search' :
+                               fund.company === 'Scale AI' ? 'Data Infrastructure for AI' :
+                               fund.company === 'Mistral AI' ? 'Open Frontier Models' :
+                               fund.company === 'xAI' ? 'Frontier AGI & Infrastructure' : 'AI Technology'}
+                            </span>
+                          </div>
+                          
+                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', gap: '4px' }}>
+                            <span style={{ fontSize: '22px', fontWeight: '800', color: '#f2135d', letterSpacing: '-0.5px', lineHeight: 1.2 }}>
+                              {fund.amount}
+                            </span>
+                            <span style={{ fontSize: '9px', textTransform: 'uppercase', color: '#94a3b8', fontWeight: '700', letterSpacing: '0.5px' }}>
+                              Amount Raised
+                            </span>
+                          </div>
+
+                          <div style={{
+                            fontSize: '9.5px',
+                            fontWeight: '700',
+                            color: '#475569',
+                            backgroundColor: '#f1f5f9',
+                            padding: '3px 10px',
+                            borderRadius: '100px',
+                            border: '1px solid #e2e8f0'
+                          }}>
+                            {fund.stage} • {fund.date}
                           </div>
                         </div>
-                        <div className="funding-amount-wrapper">
-                          <span className="funding-amount">{fund.amount}</span>
-                          <span className="funding-stage-pill">{fund.stage}</span>
-                        </div>
-                        <div className="funding-investor-details">
-                          <div className="funding-investor-info">
-                            <span className="funding-investor-label">Lead investor</span>
-                            <span className="funding-investor-name">{fund.investor}</span>
+
+                        {/* Back Side */}
+                        <div className="funding-card-back">
+                          <div className="funding-card-header" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <div className="fund-logo-wrapper" style={{ width: '28px', height: '28px', borderRadius: '6px' }} dangerouslySetInnerHTML={{ __html: fund.logo }} />
+                            <div className="funding-company-details">
+                              <h4 className="funding-company-name" style={{ fontSize: '13px', margin: 0 }}>{fund.company}</h4>
+                              <span className="funding-stage" style={{ fontSize: '10px', marginTop: 0 }}>{fund.stage}</span>
+                            </div>
+                            <span className="funding-stage-pill" style={{ marginLeft: 'auto', fontSize: '9.5px', padding: '2px 8px', backgroundColor: '#f1f5f9', color: '#475569', borderRadius: '100px', fontWeight: '600' }}>{fund.amount}</span>
                           </div>
-                          <span className="funding-time">{fund.date}</span>
+
+                          {/* Mini SVG Bar Chart */}
+                          <div style={{ height: '36px', width: '100%', margin: '6px 0', position: 'relative' }}>
+                            <svg viewBox="0 0 160 36" width="100%" height="100%">
+                              {/* Background lines */}
+                              <line x1="0" y1="9" x2="160" y2="9" stroke="#f1f5f9" strokeWidth="1" strokeDasharray="2 2" />
+                              <line x1="0" y1="18" x2="160" y2="18" stroke="#f1f5f9" strokeWidth="1" strokeDasharray="2 2" />
+                              <line x1="0" y1="27" x2="160" y2="27" stroke="#f1f5f9" strokeWidth="1" strokeDasharray="2 2" />
+                              {(() => {
+                                const barHeights = idx === 0 ? [8, 12, 16, 22, 28, 34] :
+                                                   idx === 1 ? [10, 14, 20, 18, 26, 32] :
+                                                   idx === 2 ? [6, 12, 18, 22, 24, 30] :
+                                                               [8, 10, 15, 20, 25, 33];
+                                const barWidth = 14;
+                                const spacing = 10;
+                                return barHeights.map((h, i) => {
+                                  const x = 12 + i * (barWidth + spacing);
+                                  const y = 36 - h;
+                                  return (
+                                    <rect
+                                      key={i}
+                                      x={x}
+                                      y={y}
+                                      width={barWidth}
+                                      height={h}
+                                      rx="2"
+                                      fill="#f2135d"
+                                      opacity={0.3 + (i / 5) * 0.7}
+                                    />
+                                  );
+                                });
+                              })()}
+                            </svg>
+                          </div>
+
+                          {/* Rich metadata row */}
+                          <div style={{ display: 'flex', justifyContent: 'space-between', margin: '2px 0 6px', fontSize: '10.5px', borderBottom: '1px solid #f1f5f9', paddingBottom: '6px' }}>
+                            <div>
+                              <span style={{ color: '#94a3b8', fontSize: '9px', display: 'block', textTransform: 'uppercase', fontWeight: '600' }}>Valuation</span>
+                              <span style={{ color: '#0f172a', fontWeight: '700' }}>
+                                {fund.company === 'Perplexity' ? '$3.0B Est.' :
+                                 fund.company === 'Scale AI' ? '$13.8B' :
+                                 fund.company === 'Mistral AI' ? '$6.0B' :
+                                 fund.company === 'xAI' ? '$24.0B' : '--'}
+                              </span>
+                            </div>
+                            <div style={{ textAlign: 'right' }}>
+                              <span style={{ color: '#94a3b8', fontSize: '9px', display: 'block', textTransform: 'uppercase', fontWeight: '600' }}>HQ Location</span>
+                              <span style={{ color: '#475569', fontWeight: '600' }}>
+                                {fund.company === 'Mistral AI' ? 'Paris, France' : 'San Francisco, CA'}
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="funding-investor-details" style={{ paddingTop: '8px', fontSize: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', borderTop: 'none' }}>
+                            <div className="funding-investor-info" style={{ display: 'flex', flexDirection: 'column' }}>
+                              <span className="funding-investor-label" style={{ fontSize: '9px', color: '#64748b' }}>Lead investor</span>
+                              <span className="funding-investor-name" style={{ fontWeight: '700', color: '#0f172a' }}>{fund.investor}</span>
+                            </div>
+                            <span className="funding-time" style={{ color: '#94a3b8' }}>{fund.date}</span>
+                          </div>
                         </div>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </section>
 
@@ -1023,11 +1112,10 @@ export default function HomePage() {
                         />
                       </div>
                       <div className="spotlight-content">
-                        <div>
-                          <h3 className="spotlight-name">{founder.name}</h3>
-                          <p className="spotlight-role">{founder.role}</p>
-                          <blockquote className="spotlight-quote">"{founder.quote}"</blockquote>
-                        </div>
+                        <h3 className="spotlight-name">{founder.name}</h3>
+                        <p className="spotlight-role">{founder.role}</p>
+                        <blockquote className="spotlight-quote">"{founder.quote}"</blockquote>
+                        <p className="spotlight-details">{founder.details}</p>
                         <a href={founder.profileUrl} className="spotlight-link" onClick={(e) => { e.stopPropagation(); showToast(`Redirecting to ${founder.name}'s biography...`); }} target="_blank" rel="noopener noreferrer">
                           View Profile <span>&rarr;</span>
                         </a>
@@ -1049,28 +1137,71 @@ export default function HomePage() {
                   </a>
                 </div>
                 
-                <div className="pulse-list-dark">
-                  {newsList.map((item) => (
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(4, 1fr)',
+                  gap: '20px',
+                  width: '100%',
+                  position: 'relative',
+                  zIndex: 2
+                }}>
+                  {newsList.slice(0, 4).map((item) => (
                     <div
                       key={item.id}
-                      className="pulse-item-dark"
                       onClick={() => showToast(`Opening article: "${item.title}"`)}
+                      style={{
+                        backgroundColor: '#ffffff',
+                        border: '1px solid var(--border-color)',
+                        borderRadius: '16px',
+                        padding: '20px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        minHeight: '150px',
+                        cursor: 'pointer',
+                        transition: 'all 0.2s',
+                        boxShadow: '0 2px 4px rgba(0,0,0,0.01)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)';
+                        e.currentTarget.style.boxShadow = '0 6px 15px -4px rgba(242, 19, 93, 0.06)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'none';
+                        e.currentTarget.style.borderColor = 'var(--border-color)';
+                        e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.01)';
+                      }}
                     >
-                      <div className="pulse-icon-dark" dangerouslySetInnerHTML={{ __html: item.logo }} />
-                      <span className="pulse-time-dark">{item.time}</span>
-                      <div className="pulse-tag-wrapper-dark">
-                        <span className={`pulse-badge ${item.typeClass || 'product-launch'}`}>
-                          {item.type}
-                        </span>
-                      </div>
-                      <h3 className="pulse-title-dark">
-                        {item.title}
-                      </h3>
-                      <div className="pulse-comments-dark">
-                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                        </svg>
-                        <span>{item.comments}</span>
+                      <div>
+                        {/* Upper row: Tag and Time */}
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                          <span style={{
+                            fontSize: '9px',
+                            fontWeight: '800',
+                            letterSpacing: '0.5px',
+                            padding: '3px 8px',
+                            borderRadius: '4px',
+                            backgroundColor: item.typeClass === 'partnership' ? '#ecfdf5' : '#fff0f3',
+                            color: item.typeClass === 'partnership' ? '#10b981' : '#f2135d'
+                          }}>
+                            {item.type}
+                          </span>
+                          <span style={{ fontSize: '11px', color: '#94a3b8' }}>
+                            {item.time}
+                          </span>
+                        </div>
+                        
+                        {/* Title */}
+                        <h3 style={{
+                          fontSize: '13.5px',
+                          fontWeight: '700',
+                          lineHeight: '1.5',
+                          color: 'var(--text-main)',
+                          margin: 0
+                        }}>
+                          {item.title}
+                        </h3>
                       </div>
                     </div>
                   ))}
@@ -1167,17 +1298,17 @@ export default function HomePage() {
                   <feComposite in="SourceGraphic" in2="blur" operator="over" />
                 </filter>
               </defs>
-              {/* Startups Line */}
+              {/* Top Line */}
               <line x1="500" y1="210" x2="500" y2="70" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-              {/* Investors Line */}
+              {/* Right Top Line */}
               <line x1="500" y1="210" x2="690" y2="126" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-              {/* Funding Line */}
+              {/* Right Bottom Line */}
               <line x1="500" y1="210" x2="690" y2="294" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-              {/* Jobs Line */}
+              {/* Bottom Line */}
               <line x1="500" y1="210" x2="500" y2="350" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-              {/* Products Line */}
+              {/* Left Bottom Line */}
               <line x1="500" y1="210" x2="310" y2="294" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-              {/* Founders Line */}
+              {/* Left Top Line */}
               <line x1="500" y1="210" x2="310" y2="126" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
 
               {/* Decorative small network nodes on the lines */}
@@ -1211,9 +1342,9 @@ export default function HomePage() {
               </svg>
             </div>
 
-            {/* Card 1: Startups (Top) */}
+            {/* Card 1: Bloomberg for AI (Top) */}
             <div
-              onClick={() => handlePillClick("startups")}
+              onClick={() => showToast("Product Vision: Bloomberg for AI")}
               style={{
                 position: 'absolute', top: '0%', left: '50%',
                 transform: 'translateX(-50%)', zIndex: 5, width: '210px',
@@ -1227,18 +1358,20 @@ export default function HomePage() {
             >
               <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2" /><line x1="9" y1="22" x2="9" y2="16" /><line x1="15" y1="22" x2="15" y2="16" />
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
                 </svg>
               </div>
               <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Startups</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Discover &amp; track 25,000+ AI startups worldwide.</p>
+                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Bloomberg for AI</h4>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                  "If I need info on an AI company, I go to Atlas."
+                </p>
               </div>
             </div>
 
             {/* Card 2: Investors (Right Top) */}
             <div
-              onClick={() => handlePillClick("investors")}
+              onClick={() => { handlePillClick("investors"); showToast("Filtering early-stage AI agent startups..."); }}
               style={{
                 position: 'absolute', top: '20%', right: '10%', zIndex: 5, width: '210px',
                 backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
@@ -1251,18 +1384,20 @@ export default function HomePage() {
             >
               <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                  <line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                 </svg>
               </div>
               <div>
                 <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Investors</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Track 12,000+ investors and their AI portfolio companies.</p>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                  <strong>VC wants:</strong> Early-stage AI agent startups.
+                </p>
               </div>
             </div>
 
-            {/* Card 3: Funding (Right Bottom) */}
+            {/* Card 3: Recruiters (Right Bottom) */}
             <div
-              onClick={() => handlePillClick("funding")}
+              onClick={() => { handlePillClick("startups"); showToast("Highlighting fastest growing AI companies..."); }}
               style={{
                 position: 'absolute', bottom: '20%', right: '10%', zIndex: 5, width: '210px',
                 backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
@@ -1275,18 +1410,20 @@ export default function HomePage() {
             >
               <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="16" />
+                  <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="3" />
                 </svg>
               </div>
               <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Funding</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Monitor $500B+ in funding rounds and investment activity.</p>
+                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Recruiters</h4>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                  <strong>wants:</strong> Fastest growing AI companies.
+                </p>
               </div>
             </div>
 
-            {/* Card 4: Jobs (Bottom) */}
+            {/* Card 4: Job Seekers (Bottom) */}
             <div
-              onClick={() => handlePillClick("jobs")}
+              onClick={() => { handlePillClick("jobs"); showToast("Searching startups hiring globally..."); }}
               style={{
                 position: 'absolute', bottom: '0%', left: '50%',
                 transform: 'translateX(-50%)', zIndex: 5, width: '210px',
@@ -1304,14 +1441,16 @@ export default function HomePage() {
                 </svg>
               </div>
               <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Jobs</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Find 50,000+ AI jobs from the best companies in the world.</p>
+                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Job Seekers</h4>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                  <strong>searching:</strong> AI engineer hiring globally.
+                </p>
               </div>
             </div>
 
-            {/* Card 5: Products (Left Bottom) */}
+            {/* Card 5: Researchers (Left Bottom) */}
             <div
-              onClick={() => handlePillClick("products")}
+              onClick={() => { handlePillClick("all"); showToast("Filtering top AI infrastructure startups..."); }}
               style={{
                 position: 'absolute', bottom: '20%', left: '10%', zIndex: 5, width: '210px',
                 backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
@@ -1324,18 +1463,20 @@ export default function HomePage() {
             >
               <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                  <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
                 </svg>
               </div>
               <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Products</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Discover the latest AI products and tools shaping the market.</p>
+                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Researchers</h4>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                  <strong>wants:</strong> Top AI infrastructure startups.
+                </p>
               </div>
             </div>
 
             {/* Card 6: Founders (Left Top) */}
             <div
-              onClick={() => handlePillClick("founders")}
+              onClick={() => { handlePillClick("founders"); showToast("Querying recent AI coding funding rounds..."); }}
               style={{
                 position: 'absolute', top: '20%', left: '10%', zIndex: 5, width: '210px',
                 backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
@@ -1353,7 +1494,9 @@ export default function HomePage() {
               </div>
               <div>
                 <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Founders</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Explore 100,000+ founders building the future of AI.</p>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                  <strong>wants:</strong> Which AI coding startups raised money recently?
+                </p>
               </div>
             </div>
           </div>
@@ -1372,7 +1515,7 @@ export default function HomePage() {
               textTransform: 'uppercase',
               letterSpacing: '1px'
             }}>
-              All connected. All in <span style={{ color: '#f2135d' }}>one place.</span>
+              Unifying the AI Economy in <span style={{ color: '#f2135d' }}>One Single Place.</span>
             </div>
           </div>
           </div>

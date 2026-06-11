@@ -1668,37 +1668,81 @@ ul {
   display: none;
 }
 
-.funding-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
-  width: 280px;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-normal);
-  cursor: pointer;
-  flex: none;
-  padding: 20px;
+.funding-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  display: grid;
 }
 
-.funding-card:hover {
-  border-color: #f2135d59;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px -5px #f2135d14, 0 6px 12px -5px #f2135d0a;
+.funding-card-wrapper {
+  perspective: 1000px;
+  cursor: pointer;
+  width: 100%;
+  height: 210px;
+}
+
+.funding-card-inner {
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+  position: relative;
+}
+
+.funding-card-wrapper:hover .funding-card-inner {
+  transform: rotateY(180deg);
+}
+
+.funding-card-front, .funding-card-back {
+  backface-visibility: hidden;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  transition: border-color .2s, box-shadow .2s;
+  position: absolute;
+  box-shadow: 0 4px 6px -1px #00000005, 0 2px 4px -1px #00000003;
+}
+
+.funding-card-wrapper:hover .funding-card-front, .funding-card-wrapper:hover .funding-card-back {
+  border-color: #e2e8f0;
+  box-shadow: 0 10px 15px -3px #0000000a, 0 4px 6px -2px #00000003;
+}
+
+.funding-card-front {
+  background: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  display: flex;
+}
+
+.funding-card-back {
+  background: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 20px;
+  display: flex;
+  transform: rotateY(180deg);
 }
 
 .funding-card-header {
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
   display: flex;
 }
 
 .fund-logo-wrapper {
-  border-radius: var(--border-radius-md);
+  border-radius: 10px;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   display: flex;
   overflow: hidden;
 }
@@ -1711,189 +1755,202 @@ ul {
 
 .funding-company-details {
   flex-direction: column;
+  min-width: 0;
   display: flex;
 }
 
 .funding-company-name {
   font-family: var(--font-heading);
-  color: var(--text-main);
+  color: #0f172a;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 15px;
   font-weight: 700;
+  overflow: hidden;
 }
 
 .funding-stage {
-  color: var(--text-light);
-  margin-top: 1px;
+  color: #64748b;
+  margin-top: 2px;
   font-size: 11px;
 }
 
 .funding-amount-wrapper {
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  margin-top: 16px;
   margin-bottom: 16px;
   display: flex;
 }
 
 .funding-amount {
   font-family: var(--font-heading);
-  color: var(--text-main);
+  color: #0f172a;
   letter-spacing: -.5px;
   font-size: 24px;
   font-weight: 800;
 }
 
 .funding-stage-pill {
-  border: 1px solid var(--border-color);
-  color: var(--text-muted);
-  border-radius: var(--border-radius-full);
-  background-color: #f8fafc;
-  padding: 2px 8px;
-  font-size: 10px;
+  color: #475569;
+  background-color: #f1f5f9;
+  border: none;
+  border-radius: 100px;
+  padding: 3px 10px;
+  font-size: 10.5px;
   font-weight: 600;
 }
 
 .funding-investor-details {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid #f1f5f9;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 14px;
+  padding-top: 12px;
   display: flex;
 }
 
 .funding-investor-info {
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
+  min-width: 0;
   display: flex;
 }
 
 .funding-investor-label {
-  color: var(--text-light);
+  color: #94a3b8;
   font-size: 10px;
+  font-weight: 500;
 }
 
 .funding-investor-name {
-  color: var(--text-muted);
-  font-size: 12px;
+  color: #334155;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12.5px;
   font-weight: 600;
+  overflow: hidden;
 }
 
 .funding-time {
-  color: var(--text-light);
+  color: #94a3b8;
+  white-space: nowrap;
   font-size: 11px;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .funding-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .funding-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .spotlight-row {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  gap: 12px;
   display: grid;
 }
 
 .spotlight-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
   cursor: pointer;
-  border-radius: 16px;
-  flex-direction: row;
-  height: 190px;
-  transition: all .25s cubic-bezier(.4, 0, .2, 1);
+  flex-direction: column;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 1px 3px #00000005;
 }
 
 .spotlight-card:hover {
-  border-color: #f2135d59;
-  transform: translateY(-3px);
+  border-color: #f2135d66;
+  transform: translateY(-4px);
   box-shadow: 0 10px 25px -5px #f2135d14, 0 8px 16px -6px #f2135d0d;
 }
 
 .spotlight-photo-container {
   background-color: #0f172a;
-  flex-shrink: 0;
-  width: 142px;
-  height: 190px;
+  width: 100%;
+  height: 150px;
   position: relative;
   overflow: hidden;
 }
 
 .spotlight-photo-container img {
   object-fit: cover;
-  filter: grayscale();
+  object-position: center 25%;
   width: 100%;
   height: 100%;
-  transition: all .3s;
+  transition: var(--transition-normal);
 }
 
 .spotlight-card:hover .spotlight-photo-container img {
-  filter: grayscale(0%);
   transform: scale(1.05);
 }
 
 .spotlight-content {
   flex-direction: column;
   flex: 1;
-  justify-content: space-between;
-  min-width: 0;
-  padding: 12px 14px;
+  padding: 12px;
   display: flex;
 }
 
 .spotlight-name {
   font-family: var(--font-heading);
-  color: #0f172a;
-  letter-spacing: -.3px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin: 0 0 2px;
-  font-size: 13.5px;
+  color: var(--text-main);
+  letter-spacing: -.5px;
+  margin-bottom: 2px;
+  font-size: 14px;
   font-weight: 700;
-  overflow: hidden;
 }
 
 .spotlight-role {
-  color: #f2135d;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin: 0 0 6px;
+  color: var(--primary);
+  margin-bottom: 6px;
   font-size: 11px;
   font-weight: 600;
-  overflow: hidden;
 }
 
 .spotlight-quote {
-  color: #4b5563;
-  -webkit-line-clamp: 2;
-  border-left: none;
-  -webkit-box-orient: vertical;
-  margin: 0 0 8px;
-  padding-left: 0;
-  font-size: 10.5px;
+  color: var(--text-muted);
+  border-left: 2px solid var(--primary);
+  margin-bottom: 8px;
+  padding-left: 8px;
+  font-size: 11px;
   font-style: italic;
   line-height: 1.35;
-  display: -webkit-box;
-  overflow: hidden;
+}
+
+.spotlight-details {
+  color: var(--text-muted);
+  flex: 1;
+  margin-bottom: 10px;
+  font-size: 11px;
+  line-height: 1.35;
 }
 
 .spotlight-link {
-  color: #64748b;
+  color: var(--text-main);
+  transition: var(--transition-fast);
   align-items: center;
   gap: 4px;
+  margin-top: auto;
   font-size: 11px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color .2s;
+  font-weight: 700;
   display: inline-flex;
 }
 
 .spotlight-link span {
-  transition: transform var(--transition-fast);
+  transition: var(--transition-fast);
 }
 
-.spotlight-link:hover {
-  color: var(--primary);
-}
-
-.spotlight-link:hover span {
+.spotlight-card:hover .spotlight-link span {
   transform: translateX(3px);
 }
 
