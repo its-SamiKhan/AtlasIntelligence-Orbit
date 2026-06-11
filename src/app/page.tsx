@@ -150,6 +150,14 @@ export default function HomePage() {
       setCurrentFilter("all");
       showToast("Returned to homepage Dashboard");
       window.scrollTo({ top: 0, behavior: "smooth" });
+    } else if (tab === "markets") {
+      setQuery("");
+      setCurrentFilter("all");
+      showToast("Scrolling to Market Maps...");
+      setTimeout(() => {
+        const el = document.getElementById("explore-markets-section");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 150);
     } else {
       setCurrentFilter(tab);
       showToast(`Navigating to ${tab.toUpperCase()} section...`);
@@ -424,12 +432,6 @@ export default function HomePage() {
                   <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
               )},
-              { id: "news", label: "News", icon: (
-                <svg viewBox="0 0 24 24" className="nav-icon" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <path d="M16 8h2M16 12h2M16 16h2M6 8h6M6 12h6M6 16h6" />
-                </svg>
-              )},
               { id: "startups", label: "Startups", icon: (
                 <svg viewBox="0 0 24 24" className="nav-icon" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
@@ -467,12 +469,17 @@ export default function HomePage() {
                   <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
                 </svg>
               )},
-              { id: "research", label: "Research", icon: (
+              { id: "markets", label: "Market Maps", icon: (
                 <svg viewBox="0 0 24 24" className="nav-icon" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="16" y1="13" x2="8" y2="13" />
-                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2" />
+                  <line x1="8" y1="2" x2="8" y2="18" />
+                  <line x1="16" y1="6" x2="16" y2="22" />
+                </svg>
+              )},
+              { id: "news", label: "News", icon: (
+                <svg viewBox="0 0 24 24" className="nav-icon" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <path d="M16 8h2M16 12h2M16 16h2M6 8h6M6 12h6M6 16h6" />
                 </svg>
               )}
             ].map((tab) => {
@@ -480,12 +487,12 @@ export default function HomePage() {
               return (
                 <li key={tab.id}>
                   <a
-                    href="#"
-                    className={`nav-item ${isActive ? "active" : ""}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleSidebarClick(tab.id);
-                    }}
+                     href="#"
+                     className={`nav-item ${isActive ? "active" : ""}`}
+                     onClick={(e) => {
+                       e.preventDefault();
+                       handleSidebarClick(tab.id);
+                     }}
                   >
                     {tab.icon}
                     <span>{tab.label}</span>
@@ -685,7 +692,7 @@ export default function HomePage() {
           <section className="hero-section">
             <div className="orbital-background"></div>
             <div className="hero-content">
-              <h1 className="hero-title">The Intelligence Layer<br />For The AI Economy</h1>
+              <h1 className="hero-title">The <span style={{ color: '#f2135d' }}>Intelligence Layer</span><br />For The AI Economy</h1>
               <p className="hero-subtitle">Track every AI company, founder, investor, funding round, product launch and market movement.</p>
               
               {/* Search Box */}
@@ -854,7 +861,7 @@ export default function HomePage() {
               </section>
 
               {/* Explore Markets */}
-              <section className="dashboard-section">
+              <section className="dashboard-section" id="explore-markets-section">
                 <div className="section-header">
                   <h2 className="section-title">Explore Markets</h2>
                   <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); showToast("Viewing all market maps..."); }}>
