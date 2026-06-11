@@ -21,7 +21,22 @@ import {
   JobItem
 } from "../data";
 
+export const TRENDING_MARKETS = [
+  { id: 'ai-agents', name: 'AI Agents', growth: '↑ 24%', color: '#f2135d', bgColor: 'rgba(242, 19, 93, 0.05)', sparkline: 'M 2 12 Q 12 17 22 8 T 48 3' },
+  { id: 'ai-coding', name: 'AI Coding', growth: '↑ 32%', color: '#f2135d', bgColor: 'rgba(242, 19, 93, 0.05)', sparkline: 'M 2 13 Q 10 18 20 10 T 48 4' },
+  { id: 'ai-search', name: 'AI Search', growth: '↑ 18%', color: '#2563eb', bgColor: 'rgba(37, 99, 235, 0.05)', sparkline: 'M 2 14 Q 14 16 26 12 T 48 3' },
+  { id: 'ai-video', name: 'AI Video', growth: '↑ 27%', color: '#7c3aed', bgColor: 'rgba(124, 58, 237, 0.05)', sparkline: 'M 2 15 Q 12 18 22 8 T 48 3' },
+  { id: 'ai-infrastructure', name: 'AI Infrastructure', growth: '↑ 21%', color: '#4f46e5', bgColor: 'rgba(79, 70, 229, 0.05)', sparkline: 'M 2 14 Q 14 16 26 13 T 48 4' },
+  { id: 'ai-security', name: 'AI Security', growth: '↑ 16%', color: '#10b981', bgColor: 'rgba(16, 185, 129, 0.05)', sparkline: 'M 2 15 Q 10 18 20 12 T 48 3' }
+];
+
 const MARKET_ICONS: Record<string, React.ReactNode> = {
+  "ai-video": (
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M23 7l-7 5 7 5V7z" />
+      <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+    </svg>
+  ),
   "ai-agents": (
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
@@ -205,6 +220,9 @@ export default function HomePage() {
       }
       if (searchTerms === "ai search") {
         return cat.includes("search") || cls.includes("search");
+      }
+      if (searchTerms === "ai video") {
+        return cat.includes("video") || cls.includes("video") || cat.includes("generative") || cls.includes("generative");
       }
       if (searchTerms === "ai infrastructure") {
         return cat.includes("foundation") || cls.includes("foundation") || cat.includes("infrastructure");
@@ -863,23 +881,14 @@ export default function HomePage() {
               {/* Explore Markets */}
               <section className="dashboard-section" id="explore-markets-section">
                 <div className="section-header">
-                  <h2 className="section-title">Explore Markets</h2>
-                  <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); showToast("Viewing all market maps..."); }}>
-                    View all markets <span>&rarr;</span>
+                  <h2 className="section-title">Trending This Week</h2>
+                  <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); showToast("Viewing all trend details..."); }} style={{ color: '#f2135d', fontWeight: '600' }}>
+                    View all trends <span>&rarr;</span>
                   </a>
                 </div>
                 <div className="carousel-wrapper">
-                  <button
-                    className="carousel-nav-btn prev"
-                    onClick={() => handleScroll(marketsCarouselRef, "prev")}
-                    aria-label="Previous"
-                  >
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="15 18 9 12 15 6" />
-                    </svg>
-                  </button>
                   <div className="markets-carousel" ref={marketsCarouselRef}>
-                    {MARKETS.map((market) => (
+                    {TRENDING_MARKETS.map((market) => (
                       <div
                         key={market.id}
                         className="market-item"
@@ -888,11 +897,28 @@ export default function HomePage() {
                           setCurrentFilter("startups");
                           showToast(`Showing startups in market: ${market.name}`);
                         }}
+                        style={{
+                          backgroundColor: market.bgColor,
+                          borderColor: 'rgba(15, 23, 42, 0.04)',
+                          width: '230px'
+                        }}
                       >
-                        <div className="market-icon-wrapper" style={{ backgroundColor: market.bgColor, color: market.color, borderColor: market.bgColor }}>
-                          {MARKET_ICONS[market.id] || market.icon}
+                        <div className="market-icon-wrapper" style={{ backgroundColor: '#ffffff', color: market.color, boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)' }}>
+                          {MARKET_ICONS[market.id] || <span>🤖</span>}
                         </div>
-                        <span className="market-name">{market.name}</span>
+                        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minWidth: 0 }}>
+                          <span className="market-name" style={{ display: 'block', marginBottom: '2px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{market.name}</span>
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                            <span className="market-growth" style={{ color: '#4b5563', fontSize: '11px', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '2px' }}>
+                              {market.growth}
+                            </span>
+                            <div className="market-sparkline-wrapper" style={{ margin: 0 }}>
+                              <svg width="46" height="16" viewBox="0 0 50 20" fill="none">
+                                <path d={market.sparkline} stroke={market.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -920,15 +946,6 @@ export default function HomePage() {
                   <p className="section-subtitle">Largest rounds this week</p>
                 </div>
                 <div className="carousel-wrapper">
-                  <button
-                    className="carousel-nav-btn prev"
-                    onClick={() => handleScroll(fundingCarouselRef, "prev")}
-                    aria-label="Previous"
-                  >
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="15 18 9 12 15 6" />
-                    </svg>
-                  </button>
                   <div className="funding-carousel" ref={fundingCarouselRef}>
                     {FUNDINGS.map((fund, idx) => (
                       <div
@@ -961,15 +978,6 @@ export default function HomePage() {
                       </div>
                     ))}
                   </div>
-                  <button
-                    className="carousel-nav-btn next"
-                    onClick={() => handleScroll(fundingCarouselRef, "next")}
-                    aria-label="Next"
-                  >
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </button>
                 </div>
               </section>
 
@@ -1037,10 +1045,11 @@ export default function HomePage() {
                         />
                       </div>
                       <div className="spotlight-content">
-                        <h3 className="spotlight-name">{founder.name}</h3>
-                        <p className="spotlight-role">{founder.role}</p>
-                        <blockquote className="spotlight-quote">"{founder.quote}"</blockquote>
-                        <p className="spotlight-details">{founder.details}</p>
+                        <div>
+                          <h3 className="spotlight-name">{founder.name}</h3>
+                          <p className="spotlight-role">{founder.role}</p>
+                          <blockquote className="spotlight-quote">"{founder.quote}"</blockquote>
+                        </div>
                         <a href={founder.profileUrl} className="spotlight-link" onClick={(e) => { e.stopPropagation(); showToast(`Redirecting to ${founder.name}'s biography...`); }} target="_blank" rel="noopener noreferrer">
                           View Profile <span>&rarr;</span>
                         </a>
@@ -1051,80 +1060,39 @@ export default function HomePage() {
               </section>
 
               {/* AI Pulse */}
-              <section className="dashboard-section" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                <div className="section-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
-                    <h2 className="section-title" style={{ fontSize: '20px', fontWeight: '800', margin: 0 }}>AI Pulse</h2>
-                    <span style={{ fontSize: '13px', color: '#94a3b8' }}>Latest news and product launches</span>
+              <section className="pulse-dark-section">
+                <div className="section-header" style={{ marginBottom: '24px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                    <h2 className="section-title pulse-dark-title" style={{ fontSize: '20px', fontWeight: '800', margin: 0 }}>AI Pulse</h2>
+                    <span className="pulse-dark-subtitle" style={{ fontSize: '13px' }}>Latest news and product launches</span>
                   </div>
-                  <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("news"); }} style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    View all news <span style={{ fontSize: '14px' }}>&rarr;</span>
+                  <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("news"); }} style={{ color: '#f2135d', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    View all news <span>&rarr;</span>
                   </a>
                 </div>
                 
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(4, 1fr)',
-                  gap: '20px',
-                  width: '100%'
-                }}>
-                  {newsList.slice(0, 4).map((item) => (
+                <div className="pulse-list-dark">
+                  {newsList.map((item) => (
                     <div
                       key={item.id}
+                      className="pulse-item-dark"
                       onClick={() => showToast(`Opening article: "${item.title}"`)}
-                      style={{
-                        backgroundColor: '#ffffff',
-                        border: '1px solid var(--border-color)',
-                        borderRadius: '16px',
-                        padding: '20px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-between',
-                        minHeight: '150px',
-                        cursor: 'pointer',
-                        transition: 'all 0.2s',
-                        boxShadow: '0 2px 4px rgba(0,0,0,0.01)'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = 'translateY(-2px)';
-                        e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)';
-                        e.currentTarget.style.boxShadow = '0 6px 15px -4px rgba(242, 19, 93, 0.06)';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = 'none';
-                        e.currentTarget.style.borderColor = 'var(--border-color)';
-                        e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.01)';
-                      }}
                     >
-                      <div>
-                        {/* Upper row: Tag and Time */}
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-                          <span style={{
-                            fontSize: '9px',
-                            fontWeight: '800',
-                            letterSpacing: '0.5px',
-                            padding: '3px 8px',
-                            borderRadius: '4px',
-                            backgroundColor: item.typeClass === 'partnership' ? '#ecfdf5' : '#fff0f3',
-                            color: item.typeClass === 'partnership' ? '#10b981' : '#f2135d'
-                          }}>
-                            {item.type}
-                          </span>
-                          <span style={{ fontSize: '11px', color: '#94a3b8' }}>
-                            {item.time}
-                          </span>
-                        </div>
-                        
-                        {/* Title */}
-                        <h3 style={{
-                          fontSize: '13.5px',
-                          fontWeight: '700',
-                          lineHeight: '1.5',
-                          color: 'var(--text-main)',
-                          margin: 0
-                        }}>
-                          {item.title}
-                        </h3>
+                      <div className="pulse-icon-dark" dangerouslySetInnerHTML={{ __html: item.logo }} />
+                      <span className="pulse-time-dark">{item.time}</span>
+                      <div className="pulse-tag-wrapper-dark">
+                        <span className={`pulse-badge ${item.typeClass || 'product-launch'}`}>
+                          {item.type}
+                        </span>
+                      </div>
+                      <h3 className="pulse-title-dark">
+                        {item.title}
+                      </h3>
+                      <div className="pulse-comments-dark">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                        <span>{item.comments}</span>
                       </div>
                     </div>
                   ))}

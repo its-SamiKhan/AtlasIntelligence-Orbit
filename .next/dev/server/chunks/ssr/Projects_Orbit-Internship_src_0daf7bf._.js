@@ -703,6 +703,8 @@ const JOBS = [
 "use strict";
 
 __turbopack_context__.s([
+    "TRENDING_MARKETS",
+    ()=>TRENDING_MARKETS,
     "default",
     ()=>HomePage
 ]);
@@ -713,7 +715,92 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Interns
 ;
 ;
 ;
+const TRENDING_MARKETS = [
+    {
+        id: 'ai-agents',
+        name: 'AI Agents',
+        growth: '↑ 24%',
+        color: '#f2135d',
+        bgColor: 'rgba(242, 19, 93, 0.05)',
+        sparkline: 'M 2 12 Q 12 17 22 8 T 48 3'
+    },
+    {
+        id: 'ai-coding',
+        name: 'AI Coding',
+        growth: '↑ 32%',
+        color: '#f2135d',
+        bgColor: 'rgba(242, 19, 93, 0.05)',
+        sparkline: 'M 2 13 Q 10 18 20 10 T 48 4'
+    },
+    {
+        id: 'ai-search',
+        name: 'AI Search',
+        growth: '↑ 18%',
+        color: '#2563eb',
+        bgColor: 'rgba(37, 99, 235, 0.05)',
+        sparkline: 'M 2 14 Q 14 16 26 12 T 48 3'
+    },
+    {
+        id: 'ai-video',
+        name: 'AI Video',
+        growth: '↑ 27%',
+        color: '#7c3aed',
+        bgColor: 'rgba(124, 58, 237, 0.05)',
+        sparkline: 'M 2 15 Q 12 18 22 8 T 48 3'
+    },
+    {
+        id: 'ai-infrastructure',
+        name: 'AI Infrastructure',
+        growth: '↑ 21%',
+        color: '#4f46e5',
+        bgColor: 'rgba(79, 70, 229, 0.05)',
+        sparkline: 'M 2 14 Q 14 16 26 13 T 48 4'
+    },
+    {
+        id: 'ai-security',
+        name: 'AI Security',
+        growth: '↑ 16%',
+        color: '#10b981',
+        bgColor: 'rgba(16, 185, 129, 0.05)',
+        sparkline: 'M 2 15 Q 10 18 20 12 T 48 3'
+    }
+];
 const MARKET_ICONS = {
+    "ai-video": /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+        viewBox: "0 0 24 24",
+        width: "20",
+        height: "20",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "2.2",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                d: "M23 7l-7 5 7 5V7z"
+            }, void 0, false, {
+                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                lineNumber: 36,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                x: "1",
+                y: "5",
+                width: "15",
+                height: "14",
+                rx: "2",
+                ry: "2"
+            }, void 0, false, {
+                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                lineNumber: 37,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
+        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+        lineNumber: 35,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0)),
     "ai-agents": /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
         viewBox: "0 0 24 24",
         width: "20",
@@ -728,7 +815,7 @@ const MARKET_ICONS = {
                 d: "M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 27,
+                lineNumber: 42,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
@@ -739,20 +826,20 @@ const MARKET_ICONS = {
                 rx: "2"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 28,
+                lineNumber: 43,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M12 8v3M8 15h.01M16 15h.01M9 19h6"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 29,
+                lineNumber: 44,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-        lineNumber: 26,
+        lineNumber: 41,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0)),
     "ai-coding": /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -769,14 +856,14 @@ const MARKET_ICONS = {
                 points: "16 18 22 12 16 6"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 34,
+                lineNumber: 49,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
                 points: "8 6 2 12 8 18"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 35,
+                lineNumber: 50,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -786,13 +873,13 @@ const MARKET_ICONS = {
                 y2: "3"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 36,
+                lineNumber: 51,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-        lineNumber: 33,
+        lineNumber: 48,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0)),
     "ai-search": /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -811,7 +898,7 @@ const MARKET_ICONS = {
                 r: "8"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 41,
+                lineNumber: 56,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -821,13 +908,13 @@ const MARKET_ICONS = {
                 y2: "16.65"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 42,
+                lineNumber: 57,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-        lineNumber: 40,
+        lineNumber: 55,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0)),
     "ai-infrastructure": /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -848,7 +935,7 @@ const MARKET_ICONS = {
                 rx: "1"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 47,
+                lineNumber: 62,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
@@ -859,7 +946,7 @@ const MARKET_ICONS = {
                 rx: "1"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 48,
+                lineNumber: 63,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
@@ -870,7 +957,7 @@ const MARKET_ICONS = {
                 rx: "1"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 49,
+                lineNumber: 64,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -880,7 +967,7 @@ const MARKET_ICONS = {
                 y2: "5"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 50,
+                lineNumber: 65,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -890,13 +977,13 @@ const MARKET_ICONS = {
                 y2: "13"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 51,
+                lineNumber: 66,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-        lineNumber: 46,
+        lineNumber: 61,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0)),
     "ai-healthcare": /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -912,12 +999,12 @@ const MARKET_ICONS = {
             d: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
         }, void 0, false, {
             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-            lineNumber: 56,
+            lineNumber: 71,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-        lineNumber: 55,
+        lineNumber: 70,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0)),
     "ai-security": /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -933,12 +1020,12 @@ const MARKET_ICONS = {
             d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
         }, void 0, false, {
             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-            lineNumber: 61,
+            lineNumber: 76,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-        lineNumber: 60,
+        lineNumber: 75,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0)),
     "ai-robotics": /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -957,20 +1044,20 @@ const MARKET_ICONS = {
                 r: "3"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 66,
+                lineNumber: 81,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 67,
+                lineNumber: 82,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-        lineNumber: 65,
+        lineNumber: 80,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0)),
     "ai-finance": /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -990,20 +1077,20 @@ const MARKET_ICONS = {
                 y2: "23"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 72,
+                lineNumber: 87,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 73,
+                lineNumber: 88,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-        lineNumber: 71,
+        lineNumber: 86,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0))
 };
@@ -1134,6 +1221,9 @@ function HomePage() {
             }
             if (searchTerms === "ai search") {
                 return cat.includes("search") || cls.includes("search");
+            }
+            if (searchTerms === "ai video") {
+                return cat.includes("video") || cls.includes("video") || cat.includes("generative") || cls.includes("generative");
             }
             if (searchTerms === "ai infrastructure") {
                 return cat.includes("foundation") || cls.includes("foundation") || cat.includes("infrastructure");
@@ -1328,12 +1418,12 @@ function HomePage() {
                                 d: "M8.25 4.5l7.5 7.5-7.5 7.5"
                             }, void 0, false, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 404,
+                                lineNumber: 422,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                            lineNumber: 403,
+                            lineNumber: 421,
                             columnNumber: 13
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                             width: "12",
@@ -1348,17 +1438,17 @@ function HomePage() {
                                 d: "M15.75 19.5L8.25 12l7.5-7.5"
                             }, void 0, false, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 408,
+                                lineNumber: 426,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                            lineNumber: 407,
+                            lineNumber: 425,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                        lineNumber: 375,
+                        lineNumber: 393,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1393,7 +1483,7 @@ function HomePage() {
                                                 d: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 417,
+                                                lineNumber: 435,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ellipse", {
@@ -1404,7 +1494,7 @@ function HomePage() {
                                                 transform: "rotate(-45 12 12)"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 418,
+                                                lineNumber: 436,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ellipse", {
@@ -1415,18 +1505,18 @@ function HomePage() {
                                                 transform: "rotate(45 12 12)"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 419,
+                                                lineNumber: 437,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 416,
+                                        lineNumber: 434,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                    lineNumber: 415,
+                                    lineNumber: 433,
                                     columnNumber: 13
                                 }, this),
                                 !sidebarCollapsed && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1441,24 +1531,24 @@ function HomePage() {
                                             children: "Intelligence"
                                         }, void 0, false, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 422,
+                                            lineNumber: 440,
                                             columnNumber: 102
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                    lineNumber: 422,
+                                    lineNumber: 440,
                                     columnNumber: 35
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                            lineNumber: 414,
+                            lineNumber: 432,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                        lineNumber: 413,
+                        lineNumber: 431,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -1481,20 +1571,20 @@ function HomePage() {
                                                 d: "m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 431,
+                                                lineNumber: 449,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
                                                 points: "9 22 9 12 15 12 15 22"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 432,
+                                                lineNumber: 450,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 430,
+                                        lineNumber: 448,
                                         columnNumber: 17
                                     }, this)
                                 },
@@ -1519,7 +1609,7 @@ function HomePage() {
                                                 ry: "2"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 437,
+                                                lineNumber: 455,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1529,7 +1619,7 @@ function HomePage() {
                                                 y2: "16"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 438,
+                                                lineNumber: 456,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1539,7 +1629,7 @@ function HomePage() {
                                                 y2: "16"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 439,
+                                                lineNumber: 457,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1549,13 +1639,13 @@ function HomePage() {
                                                 y2: "16"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 440,
+                                                lineNumber: 458,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 436,
+                                        lineNumber: 454,
                                         columnNumber: 17
                                     }, this)
                                 },
@@ -1575,7 +1665,7 @@ function HomePage() {
                                                 d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 445,
+                                                lineNumber: 463,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -1584,13 +1674,13 @@ function HomePage() {
                                                 r: "4"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 446,
+                                                lineNumber: 464,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 444,
+                                        lineNumber: 462,
                                         columnNumber: 17
                                     }, this)
                                 },
@@ -1615,20 +1705,20 @@ function HomePage() {
                                                 ry: "2"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 451,
+                                                lineNumber: 469,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                 d: "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 452,
+                                                lineNumber: 470,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 450,
+                                        lineNumber: 468,
                                         columnNumber: 17
                                     }, this)
                                 },
@@ -1647,12 +1737,12 @@ function HomePage() {
                                             d: "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
                                         }, void 0, false, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 457,
+                                            lineNumber: 475,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 456,
+                                        lineNumber: 474,
                                         columnNumber: 17
                                     }, this)
                                 },
@@ -1674,7 +1764,7 @@ function HomePage() {
                                                 r: "10"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 462,
+                                                lineNumber: 480,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1684,13 +1774,13 @@ function HomePage() {
                                                 y2: "16"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 463,
+                                                lineNumber: 481,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 461,
+                                        lineNumber: 479,
                                         columnNumber: 17
                                     }, this)
                                 },
@@ -1715,20 +1805,20 @@ function HomePage() {
                                                 ry: "2"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 468,
+                                                lineNumber: 486,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                 d: "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 469,
+                                                lineNumber: 487,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 467,
+                                        lineNumber: 485,
                                         columnNumber: 17
                                     }, this)
                                 },
@@ -1748,7 +1838,7 @@ function HomePage() {
                                                 points: "1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 474,
+                                                lineNumber: 492,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1758,7 +1848,7 @@ function HomePage() {
                                                 y2: "18"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 475,
+                                                lineNumber: 493,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1768,13 +1858,13 @@ function HomePage() {
                                                 y2: "22"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 476,
+                                                lineNumber: 494,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 473,
+                                        lineNumber: 491,
                                         columnNumber: 17
                                     }, this)
                                 },
@@ -1794,20 +1884,20 @@ function HomePage() {
                                                 d: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 481,
+                                                lineNumber: 499,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                 d: "M16 8h2M16 12h2M16 16h2M6 8h6M6 12h6M6 16h6"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 482,
+                                                lineNumber: 500,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 480,
+                                        lineNumber: 498,
                                         columnNumber: 17
                                     }, this)
                                 }
@@ -1827,7 +1917,7 @@ function HomePage() {
                                                 children: tab.label
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 498,
+                                                lineNumber: 516,
                                                 columnNumber: 21
                                             }, this),
                                             tab.badge && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1835,29 +1925,29 @@ function HomePage() {
                                                 children: tab.badge
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 499,
+                                                lineNumber: 517,
                                                 columnNumber: 35
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 489,
+                                        lineNumber: 507,
                                         columnNumber: 19
                                     }, this)
                                 }, tab.id, false, {
                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                    lineNumber: 488,
+                                    lineNumber: 506,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                            lineNumber: 427,
+                            lineNumber: 445,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                        lineNumber: 426,
+                        lineNumber: 444,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1894,7 +1984,7 @@ function HomePage() {
                                         children: "PRO PLAN"
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 519,
+                                        lineNumber: 537,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1908,7 +1998,7 @@ function HomePage() {
                                         children: "Unlock Premium Data"
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 534,
+                                        lineNumber: 552,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1921,7 +2011,7 @@ function HomePage() {
                                         children: "Get real-time funding lists, full investor details & alerts."
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 543,
+                                        lineNumber: 561,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1938,13 +2028,13 @@ function HomePage() {
                                         children: "Upgrade Now"
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 551,
+                                        lineNumber: 569,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 511,
+                                lineNumber: 529,
                                 columnNumber: 13
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: ()=>showToast("Upgrade modal: Opening premium tier checkout..."),
@@ -1976,17 +2066,17 @@ function HomePage() {
                                         points: "12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 586,
+                                        lineNumber: 604,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                    lineNumber: 585,
+                                    lineNumber: 603,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 567,
+                                lineNumber: 585,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1995,14 +2085,14 @@ function HomePage() {
                                     "One platform.",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 591,
+                                        lineNumber: 609,
                                         columnNumber: 55
                                     }, this),
                                     "Complete intelligence."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 591,
+                                lineNumber: 609,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2040,34 +2130,34 @@ function HomePage() {
                                                 d: social.path
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 610,
+                                                lineNumber: 628,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 609,
+                                            lineNumber: 627,
                                             columnNumber: 17
                                         }, this)
                                     }, social.label, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 600,
+                                        lineNumber: 618,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 593,
+                                lineNumber: 611,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                        lineNumber: 507,
+                        lineNumber: 525,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 373,
+                lineNumber: 391,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2075,7 +2165,7 @@ function HomePage() {
                 onClick: ()=>setSidebarOpen(false)
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 619,
+                lineNumber: 637,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2112,7 +2202,7 @@ function HomePage() {
                                                     y2: "12"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                    lineNumber: 628,
+                                                    lineNumber: 646,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -2122,7 +2212,7 @@ function HomePage() {
                                                     y2: "6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                    lineNumber: 629,
+                                                    lineNumber: 647,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -2132,18 +2222,18 @@ function HomePage() {
                                                     y2: "18"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                    lineNumber: 630,
+                                                    lineNumber: 648,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 627,
+                                            lineNumber: 645,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 626,
+                                        lineNumber: 644,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2173,7 +2263,7 @@ function HomePage() {
                                                             d: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 636,
+                                                            lineNumber: 654,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ellipse", {
@@ -2184,7 +2274,7 @@ function HomePage() {
                                                             transform: "rotate(-45 12 12)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 637,
+                                                            lineNumber: 655,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ellipse", {
@@ -2195,18 +2285,18 @@ function HomePage() {
                                                             transform: "rotate(45 12 12)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 638,
+                                                            lineNumber: 656,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                    lineNumber: 635,
+                                                    lineNumber: 653,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 634,
+                                                lineNumber: 652,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2218,25 +2308,25 @@ function HomePage() {
                                                         children: "Intelligence"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 641,
+                                                        lineNumber: 659,
                                                         columnNumber: 49
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 641,
+                                                lineNumber: 659,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 633,
+                                        lineNumber: 651,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 625,
+                                lineNumber: 643,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2264,25 +2354,25 @@ function HomePage() {
                                                     points: "12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                    lineNumber: 648,
+                                                    lineNumber: 666,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 647,
+                                                lineNumber: 665,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Wishlist"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 650,
+                                                lineNumber: 668,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 646,
+                                        lineNumber: 664,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2304,7 +2394,7 @@ function HomePage() {
                                         children: "Sign in"
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 653,
+                                        lineNumber: 671,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2320,19 +2410,19 @@ function HomePage() {
                                         children: "Create account"
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 673,
+                                        lineNumber: 691,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 645,
+                                lineNumber: 663,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                        lineNumber: 624,
+                        lineNumber: 642,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2345,7 +2435,7 @@ function HomePage() {
                                         className: "orbital-background"
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 693,
+                                        lineNumber: 711,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2362,19 +2452,19 @@ function HomePage() {
                                                         children: "Intelligence Layer"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 695,
+                                                        lineNumber: 713,
                                                         columnNumber: 46
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 695,
+                                                        lineNumber: 713,
                                                         columnNumber: 106
                                                     }, this),
                                                     "For The AI Economy"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 695,
+                                                lineNumber: 713,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2382,7 +2472,7 @@ function HomePage() {
                                                 children: "Track every AI company, founder, investor, funding round, product launch and market movement."
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 696,
+                                                lineNumber: 714,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2406,7 +2496,7 @@ function HomePage() {
                                                                         r: "8"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 702,
+                                                                        lineNumber: 720,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -2416,13 +2506,13 @@ function HomePage() {
                                                                         y2: "16.65"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 703,
+                                                                        lineNumber: 721,
                                                                         columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 701,
+                                                                lineNumber: 719,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2435,13 +2525,13 @@ function HomePage() {
                                                                 autoComplete: "off"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 705,
+                                                                lineNumber: 723,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 700,
+                                                        lineNumber: 718,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2450,13 +2540,13 @@ function HomePage() {
                                                         children: "Search"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 715,
+                                                        lineNumber: 733,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 699,
+                                                lineNumber: 717,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2479,20 +2569,20 @@ function HomePage() {
                                                                     d: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 723,
+                                                                    lineNumber: 741,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                                     d: "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 724,
+                                                                    lineNumber: 742,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 722,
+                                                            lineNumber: 740,
                                                             columnNumber: 21
                                                         }, this)
                                                     },
@@ -2518,7 +2608,7 @@ function HomePage() {
                                                                     ry: "2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 729,
+                                                                    lineNumber: 747,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -2528,7 +2618,7 @@ function HomePage() {
                                                                     y2: "16"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 730,
+                                                                    lineNumber: 748,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -2538,13 +2628,13 @@ function HomePage() {
                                                                     y2: "16"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 731,
+                                                                    lineNumber: 749,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 728,
+                                                            lineNumber: 746,
                                                             columnNumber: 21
                                                         }, this)
                                                     },
@@ -2565,7 +2655,7 @@ function HomePage() {
                                                                     d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 736,
+                                                                    lineNumber: 754,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -2574,13 +2664,13 @@ function HomePage() {
                                                                     r: "4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 737,
+                                                                    lineNumber: 755,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 735,
+                                                            lineNumber: 753,
                                                             columnNumber: 21
                                                         }, this)
                                                     },
@@ -2606,20 +2696,20 @@ function HomePage() {
                                                                     ry: "2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 742,
+                                                                    lineNumber: 760,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                                     d: "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 743,
+                                                                    lineNumber: 761,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 741,
+                                                            lineNumber: 759,
                                                             columnNumber: 21
                                                         }, this)
                                                     },
@@ -2639,12 +2729,12 @@ function HomePage() {
                                                                 d: "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 748,
+                                                                lineNumber: 766,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 747,
+                                                            lineNumber: 765,
                                                             columnNumber: 21
                                                         }, this)
                                                     },
@@ -2664,12 +2754,12 @@ function HomePage() {
                                                                 d: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 753,
+                                                                lineNumber: 771,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 752,
+                                                            lineNumber: 770,
                                                             columnNumber: 21
                                                         }, this)
                                                     },
@@ -2692,7 +2782,7 @@ function HomePage() {
                                                                     r: "10"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 758,
+                                                                    lineNumber: 776,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -2702,13 +2792,13 @@ function HomePage() {
                                                                     y2: "16"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 759,
+                                                                    lineNumber: 777,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 757,
+                                                            lineNumber: 775,
                                                             columnNumber: 21
                                                         }, this)
                                                     },
@@ -2734,20 +2824,20 @@ function HomePage() {
                                                                     ry: "2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 764,
+                                                                    lineNumber: 782,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                                     d: "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 765,
+                                                                    lineNumber: 783,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 763,
+                                                            lineNumber: 781,
                                                             columnNumber: 21
                                                         }, this)
                                                     }
@@ -2760,30 +2850,30 @@ function HomePage() {
                                                                 children: pill.label
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 775,
+                                                                lineNumber: 793,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, pill.id, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 769,
+                                                        lineNumber: 787,
                                                         columnNumber: 19
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 719,
+                                                lineNumber: 737,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 694,
+                                        lineNumber: 712,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 692,
+                                lineNumber: 710,
                                 columnNumber: 11
                             }, this),
                             isSearchActive ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2798,7 +2888,7 @@ function HomePage() {
                                                 children: "Search Results"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 786,
+                                                lineNumber: 804,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2811,13 +2901,13 @@ function HomePage() {
                                                 children: "Clear Search"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 787,
+                                                lineNumber: 805,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 785,
+                                        lineNumber: 803,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2828,12 +2918,12 @@ function HomePage() {
                                                 children: "No results found matching your query. Try adjusting your terms or filters."
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 801,
+                                                lineNumber: 819,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 800,
+                                            lineNumber: 818,
                                             columnNumber: 19
                                         }, this) : searchResults.map((res, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "generic-result-card",
@@ -2844,7 +2934,7 @@ function HomePage() {
                                                         children: res.type
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 810,
+                                                        lineNumber: 828,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2852,7 +2942,7 @@ function HomePage() {
                                                         children: res.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 811,
+                                                        lineNumber: 829,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2860,7 +2950,7 @@ function HomePage() {
                                                         children: res.subtitle
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 812,
+                                                        lineNumber: 830,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2868,7 +2958,7 @@ function HomePage() {
                                                         children: res.desc
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 813,
+                                                        lineNumber: 831,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2878,7 +2968,7 @@ function HomePage() {
                                                                 children: res.footerText
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 815,
+                                                                lineNumber: 833,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2886,30 +2976,30 @@ function HomePage() {
                                                                 children: "View details →"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 816,
+                                                                lineNumber: 834,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 814,
+                                                        lineNumber: 832,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, idx, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 805,
+                                                lineNumber: 823,
                                                 columnNumber: 21
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 798,
+                                        lineNumber: 816,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 784,
+                                lineNumber: 802,
                                 columnNumber: 13
                             }, this) : /* Main Dashboard Content (Only rendered if search/filter is not active) */ /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "dashboard-modules",
@@ -2926,7 +3016,7 @@ function HomePage() {
                                                         children: "Featured AI Companies"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 829,
+                                                        lineNumber: 847,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2942,19 +3032,19 @@ function HomePage() {
                                                                 children: "→"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 831,
+                                                                lineNumber: 849,
                                                                 columnNumber: 39
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 830,
+                                                        lineNumber: 848,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 828,
+                                                lineNumber: 846,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2973,7 +3063,7 @@ function HomePage() {
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 844,
+                                                                lineNumber: 862,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2981,7 +3071,7 @@ function HomePage() {
                                                                 children: startup.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 845,
+                                                                lineNumber: 863,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2989,7 +3079,7 @@ function HomePage() {
                                                                 children: startup.description
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 846,
+                                                                lineNumber: 864,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3002,7 +3092,7 @@ function HomePage() {
                                                                                 children: "Funding"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 849,
+                                                                                lineNumber: 867,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3010,13 +3100,13 @@ function HomePage() {
                                                                                 children: startup.funding
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 850,
+                                                                                lineNumber: 868,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 848,
+                                                                        lineNumber: 866,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3026,7 +3116,7 @@ function HomePage() {
                                                                                 children: "Founded"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 853,
+                                                                                lineNumber: 871,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3034,13 +3124,13 @@ function HomePage() {
                                                                                 children: startup.founded
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 854,
+                                                                                lineNumber: 872,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 852,
+                                                                        lineNumber: 870,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3048,30 +3138,30 @@ function HomePage() {
                                                                         children: startup.category
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 856,
+                                                                        lineNumber: 874,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 847,
+                                                                lineNumber: 865,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, startup.id, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 836,
+                                                        lineNumber: 854,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 834,
+                                                lineNumber: 852,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 827,
+                                        lineNumber: 845,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3083,10 +3173,10 @@ function HomePage() {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                                         className: "section-title",
-                                                        children: "Explore Markets"
+                                                        children: "Trending This Week"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 866,
+                                                        lineNumber: 884,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3094,103 +3184,170 @@ function HomePage() {
                                                         className: "section-link",
                                                         onClick: (e)=>{
                                                             e.preventDefault();
-                                                            showToast("Viewing all market maps...");
+                                                            showToast("Viewing all trend details...");
+                                                        },
+                                                        style: {
+                                                            color: '#f2135d',
+                                                            fontWeight: '600'
                                                         },
                                                         children: [
-                                                            "View all markets ",
+                                                            "View all trends ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 children: "→"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 868,
-                                                                columnNumber: 38
+                                                                lineNumber: 886,
+                                                                columnNumber: 37
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 867,
+                                                        lineNumber: 885,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 865,
+                                                lineNumber: 883,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "carousel-wrapper",
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                        className: "carousel-nav-btn prev",
-                                                        onClick: ()=>handleScroll(marketsCarouselRef, "prev"),
-                                                        "aria-label": "Previous",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                            viewBox: "0 0 24 24",
-                                                            width: "18",
-                                                            height: "18",
-                                                            fill: "none",
-                                                            stroke: "currentColor",
-                                                            strokeWidth: "2",
-                                                            strokeLinecap: "round",
-                                                            strokeLinejoin: "round",
-                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
-                                                                points: "15 18 9 12 15 6"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 878,
-                                                                columnNumber: 23
-                                                            }, this)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 877,
-                                                            columnNumber: 21
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 872,
-                                                        columnNumber: 19
-                                                    }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "markets-carousel",
                                                         ref: marketsCarouselRef,
-                                                        children: __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$src$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MARKETS"].map((market)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        children: TRENDING_MARKETS.map((market)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "market-item",
                                                                 onClick: ()=>{
                                                                     setQuery(market.name);
                                                                     setCurrentFilter("startups");
                                                                     showToast(`Showing startups in market: ${market.name}`);
                                                                 },
+                                                                style: {
+                                                                    backgroundColor: market.bgColor,
+                                                                    borderColor: 'rgba(15, 23, 42, 0.04)',
+                                                                    width: '230px'
+                                                                },
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         className: "market-icon-wrapper",
                                                                         style: {
-                                                                            backgroundColor: market.bgColor,
+                                                                            backgroundColor: '#ffffff',
                                                                             color: market.color,
-                                                                            borderColor: market.bgColor
+                                                                            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)'
                                                                         },
-                                                                        children: MARKET_ICONS[market.id] || market.icon
+                                                                        children: MARKET_ICONS[market.id] || /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: "🤖"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                            lineNumber: 907,
+                                                                            columnNumber: 55
+                                                                        }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 892,
+                                                                        lineNumber: 906,
                                                                         columnNumber: 25
                                                                     }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: "market-name",
-                                                                        children: market.name
-                                                                    }, void 0, false, {
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        style: {
+                                                                            display: 'flex',
+                                                                            flexDirection: 'column',
+                                                                            flex: 1,
+                                                                            minWidth: 0
+                                                                        },
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                className: "market-name",
+                                                                                style: {
+                                                                                    display: 'block',
+                                                                                    marginBottom: '2px',
+                                                                                    overflow: 'hidden',
+                                                                                    textOverflow: 'ellipsis',
+                                                                                    whiteSpace: 'nowrap'
+                                                                                },
+                                                                                children: market.name
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                lineNumber: 910,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                style: {
+                                                                                    display: 'flex',
+                                                                                    alignItems: 'center',
+                                                                                    justifyContent: 'space-between',
+                                                                                    width: '100%'
+                                                                                },
+                                                                                children: [
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                        className: "market-growth",
+                                                                                        style: {
+                                                                                            color: '#4b5563',
+                                                                                            fontSize: '11px',
+                                                                                            fontWeight: '500',
+                                                                                            display: 'flex',
+                                                                                            alignItems: 'center',
+                                                                                            gap: '2px'
+                                                                                        },
+                                                                                        children: market.growth
+                                                                                    }, void 0, false, {
+                                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                        lineNumber: 912,
+                                                                                        columnNumber: 29
+                                                                                    }, this),
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                        className: "market-sparkline-wrapper",
+                                                                                        style: {
+                                                                                            margin: 0
+                                                                                        },
+                                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                                                            width: "46",
+                                                                                            height: "16",
+                                                                                            viewBox: "0 0 50 20",
+                                                                                            fill: "none",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                                                d: market.sparkline,
+                                                                                                stroke: market.color,
+                                                                                                strokeWidth: "2",
+                                                                                                strokeLinecap: "round",
+                                                                                                strokeLinejoin: "round"
+                                                                                            }, void 0, false, {
+                                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                                lineNumber: 917,
+                                                                                                columnNumber: 33
+                                                                                            }, this)
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                            lineNumber: 916,
+                                                                                            columnNumber: 31
+                                                                                        }, this)
+                                                                                    }, void 0, false, {
+                                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                        lineNumber: 915,
+                                                                                        columnNumber: 29
+                                                                                    }, this)
+                                                                                ]
+                                                                            }, void 0, true, {
+                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                lineNumber: 911,
+                                                                                columnNumber: 27
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
                                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 895,
+                                                                        lineNumber: 909,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, market.id, true, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 883,
+                                                                lineNumber: 892,
                                                                 columnNumber: 23
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 881,
+                                                        lineNumber: 890,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3210,29 +3367,29 @@ function HomePage() {
                                                                 points: "9 18 15 12 9 6"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 905,
+                                                                lineNumber: 931,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 904,
+                                                            lineNumber: 930,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 899,
+                                                        lineNumber: 925,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 871,
+                                                lineNumber: 889,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 864,
+                                        lineNumber: 882,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3249,7 +3406,7 @@ function HomePage() {
                                                                 children: "Funding Intelligence"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 915,
+                                                                lineNumber: 941,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3265,19 +3422,19 @@ function HomePage() {
                                                                         children: "→"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 917,
+                                                                        lineNumber: 943,
                                                                         columnNumber: 40
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 916,
+                                                                lineNumber: 942,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 914,
+                                                        lineNumber: 940,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3285,221 +3442,159 @@ function HomePage() {
                                                         children: "Largest rounds this week"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 920,
+                                                        lineNumber: 946,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 913,
+                                                lineNumber: 939,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "carousel-wrapper",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                        className: "carousel-nav-btn prev",
-                                                        onClick: ()=>handleScroll(fundingCarouselRef, "prev"),
-                                                        "aria-label": "Previous",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                            viewBox: "0 0 24 24",
-                                                            width: "18",
-                                                            height: "18",
-                                                            fill: "none",
-                                                            stroke: "currentColor",
-                                                            strokeWidth: "2",
-                                                            strokeLinecap: "round",
-                                                            strokeLinejoin: "round",
-                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
-                                                                points: "15 18 9 12 15 6"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 929,
-                                                                columnNumber: 23
-                                                            }, this)
-                                                        }, void 0, false, {
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "funding-carousel",
+                                                    ref: fundingCarouselRef,
+                                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$src$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FUNDINGS"].map((fund, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "funding-card",
+                                                            onClick: ()=>{
+                                                                setQuery(fund.company);
+                                                                setCurrentFilter("funding");
+                                                                showToast(`Showing funding round for ${fund.company}`);
+                                                            },
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "funding-card-header",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "fund-logo-wrapper",
+                                                                            dangerouslySetInnerHTML: {
+                                                                                __html: fund.logo
+                                                                            }
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                            lineNumber: 961,
+                                                                            columnNumber: 27
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "funding-company-details",
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                                    className: "funding-company-name",
+                                                                                    children: fund.company
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                    lineNumber: 963,
+                                                                                    columnNumber: 29
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                    className: "funding-stage",
+                                                                                    children: fund.stage
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                    lineNumber: 964,
+                                                                                    columnNumber: 29
+                                                                                }, this)
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                            lineNumber: 962,
+                                                                            columnNumber: 27
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                    lineNumber: 960,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "funding-amount-wrapper",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "funding-amount",
+                                                                            children: fund.amount
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                            lineNumber: 968,
+                                                                            columnNumber: 27
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "funding-stage-pill",
+                                                                            children: fund.stage
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                            lineNumber: 969,
+                                                                            columnNumber: 27
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                    lineNumber: 967,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "funding-investor-details",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "funding-investor-info",
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                    className: "funding-investor-label",
+                                                                                    children: "Lead investor"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                    lineNumber: 973,
+                                                                                    columnNumber: 29
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                    className: "funding-investor-name",
+                                                                                    children: fund.investor
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                    lineNumber: 974,
+                                                                                    columnNumber: 29
+                                                                                }, this)
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                            lineNumber: 972,
+                                                                            columnNumber: 27
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "funding-time",
+                                                                            children: fund.date
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                            lineNumber: 976,
+                                                                            columnNumber: 27
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                    lineNumber: 971,
+                                                                    columnNumber: 25
+                                                                }, this)
+                                                            ]
+                                                        }, idx, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 928,
-                                                            columnNumber: 21
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 923,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "funding-carousel",
-                                                        ref: fundingCarouselRef,
-                                                        children: __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$src$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FUNDINGS"].map((fund, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "funding-card",
-                                                                onClick: ()=>{
-                                                                    setQuery(fund.company);
-                                                                    setCurrentFilter("funding");
-                                                                    showToast(`Showing funding round for ${fund.company}`);
-                                                                },
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                        className: "funding-card-header",
-                                                                        children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                className: "fund-logo-wrapper",
-                                                                                dangerouslySetInnerHTML: {
-                                                                                    __html: fund.logo
-                                                                                }
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 944,
-                                                                                columnNumber: 27
-                                                                            }, this),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                className: "funding-company-details",
-                                                                                children: [
-                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                                                        className: "funding-company-name",
-                                                                                        children: fund.company
-                                                                                    }, void 0, false, {
-                                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                        lineNumber: 946,
-                                                                                        columnNumber: 29
-                                                                                    }, this),
-                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                        className: "funding-stage",
-                                                                                        children: fund.stage
-                                                                                    }, void 0, false, {
-                                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                        lineNumber: 947,
-                                                                                        columnNumber: 29
-                                                                                    }, this)
-                                                                                ]
-                                                                            }, void 0, true, {
-                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 945,
-                                                                                columnNumber: 27
-                                                                            }, this)
-                                                                        ]
-                                                                    }, void 0, true, {
-                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 943,
-                                                                        columnNumber: 25
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                        className: "funding-amount-wrapper",
-                                                                        children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                className: "funding-amount",
-                                                                                children: fund.amount
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 951,
-                                                                                columnNumber: 27
-                                                                            }, this),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                className: "funding-stage-pill",
-                                                                                children: fund.stage
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 952,
-                                                                                columnNumber: 27
-                                                                            }, this)
-                                                                        ]
-                                                                    }, void 0, true, {
-                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 950,
-                                                                        columnNumber: 25
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                        className: "funding-investor-details",
-                                                                        children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                className: "funding-investor-info",
-                                                                                children: [
-                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                        className: "funding-investor-label",
-                                                                                        children: "Lead investor"
-                                                                                    }, void 0, false, {
-                                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                        lineNumber: 956,
-                                                                                        columnNumber: 29
-                                                                                    }, this),
-                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                        className: "funding-investor-name",
-                                                                                        children: fund.investor
-                                                                                    }, void 0, false, {
-                                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                        lineNumber: 957,
-                                                                                        columnNumber: 29
-                                                                                    }, this)
-                                                                                ]
-                                                                            }, void 0, true, {
-                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 955,
-                                                                                columnNumber: 27
-                                                                            }, this),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                className: "funding-time",
-                                                                                children: fund.date
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 959,
-                                                                                columnNumber: 27
-                                                                            }, this)
-                                                                        ]
-                                                                    }, void 0, true, {
-                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 954,
-                                                                        columnNumber: 25
-                                                                    }, this)
-                                                                ]
-                                                            }, idx, true, {
-                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 934,
-                                                                columnNumber: 23
-                                                            }, this))
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 932,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                        className: "carousel-nav-btn next",
-                                                        onClick: ()=>handleScroll(fundingCarouselRef, "next"),
-                                                        "aria-label": "Next",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                            viewBox: "0 0 24 24",
-                                                            width: "18",
-                                                            height: "18",
-                                                            fill: "none",
-                                                            stroke: "currentColor",
-                                                            strokeWidth: "2",
-                                                            strokeLinecap: "round",
-                                                            strokeLinejoin: "round",
-                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
-                                                                points: "9 18 15 12 9 6"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 970,
-                                                                columnNumber: 23
-                                                            }, this)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 969,
-                                                            columnNumber: 21
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 964,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
+                                                            lineNumber: 951,
+                                                            columnNumber: 23
+                                                        }, this))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                    lineNumber: 949,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 922,
+                                                lineNumber: 948,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 912,
+                                        lineNumber: 938,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3512,12 +3607,12 @@ function HomePage() {
                                                     children: "Founder Spotlight"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                    lineNumber: 979,
+                                                    lineNumber: 987,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 978,
+                                                lineNumber: 986,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3581,51 +3676,51 @@ function HomePage() {
                                                                     }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1029,
+                                                                    lineNumber: 1037,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1028,
+                                                                lineNumber: 1036,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "spotlight-content",
                                                                 children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                        className: "spotlight-name",
-                                                                        children: founder.name
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 1040,
-                                                                        columnNumber: 25
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        className: "spotlight-role",
-                                                                        children: founder.role
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 1041,
-                                                                        columnNumber: 25
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("blockquote", {
-                                                                        className: "spotlight-quote",
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         children: [
-                                                                            '"',
-                                                                            founder.quote,
-                                                                            '"'
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                                                className: "spotlight-name",
+                                                                                children: founder.name
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                lineNumber: 1049,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                className: "spotlight-role",
+                                                                                children: founder.role
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                lineNumber: 1050,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("blockquote", {
+                                                                                className: "spotlight-quote",
+                                                                                children: [
+                                                                                    '"',
+                                                                                    founder.quote,
+                                                                                    '"'
+                                                                                ]
+                                                                            }, void 0, true, {
+                                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                                lineNumber: 1051,
+                                                                                columnNumber: 27
+                                                                            }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 1042,
-                                                                        columnNumber: 25
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        className: "spotlight-details",
-                                                                        children: founder.details
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 1043,
+                                                                        lineNumber: 1048,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3643,63 +3738,56 @@ function HomePage() {
                                                                                 children: "→"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                                lineNumber: 1045,
+                                                                                lineNumber: 1054,
                                                                                 columnNumber: 40
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                        lineNumber: 1044,
+                                                                        lineNumber: 1053,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1039,
+                                                                lineNumber: 1047,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, idx, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1020,
+                                                        lineNumber: 1028,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 981,
+                                                lineNumber: 989,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 977,
+                                        lineNumber: 985,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                        className: "dashboard-section",
-                                        style: {
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            gap: '20px'
-                                        },
+                                        className: "pulse-dark-section",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "section-header",
                                                 style: {
-                                                    display: 'flex',
-                                                    justifyContent: 'space-between',
-                                                    alignItems: 'baseline'
+                                                    marginBottom: '24px'
                                                 },
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         style: {
                                                             display: 'flex',
-                                                            alignItems: 'baseline',
-                                                            gap: '12px'
+                                                            flexDirection: 'column',
+                                                            gap: '4px'
                                                         },
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                                className: "section-title",
+                                                                className: "section-title pulse-dark-title",
                                                                 style: {
                                                                     fontSize: '20px',
                                                                     fontWeight: '800',
@@ -3708,24 +3796,24 @@ function HomePage() {
                                                                 children: "AI Pulse"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1057,
+                                                                lineNumber: 1066,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                className: "pulse-dark-subtitle",
                                                                 style: {
-                                                                    fontSize: '13px',
-                                                                    color: '#94a3b8'
+                                                                    fontSize: '13px'
                                                                 },
                                                                 children: "Latest news and product launches"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1058,
+                                                                lineNumber: 1067,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1056,
+                                                        lineNumber: 1065,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3736,9 +3824,8 @@ function HomePage() {
                                                             handleSidebarClick("news");
                                                         },
                                                         style: {
-                                                            color: 'var(--primary)',
+                                                            color: '#f2135d',
                                                             fontWeight: '600',
-                                                            fontSize: '13px',
                                                             display: 'flex',
                                                             alignItems: 'center',
                                                             gap: '4px'
@@ -3746,148 +3833,135 @@ function HomePage() {
                                                         children: [
                                                             "View all news ",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                style: {
-                                                                    fontSize: '14px'
-                                                                },
                                                                 children: "→"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1061,
+                                                                lineNumber: 1070,
                                                                 columnNumber: 35
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1060,
+                                                        lineNumber: 1069,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1055,
+                                                lineNumber: 1064,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                style: {
-                                                    display: 'grid',
-                                                    gridTemplateColumns: 'repeat(4, 1fr)',
-                                                    gap: '20px',
-                                                    width: '100%'
-                                                },
-                                                children: newsList.slice(0, 4).map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "pulse-list-dark",
+                                                children: newsList.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "pulse-item-dark",
                                                         onClick: ()=>showToast(`Opening article: "${item.title}"`),
-                                                        style: {
-                                                            backgroundColor: '#ffffff',
-                                                            border: '1px solid var(--border-color)',
-                                                            borderRadius: '16px',
-                                                            padding: '20px',
-                                                            display: 'flex',
-                                                            flexDirection: 'column',
-                                                            justifyContent: 'space-between',
-                                                            minHeight: '150px',
-                                                            cursor: 'pointer',
-                                                            transition: 'all 0.2s',
-                                                            boxShadow: '0 2px 4px rgba(0,0,0,0.01)'
-                                                        },
-                                                        onMouseEnter: (e)=>{
-                                                            e.currentTarget.style.transform = 'translateY(-2px)';
-                                                            e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)';
-                                                            e.currentTarget.style.boxShadow = '0 6px 15px -4px rgba(242, 19, 93, 0.06)';
-                                                        },
-                                                        onMouseLeave: (e)=>{
-                                                            e.currentTarget.style.transform = 'none';
-                                                            e.currentTarget.style.borderColor = 'var(--border-color)';
-                                                            e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.01)';
-                                                        },
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    style: {
-                                                                        display: 'flex',
-                                                                        justifyContent: 'space-between',
-                                                                        alignItems: 'center',
-                                                                        marginBottom: '16px'
-                                                                    },
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            style: {
-                                                                                fontSize: '9px',
-                                                                                fontWeight: '800',
-                                                                                letterSpacing: '0.5px',
-                                                                                padding: '3px 8px',
-                                                                                borderRadius: '4px',
-                                                                                backgroundColor: item.typeClass === 'partnership' ? '#ecfdf5' : '#fff0f3',
-                                                                                color: item.typeClass === 'partnership' ? '#10b981' : '#f2135d'
-                                                                            },
-                                                                            children: item.type
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                            lineNumber: 1102,
-                                                                            columnNumber: 27
-                                                                        }, this),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            style: {
-                                                                                fontSize: '11px',
-                                                                                color: '#94a3b8'
-                                                                            },
-                                                                            children: item.time
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                            lineNumber: 1113,
-                                                                            columnNumber: 27
-                                                                        }, this)
-                                                                    ]
-                                                                }, void 0, true, {
-                                                                    fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1101,
-                                                                    columnNumber: 25
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                    style: {
-                                                                        fontSize: '13.5px',
-                                                                        fontWeight: '700',
-                                                                        lineHeight: '1.5',
-                                                                        color: 'var(--text-main)',
-                                                                        margin: 0
-                                                                    },
-                                                                    children: item.title
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "pulse-icon-dark",
+                                                                dangerouslySetInnerHTML: {
+                                                                    __html: item.logo
+                                                                }
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                lineNumber: 1081,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                className: "pulse-time-dark",
+                                                                children: item.time
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                lineNumber: 1082,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "pulse-tag-wrapper-dark",
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: `pulse-badge ${item.typeClass || 'product-launch'}`,
+                                                                    children: item.type
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1119,
+                                                                    lineNumber: 1084,
                                                                     columnNumber: 25
                                                                 }, this)
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1099,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    }, item.id, false, {
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                lineNumber: 1083,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                                className: "pulse-title-dark",
+                                                                children: item.title
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                lineNumber: 1088,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "pulse-comments-dark",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                                        viewBox: "0 0 24 24",
+                                                                        width: "14",
+                                                                        height: "14",
+                                                                        fill: "none",
+                                                                        stroke: "currentColor",
+                                                                        strokeWidth: "2",
+                                                                        strokeLinecap: "round",
+                                                                        strokeLinejoin: "round",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                            d: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                            lineNumber: 1093,
+                                                                            columnNumber: 27
+                                                                        }, this)
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                        lineNumber: 1092,
+                                                                        columnNumber: 25
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        children: item.comments
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                        lineNumber: 1095,
+                                                                        columnNumber: 25
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
+                                                                lineNumber: 1091,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        ]
+                                                    }, item.id, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1072,
+                                                        lineNumber: 1076,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1065,
+                                                lineNumber: 1074,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1054,
+                                        lineNumber: 1063,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 825,
+                                lineNumber: 843,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                        lineNumber: 690,
+                        lineNumber: 708,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3906,7 +3980,7 @@ function HomePage() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 1141,
+                                lineNumber: 1109,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3936,12 +4010,12 @@ function HomePage() {
                                             children: "Why Atlas Intelligence?"
                                         }, void 0, false, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 1155,
+                                            lineNumber: 1123,
                                             columnNumber: 13
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1154,
+                                        lineNumber: 1122,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3963,13 +4037,13 @@ function HomePage() {
                                                 children: "Connected."
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1181,
+                                                lineNumber: 1149,
                                                 columnNumber: 34
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1172,
+                                        lineNumber: 1140,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3983,7 +4057,7 @@ function HomePage() {
                                         children: "Atlas Intelligence unifies every piece of the AI ecosystem so you can discover, track and stay ahead."
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1185,
+                                        lineNumber: 1153,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4021,7 +4095,7 @@ function HomePage() {
                                                                     result: "blur"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1220,
+                                                                    lineNumber: 1188,
                                                                     columnNumber: 19
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("feComposite", {
@@ -4030,18 +4104,18 @@ function HomePage() {
                                                                     operator: "over"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1221,
+                                                                    lineNumber: 1189,
                                                                     columnNumber: 19
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1219,
+                                                            lineNumber: 1187,
                                                             columnNumber: 17
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1218,
+                                                        lineNumber: 1186,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -4054,7 +4128,7 @@ function HomePage() {
                                                         strokeDasharray: "4 4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1225,
+                                                        lineNumber: 1193,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -4067,7 +4141,7 @@ function HomePage() {
                                                         strokeDasharray: "4 4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1227,
+                                                        lineNumber: 1195,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -4080,7 +4154,7 @@ function HomePage() {
                                                         strokeDasharray: "4 4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1229,
+                                                        lineNumber: 1197,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -4093,7 +4167,7 @@ function HomePage() {
                                                         strokeDasharray: "4 4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1231,
+                                                        lineNumber: 1199,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -4106,7 +4180,7 @@ function HomePage() {
                                                         strokeDasharray: "4 4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1233,
+                                                        lineNumber: 1201,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -4119,7 +4193,7 @@ function HomePage() {
                                                         strokeDasharray: "4 4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1235,
+                                                        lineNumber: 1203,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -4130,7 +4204,7 @@ function HomePage() {
                                                         filter: "url(#glow)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1238,
+                                                        lineNumber: 1206,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -4141,7 +4215,7 @@ function HomePage() {
                                                         filter: "url(#glow)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1239,
+                                                        lineNumber: 1207,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -4152,7 +4226,7 @@ function HomePage() {
                                                         filter: "url(#glow)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1240,
+                                                        lineNumber: 1208,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -4163,7 +4237,7 @@ function HomePage() {
                                                         filter: "url(#glow)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1241,
+                                                        lineNumber: 1209,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -4174,7 +4248,7 @@ function HomePage() {
                                                         filter: "url(#glow)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1242,
+                                                        lineNumber: 1210,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -4185,13 +4259,13 @@ function HomePage() {
                                                         filter: "url(#glow)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1243,
+                                                        lineNumber: 1211,
                                                         columnNumber: 15
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1206,
+                                                lineNumber: 1174,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4223,7 +4297,7 @@ function HomePage() {
                                                             d: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1262,
+                                                            lineNumber: 1230,
                                                             columnNumber: 17
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ellipse", {
@@ -4234,7 +4308,7 @@ function HomePage() {
                                                             transform: "rotate(-45 12 12)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1263,
+                                                            lineNumber: 1231,
                                                             columnNumber: 17
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ellipse", {
@@ -4245,18 +4319,18 @@ function HomePage() {
                                                             transform: "rotate(45 12 12)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1264,
+                                                            lineNumber: 1232,
                                                             columnNumber: 17
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                    lineNumber: 1261,
+                                                    lineNumber: 1229,
                                                     columnNumber: 15
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1247,
+                                                lineNumber: 1215,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4321,7 +4395,7 @@ function HomePage() {
                                                                     ry: "2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1284,
+                                                                    lineNumber: 1252,
                                                                     columnNumber: 19
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -4331,7 +4405,7 @@ function HomePage() {
                                                                     y2: "16"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1284,
+                                                                    lineNumber: 1252,
                                                                     columnNumber: 76
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -4341,18 +4415,18 @@ function HomePage() {
                                                                     y2: "16"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1284,
+                                                                    lineNumber: 1252,
                                                                     columnNumber: 114
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1283,
+                                                            lineNumber: 1251,
                                                             columnNumber: 17
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1282,
+                                                        lineNumber: 1250,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4367,7 +4441,7 @@ function HomePage() {
                                                                 children: "Startups"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1288,
+                                                                lineNumber: 1256,
                                                                 columnNumber: 17
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4380,19 +4454,19 @@ function HomePage() {
                                                                 children: "Discover & track 25,000+ AI startups worldwide."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1289,
+                                                                lineNumber: 1257,
                                                                 columnNumber: 17
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1287,
+                                                        lineNumber: 1255,
                                                         columnNumber: 15
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1269,
+                                                lineNumber: 1237,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4456,25 +4530,25 @@ function HomePage() {
                                                                     ry: "2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1308,
+                                                                    lineNumber: 1276,
                                                                     columnNumber: 19
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                                     d: "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1308,
+                                                                    lineNumber: 1276,
                                                                     columnNumber: 76
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1307,
+                                                            lineNumber: 1275,
                                                             columnNumber: 17
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1306,
+                                                        lineNumber: 1274,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4489,7 +4563,7 @@ function HomePage() {
                                                                 children: "Investors"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1312,
+                                                                lineNumber: 1280,
                                                                 columnNumber: 17
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4502,19 +4576,19 @@ function HomePage() {
                                                                 children: "Track 12,000+ investors and their AI portfolio companies."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1313,
+                                                                lineNumber: 1281,
                                                                 columnNumber: 17
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1311,
+                                                        lineNumber: 1279,
                                                         columnNumber: 15
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1294,
+                                                lineNumber: 1262,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4575,7 +4649,7 @@ function HomePage() {
                                                                     r: "10"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1332,
+                                                                    lineNumber: 1300,
                                                                     columnNumber: 19
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -4585,18 +4659,18 @@ function HomePage() {
                                                                     y2: "16"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1332,
+                                                                    lineNumber: 1300,
                                                                     columnNumber: 52
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1331,
+                                                            lineNumber: 1299,
                                                             columnNumber: 17
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1330,
+                                                        lineNumber: 1298,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4611,7 +4685,7 @@ function HomePage() {
                                                                 children: "Funding"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1336,
+                                                                lineNumber: 1304,
                                                                 columnNumber: 17
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4624,19 +4698,19 @@ function HomePage() {
                                                                 children: "Monitor $500B+ in funding rounds and investment activity."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1337,
+                                                                lineNumber: 1305,
                                                                 columnNumber: 17
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1335,
+                                                        lineNumber: 1303,
                                                         columnNumber: 15
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1318,
+                                                lineNumber: 1286,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4701,25 +4775,25 @@ function HomePage() {
                                                                     ry: "2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1357,
+                                                                    lineNumber: 1325,
                                                                     columnNumber: 19
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                                     d: "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1357,
+                                                                    lineNumber: 1325,
                                                                     columnNumber: 76
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1356,
+                                                            lineNumber: 1324,
                                                             columnNumber: 17
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1355,
+                                                        lineNumber: 1323,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4734,7 +4808,7 @@ function HomePage() {
                                                                 children: "Jobs"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1361,
+                                                                lineNumber: 1329,
                                                                 columnNumber: 17
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4747,19 +4821,19 @@ function HomePage() {
                                                                 children: "Find 50,000+ AI jobs from the best companies in the world."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1362,
+                                                                lineNumber: 1330,
                                                                 columnNumber: 17
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1360,
+                                                        lineNumber: 1328,
                                                         columnNumber: 15
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1342,
+                                                lineNumber: 1310,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4817,17 +4891,17 @@ function HomePage() {
                                                                 d: "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1381,
+                                                                lineNumber: 1349,
                                                                 columnNumber: 19
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1380,
+                                                            lineNumber: 1348,
                                                             columnNumber: 17
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1379,
+                                                        lineNumber: 1347,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4842,7 +4916,7 @@ function HomePage() {
                                                                 children: "Products"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1385,
+                                                                lineNumber: 1353,
                                                                 columnNumber: 17
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4855,19 +4929,19 @@ function HomePage() {
                                                                 children: "Discover the latest AI products and tools shaping the market."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1386,
+                                                                lineNumber: 1354,
                                                                 columnNumber: 17
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1384,
+                                                        lineNumber: 1352,
                                                         columnNumber: 15
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1367,
+                                                lineNumber: 1335,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4926,7 +5000,7 @@ function HomePage() {
                                                                     d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1405,
+                                                                    lineNumber: 1373,
                                                                     columnNumber: 19
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -4935,18 +5009,18 @@ function HomePage() {
                                                                     r: "4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1405,
+                                                                    lineNumber: 1373,
                                                                     columnNumber: 73
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1404,
+                                                            lineNumber: 1372,
                                                             columnNumber: 17
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1403,
+                                                        lineNumber: 1371,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4961,7 +5035,7 @@ function HomePage() {
                                                                 children: "Founders"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1409,
+                                                                lineNumber: 1377,
                                                                 columnNumber: 17
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4974,25 +5048,25 @@ function HomePage() {
                                                                 children: "Explore 100,000+ founders building the future of AI."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1410,
+                                                                lineNumber: 1378,
                                                                 columnNumber: 17
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1408,
+                                                        lineNumber: 1376,
                                                         columnNumber: 15
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1391,
+                                                lineNumber: 1359,
                                                 columnNumber: 13
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1196,
+                                        lineNumber: 1164,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5019,30 +5093,30 @@ function HomePage() {
                                                     children: "one place."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                    lineNumber: 1429,
+                                                    lineNumber: 1397,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 1420,
+                                            lineNumber: 1388,
                                             columnNumber: 13
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1416,
+                                        lineNumber: 1384,
                                         columnNumber: 11
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 1152,
+                                lineNumber: 1120,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                        lineNumber: 1139,
+                        lineNumber: 1107,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -5081,7 +5155,7 @@ function HomePage() {
                                                                     d: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1443,
+                                                                    lineNumber: 1411,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ellipse", {
@@ -5092,7 +5166,7 @@ function HomePage() {
                                                                     transform: "rotate(-45 12 12)"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1444,
+                                                                    lineNumber: 1412,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ellipse", {
@@ -5103,18 +5177,18 @@ function HomePage() {
                                                                     transform: "rotate(45 12 12)"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                    lineNumber: 1445,
+                                                                    lineNumber: 1413,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1442,
+                                                            lineNumber: 1410,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1441,
+                                                        lineNumber: 1409,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5126,19 +5200,19 @@ function HomePage() {
                                                                 children: "Intelligence"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1448,
+                                                                lineNumber: 1416,
                                                                 columnNumber: 51
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1448,
+                                                        lineNumber: 1416,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1440,
+                                                lineNumber: 1408,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5146,7 +5220,7 @@ function HomePage() {
                                                 children: "The intelligence layer for the AI economy. Track companies, people, funding, products and market movements."
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1450,
+                                                lineNumber: 1418,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5184,28 +5258,28 @@ function HomePage() {
                                                                 d: social.path
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1468,
+                                                                lineNumber: 1436,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1467,
+                                                            lineNumber: 1435,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, social.label, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1458,
+                                                        lineNumber: 1426,
                                                         columnNumber: 19
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1451,
+                                                lineNumber: 1419,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1439,
+                                        lineNumber: 1407,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5216,7 +5290,7 @@ function HomePage() {
                                                 children: "Platform"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1477,
+                                                lineNumber: 1445,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -5231,12 +5305,12 @@ function HomePage() {
                                                             children: "Discover"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1479,
+                                                            lineNumber: 1447,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1479,
+                                                        lineNumber: 1447,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5249,12 +5323,12 @@ function HomePage() {
                                                             children: "Startups"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1480,
+                                                            lineNumber: 1448,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1480,
+                                                        lineNumber: 1448,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5267,12 +5341,12 @@ function HomePage() {
                                                             children: "Products"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1481,
+                                                            lineNumber: 1449,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1481,
+                                                        lineNumber: 1449,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5285,12 +5359,12 @@ function HomePage() {
                                                             children: "Funding"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1482,
+                                                            lineNumber: 1450,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1482,
+                                                        lineNumber: 1450,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5303,24 +5377,24 @@ function HomePage() {
                                                             children: "Jobs"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1483,
+                                                            lineNumber: 1451,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1483,
+                                                        lineNumber: 1451,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1478,
+                                                lineNumber: 1446,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1476,
+                                        lineNumber: 1444,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5331,7 +5405,7 @@ function HomePage() {
                                                 children: "Resources"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1489,
+                                                lineNumber: 1457,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -5346,12 +5420,12 @@ function HomePage() {
                                                             children: "Research"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1491,
+                                                            lineNumber: 1459,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1491,
+                                                        lineNumber: 1459,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5364,12 +5438,12 @@ function HomePage() {
                                                             children: "About Us"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1492,
+                                                            lineNumber: 1460,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1492,
+                                                        lineNumber: 1460,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5382,12 +5456,12 @@ function HomePage() {
                                                             children: "Careers"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1493,
+                                                            lineNumber: 1461,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1493,
+                                                        lineNumber: 1461,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5400,12 +5474,12 @@ function HomePage() {
                                                             children: "Terms of Service"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1494,
+                                                            lineNumber: 1462,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1494,
+                                                        lineNumber: 1462,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5418,24 +5492,24 @@ function HomePage() {
                                                             children: "Privacy Policy"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                            lineNumber: 1495,
+                                                            lineNumber: 1463,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1495,
+                                                        lineNumber: 1463,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1490,
+                                                lineNumber: 1458,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1488,
+                                        lineNumber: 1456,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5446,7 +5520,7 @@ function HomePage() {
                                                 children: "Stay Updated"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1501,
+                                                lineNumber: 1469,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5454,7 +5528,7 @@ function HomePage() {
                                                 children: "Get the latest AI economy insights in your inbox."
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1502,
+                                                lineNumber: 1470,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -5475,7 +5549,7 @@ function HomePage() {
                                                         "aria-label": "Email for newsletter"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1513,
+                                                        lineNumber: 1481,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5484,25 +5558,25 @@ function HomePage() {
                                                         children: "Subscribe"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1514,
+                                                        lineNumber: 1482,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1503,
+                                                lineNumber: 1471,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1500,
+                                        lineNumber: 1468,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 1437,
+                                lineNumber: 1405,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5512,24 +5586,24 @@ function HomePage() {
                                     children: "© 2026 Atlas Intelligence. All rights reserved."
                                 }, void 0, false, {
                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                    lineNumber: 1520,
+                                    lineNumber: 1488,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                lineNumber: 1519,
+                                lineNumber: 1487,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                        lineNumber: 1436,
+                        lineNumber: 1404,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 622,
+                lineNumber: 640,
                 columnNumber: 7
             }, this),
             showAllStartups && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5552,7 +5626,7 @@ function HomePage() {
                                             children: "All AI Startups"
                                         }, void 0, false, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 1531,
+                                            lineNumber: 1499,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5560,13 +5634,13 @@ function HomePage() {
                                             children: "Browse and filter the complete database of active AI companies"
                                         }, void 0, false, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 1532,
+                                            lineNumber: 1500,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                    lineNumber: 1530,
+                                    lineNumber: 1498,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5593,7 +5667,7 @@ function HomePage() {
                                                 y2: "18"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1536,
+                                                lineNumber: 1504,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -5603,24 +5677,24 @@ function HomePage() {
                                                 y2: "18"
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1537,
+                                                lineNumber: 1505,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1535,
+                                        lineNumber: 1503,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                    lineNumber: 1534,
+                                    lineNumber: 1502,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                            lineNumber: 1529,
+                            lineNumber: 1497,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5641,7 +5715,7 @@ function HomePage() {
                                             r: "8"
                                         }, void 0, false, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 1544,
+                                            lineNumber: 1512,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -5651,13 +5725,13 @@ function HomePage() {
                                             y2: "16.65"
                                         }, void 0, false, {
                                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                            lineNumber: 1545,
+                                            lineNumber: 1513,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                    lineNumber: 1543,
+                                    lineNumber: 1511,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5667,13 +5741,13 @@ function HomePage() {
                                     onChange: (e)=>setModalQuery(e.target.value)
                                 }, void 0, false, {
                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                    lineNumber: 1547,
+                                    lineNumber: 1515,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                            lineNumber: 1542,
+                            lineNumber: 1510,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5694,7 +5768,7 @@ function HomePage() {
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1566,
+                                                lineNumber: 1534,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -5702,7 +5776,7 @@ function HomePage() {
                                                 children: startup.name
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1567,
+                                                lineNumber: 1535,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5710,7 +5784,7 @@ function HomePage() {
                                                 children: startup.description
                                             }, void 0, false, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1568,
+                                                lineNumber: 1536,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5723,7 +5797,7 @@ function HomePage() {
                                                                 children: "Funding"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1571,
+                                                                lineNumber: 1539,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5731,13 +5805,13 @@ function HomePage() {
                                                                 children: startup.funding
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1572,
+                                                                lineNumber: 1540,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1570,
+                                                        lineNumber: 1538,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5747,7 +5821,7 @@ function HomePage() {
                                                                 children: "Founded"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1575,
+                                                                lineNumber: 1543,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5755,13 +5829,13 @@ function HomePage() {
                                                                 children: startup.founded
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                                lineNumber: 1576,
+                                                                lineNumber: 1544,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1574,
+                                                        lineNumber: 1542,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5769,19 +5843,19 @@ function HomePage() {
                                                         children: startup.category
                                                     }, void 0, false, {
                                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                        lineNumber: 1578,
+                                                        lineNumber: 1546,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                                lineNumber: 1569,
+                                                lineNumber: 1537,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, startup.id, true, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1557,
+                                        lineNumber: 1525,
                                         columnNumber: 17
                                     }, this)),
                                 filteredStartups.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5790,29 +5864,29 @@ function HomePage() {
                                         children: "No startups found matching your filter terms."
                                     }, void 0, false, {
                                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                        lineNumber: 1584,
+                                        lineNumber: 1552,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                                    lineNumber: 1583,
+                                    lineNumber: 1551,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                            lineNumber: 1555,
+                            lineNumber: 1523,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                    lineNumber: 1528,
+                    lineNumber: 1496,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 1527,
+                lineNumber: 1495,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Projects$2f$Orbit$2d$Internship$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5825,23 +5899,23 @@ function HomePage() {
                         children: toast.message
                     }, void 0, false, {
                         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                        lineNumber: 1595,
+                        lineNumber: 1563,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                    lineNumber: 1594,
+                    lineNumber: 1562,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-                lineNumber: 1593,
+                lineNumber: 1561,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Projects/Orbit-Internship/src/app/page.tsx",
-        lineNumber: 371,
+        lineNumber: 389,
         columnNumber: 5
     }, this);
 }
