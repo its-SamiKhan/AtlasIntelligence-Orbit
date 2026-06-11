@@ -4,3 +4,7 @@
 {"timestamp":"00:01:23.432","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
 {"timestamp":"00:02:40.296","source":"Server","level":"LOG","message":"✓ Compiled in 70ms"}
 {"timestamp":"00:03:14.596","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
+{"timestamp":"00:08:32.194","source":"Server","level":"LOG","message":"✓ Compiled in 61ms"}
+{"timestamp":"00:10:09.787","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:10:15.825","source":"Server","level":"LOG","message":"✓ Compiled in 207ms"}
+{"timestamp":"00:11:37.087","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}

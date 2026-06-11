@@ -470,7 +470,7 @@ ul {
   line-height: 1.6;
   color: var(--text-muted);
   margin-bottom: 36px;
-  max-width: 580px;
+  max-width: none;
 }
 
 /* Search bar styling */
