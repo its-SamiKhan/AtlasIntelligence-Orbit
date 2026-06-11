@@ -2078,3 +2078,38 @@ ul {
   }
 }
 
+/* Desktop Sidebar Toggle Button & Icon */
+.desktop-sidebar-toggle {
+  position: absolute;
+  right: -12px;
+  top: 28px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  z-index: 100;
+  color: var(--text-muted);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.desktop-sidebar-toggle:hover {
+  border-color: #f2135d;
+  color: #f2135d;
+  box-shadow: 0 0 0 3px rgba(242, 19, 93, 0.12), 0 2px 4px rgba(0,0,0,0.05);
+  transform: scale(1.08);
+}
+
+.toggle-chevron-icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+

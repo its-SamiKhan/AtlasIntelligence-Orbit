@@ -96,7 +96,7 @@ export default function HomePage() {
   const [currentFilter, setCurrentFilter] = useState("all");
   const [showingAllNews, setShowingAllNews] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
   const [showAllStartups, setShowAllStartups] = useState(false);
   const [modalQuery, setModalQuery] = useState("");
   
@@ -120,7 +120,9 @@ export default function HomePage() {
 
   useEffect(() => {
     const saved = localStorage.getItem("sidebar-collapsed");
-    if (saved === "true") {
+    if (saved === "false") {
+      setSidebarCollapsed(false);
+    } else {
       setSidebarCollapsed(true);
     }
   }, []);
@@ -398,34 +400,10 @@ export default function HomePage() {
           }}
           className="desktop-sidebar-toggle"
           title={sidebarCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
-          style={{
-            position: 'absolute',
-            right: '-12px',
-            top: '28px',
-            height: '24px',
-            width: '24px',
-            borderRadius: '50%',
-            border: '1px solid var(--border-color)',
-            backgroundColor: '#ffffff',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
-            zIndex: 100,
-            color: 'var(--text-muted)',
-            transition: 'all 0.2s'
-          }}
         >
-          {sidebarCollapsed ? (
-            <svg width="12" height="12" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-          ) : (
-            <svg width="12" height="12" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-          )}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`toggle-chevron-icon ${sidebarCollapsed ? "rotated" : ""}`}>
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
         </button>
 
         <div className="sidebar-header">

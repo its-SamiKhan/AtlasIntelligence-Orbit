@@ -2386,6 +2386,40 @@ ul {
   }
 }
 
+.desktop-sidebar-toggle {
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  z-index: 100;
+  width: 24px;
+  height: 24px;
+  color: var(--text-muted);
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: all .25s cubic-bezier(.4, 0, .2, 1);
+  display: flex;
+  position: absolute;
+  top: 28px;
+  right: -12px;
+  box-shadow: 0 1px 3px #0000000d;
+}
+
+.desktop-sidebar-toggle:hover {
+  color: #f2135d;
+  border-color: #f2135d;
+  transform: scale(1.08);
+  box-shadow: 0 0 0 3px #f2135d1f, 0 2px 4px #0000000d;
+}
+
+.toggle-chevron-icon {
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.toggle-chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false
