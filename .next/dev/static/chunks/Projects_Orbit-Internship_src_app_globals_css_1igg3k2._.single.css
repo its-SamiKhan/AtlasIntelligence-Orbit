@@ -395,7 +395,7 @@
   --text-main: #0f172a;
   --text-muted: #4b5563;
   --text-light: #9ca3af;
-  --bg-app: #fff;
+  --bg-app: #f8fafc;
   --bg-sidebar: #fff;
   --bg-card: #fff;
   --bg-card-hover: #fafbfc;
@@ -772,9 +772,21 @@ ul {
 }
 
 .hero-section {
-  margin-bottom: 24px;
-  padding: 48px 0 32px;
+  background-color: #fff;
+  border: 1px solid #f2135d14;
+  border-radius: 24px;
+  margin: 16px -40px 32px;
+  padding: 48px 40px;
+  transition: transform .4s cubic-bezier(.175, .885, .32, 1.1), box-shadow .4s, border-color .4s;
   position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -18px #0f172a14, 0 0 0 1px #0f172a05, inset 0 1px #fffc;
+}
+
+.hero-section:hover {
+  border-color: #f2135d40;
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px -25px #f2135d1f, 0 0 0 1px #f2135d0d, inset 0 1px #ffffffe6;
 }
 
 .orbital-background {
@@ -788,8 +800,8 @@ ul {
   width: 900px;
   height: 700px;
   position: absolute;
-  top: -142px;
-  right: -30px;
+  top: -144px;
+  right: 0;
 }
 
 .hero-content {
@@ -940,13 +952,21 @@ ul {
 }
 
 .dashboard-section {
-  border: 1.5px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
   background-color: #fff;
-  margin-bottom: 32px;
+  border: 1px solid #f2135d14;
+  border-radius: 24px;
+  margin-bottom: 40px;
   margin-left: -40px;
   margin-right: -40px;
   padding: 40px;
+  transition: transform .4s cubic-bezier(.175, .885, .32, 1.1), box-shadow .4s, border-color .4s;
+  box-shadow: 0 20px 40px -18px #0f172a14, 0 0 0 1px #0f172a05, inset 0 1px #fffc;
+}
+
+.dashboard-section:hover {
+  border-color: #f2135d40;
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px -25px #f2135d1f, 0 0 0 1px #f2135d0d, inset 0 1px #ffffffe6;
 }
 
 @media (max-width: 992px) {
@@ -956,6 +976,27 @@ ul {
     margin-right: -24px;
     padding: 24px;
   }
+}
+
+.why-atlas-section {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #f2135d14;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 80px;
+  padding: 60px 24px;
+  transition: transform .4s cubic-bezier(.175, .885, .32, 1.1), box-shadow .4s, border-color .4s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -18px #0f172a14, 0 0 0 1px #0f172a05, inset 0 1px #fffc;
+}
+
+.why-atlas-section:hover {
+  border-color: #f2135d40;
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px -25px #f2135d1f, 0 0 0 1px #f2135d0d, inset 0 1px #ffffffe6;
 }
 
 .section-header-group {
@@ -1889,7 +1930,8 @@ ul {
   }
 
   .hero-section {
-    padding-top: 32px;
+    margin: 8px -24px 24px;
+    padding: 32px 24px;
   }
 
   .hero-title {

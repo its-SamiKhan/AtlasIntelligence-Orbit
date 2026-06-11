@@ -10,7 +10,7 @@
   --color-text-muted: #4b5563;
   --color-text-light: #9ca3af;
   
-  --color-bg-app: #ffffff;
+  --color-bg-app: #f8fafc;
   --color-bg-sidebar: #ffffff;
   --color-bg-card: #ffffff;
   
@@ -32,7 +32,7 @@
   --text-muted: #4b5563;
   --text-light: #9ca3af;
   
-  --bg-app: #ffffff;
+  --bg-app: #f8fafc;
   --bg-sidebar: #ffffff;
   --bg-card: #ffffff;
   --bg-card-hover: #fafbfc;
@@ -428,14 +428,35 @@ ul {
 /* Hero Section */
 .hero-section {
   position: relative;
-  padding: 48px 0 32px;
-  margin-bottom: 24px;
+  margin-left: -40px;
+  margin-right: -40px;
+  padding: 48px 40px;
+  border: 1px solid rgba(242, 19, 93, 0.08);
+  border-radius: 24px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px -18px rgba(15, 23, 42, 0.08), 
+              0 0 0 1px rgba(15, 23, 42, 0.02),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1), 
+              box-shadow 0.4s ease, 
+              border-color 0.4s ease;
+  overflow: hidden;
+}
+
+.hero-section:hover {
+  transform: translateY(-5px);
+  border-color: rgba(242, 19, 93, 0.25);
+  box-shadow: 0 30px 60px -25px rgba(242, 19, 93, 0.12), 
+              0 0 0 1px rgba(242, 19, 93, 0.05),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
 }
 
 .orbital-background {
   position: absolute;
-  top: -142px;
-  right: -30px;
+  top: -144px;
+  right: 0px;
   width: 900px;
   height: 700px;
   background-image: url('/assets/hero_globe_bg.png');
@@ -601,10 +622,24 @@ ul {
   margin-left: -40px;
   margin-right: -40px;
   padding: 40px;
-  border: 1.5px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
-  margin-bottom: 32px;
+  border: 1px solid rgba(242, 19, 93, 0.08);
+  border-radius: 24px;
+  margin-bottom: 40px;
   background-color: #ffffff;
+  box-shadow: 0 20px 40px -18px rgba(15, 23, 42, 0.08), 
+              0 0 0 1px rgba(15, 23, 42, 0.02),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1), 
+              box-shadow 0.4s ease, 
+              border-color 0.4s ease;
+}
+
+.dashboard-section:hover {
+  transform: translateY(-5px);
+  border-color: rgba(242, 19, 93, 0.25);
+  box-shadow: 0 30px 60px -25px rgba(242, 19, 93, 0.12), 
+              0 0 0 1px rgba(242, 19, 93, 0.05),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 992px) {
@@ -614,6 +649,34 @@ ul {
     padding: 24px;
     margin-bottom: 24px;
   }
+}
+
+/* Why Atlas Section 3D Floating Block */
+.why-atlas-section {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto 80px;
+  padding: 60px 24px;
+  text-align: center;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(242, 19, 93, 0.08);
+  box-shadow: 0 20px 40px -18px rgba(15, 23, 42, 0.08), 
+              0 0 0 1px rgba(15, 23, 42, 0.02),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1), 
+              box-shadow 0.4s ease, 
+              border-color 0.4s ease;
+  overflow: hidden; /* Ensure background image doesn't overflow rounded corners */
+}
+
+.why-atlas-section:hover {
+  transform: translateY(-5px);
+  border-color: rgba(242, 19, 93, 0.25);
+  box-shadow: 0 30px 60px -25px rgba(242, 19, 93, 0.12), 
+              0 0 0 1px rgba(242, 19, 93, 0.05),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
 }
 
 .section-header-group {
@@ -1562,7 +1625,11 @@ ul {
   }
   
   .hero-section {
-    padding-top: 32px;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 32px 24px;
+    margin-top: 8px;
+    margin-bottom: 24px;
   }
   
   .hero-title {

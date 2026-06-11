@@ -182,10 +182,45 @@ export default function HomePage() {
       link?: string;
     }> = [];
 
+    // Intelligent helper to map market queries to data category classes/labels
+    const matchesQuery = (itemName: string, itemCategory: string, itemDescription: string, itemCategoryClass?: string) => {
+      if (searchTerms === "") return true;
+
+      const cat = itemCategory.toLowerCase();
+      const cls = (itemCategoryClass || "").toLowerCase();
+
+      if (searchTerms === "ai agents") {
+        return cat.includes("agent") || cls.includes("agents") || cat.includes("safety");
+      }
+      if (searchTerms === "ai coding") {
+        return cat.includes("coding") || cls.includes("coding");
+      }
+      if (searchTerms === "ai search") {
+        return cat.includes("search") || cls.includes("search");
+      }
+      if (searchTerms === "ai infrastructure") {
+        return cat.includes("foundation") || cls.includes("foundation") || cat.includes("infrastructure");
+      }
+      if (searchTerms === "ai healthcare") {
+        return cat.includes("healthcare") || cls.includes("healthcare");
+      }
+      if (searchTerms === "ai security") {
+        return cat.includes("security") || cls.includes("security");
+      }
+      if (searchTerms === "ai robotics") {
+        return cat.includes("robotics") || cls.includes("robotics");
+      }
+      if (searchTerms === "ai finance") {
+        return cat.includes("finance") || cls.includes("finance");
+      }
+
+      return filterMatches(itemName, itemCategory, itemDescription, searchTerms);
+    };
+
     // 1. Startups
     if (currentFilter === "all" || currentFilter === "startups") {
       STARTUPS.forEach((item) => {
-        if (searchTerms === "" || filterMatches(item.name, item.category, item.description, searchTerms)) {
+        if (matchesQuery(item.name, item.category, item.description, item.categoryClass)) {
           results.push({
             type: "Startup",
             title: item.name,
@@ -233,7 +268,7 @@ export default function HomePage() {
     // 4. Products
     if (currentFilter === "all" || currentFilter === "products") {
       PRODUCTS.forEach((item) => {
-        if (searchTerms === "" || filterMatches(item.name, item.category, item.description, searchTerms)) {
+        if (matchesQuery(item.name, item.category, item.description)) {
           results.push({
             type: "Product",
             title: item.name,
@@ -1094,17 +1129,7 @@ export default function HomePage() {
 
 
         {/* Why Atlas Intelligence Section */}
-        <section className="why-atlas-section" style={{
-          margin: '0 auto 80px',
-          maxWidth: '1280px',
-          width: '100%',
-          padding: '60px 24px',
-          textAlign: 'center',
-          position: 'relative',
-          backgroundColor: '#ffffff',
-          borderRadius: '24px',
-          boxShadow: '0 1px 3px rgba(0,0,0,0.03)',
-        }}>
+        <section className="why-atlas-section">
           {/* Exact background image from user — centered, covering full section */}
           <div style={{
             position: 'absolute',
