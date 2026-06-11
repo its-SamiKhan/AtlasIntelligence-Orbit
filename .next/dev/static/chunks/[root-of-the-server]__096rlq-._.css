@@ -797,8 +797,12 @@
   --border-radius-lg: 16px;
   --border-radius-xl: 24px;
   --border-radius-full: 9999px;
-  --transition-fast: .15s ease;
-  --transition-normal: .25s cubic-bezier(.4, 0, .2, 1);
+  --transition-fast: .2s cubic-bezier(.16, 1, .3, 1);
+  --transition-normal: .35s cubic-bezier(.16, 1, .3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -813,6 +817,7 @@ body {
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -1156,12 +1161,13 @@ ul {
 }
 
 .hero-section {
+  will-change: transform, box-shadow;
   background-color: #fff;
   border: 1px solid #f2135d14;
   border-radius: 24px;
   margin: 15px -40px 32px;
   padding: 48px 40px;
-  transition: transform .4s cubic-bezier(.175, .885, .32, 1.1), box-shadow .4s, border-color .4s;
+  transition: transform .5s cubic-bezier(.16, 1, .3, 1), box-shadow .5s cubic-bezier(.16, 1, .3, 1), border-color .5s cubic-bezier(.16, 1, .3, 1);
   position: relative;
   overflow: hidden;
   box-shadow: 0 20px 40px -18px #0f172a14, 0 0 0 1px #0f172a05, inset 0 1px #fffc;
@@ -1339,6 +1345,7 @@ ul {
 }
 
 .dashboard-section {
+  will-change: transform, box-shadow;
   background-color: #fff;
   border: 1px solid #f2135d14;
   border-radius: 24px;
@@ -1346,7 +1353,7 @@ ul {
   margin-left: -40px;
   margin-right: -40px;
   padding: 40px;
-  transition: transform .4s cubic-bezier(.175, .885, .32, 1.1), box-shadow .4s, border-color .4s;
+  transition: transform .5s cubic-bezier(.16, 1, .3, 1), box-shadow .5s cubic-bezier(.16, 1, .3, 1), border-color .5s cubic-bezier(.16, 1, .3, 1);
   box-shadow: 0 20px 40px -18px #0f172a14, 0 0 0 1px #0f172a05, inset 0 1px #fffc;
 }
 
@@ -1367,6 +1374,7 @@ ul {
 
 .why-atlas-section {
   text-align: center;
+  will-change: transform, box-shadow;
   background-color: #fff;
   border: 1px solid #f2135d14;
   border-radius: 24px;
@@ -1374,7 +1382,7 @@ ul {
   max-width: 1280px;
   margin: 0 auto 80px;
   padding: 60px 24px;
-  transition: transform .4s cubic-bezier(.175, .885, .32, 1.1), box-shadow .4s, border-color .4s;
+  transition: transform .5s cubic-bezier(.16, 1, .3, 1), box-shadow .5s cubic-bezier(.16, 1, .3, 1), border-color .5s cubic-bezier(.16, 1, .3, 1);
   position: relative;
   overflow: hidden;
   box-shadow: 0 20px 40px -18px #0f172a14, 0 0 0 1px #0f172a05, inset 0 1px #fffc;
@@ -1687,7 +1695,8 @@ ul {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+  will-change: transform;
+  transition: transform .6s cubic-bezier(.16, 1, .3, 1);
   position: relative;
 }
 
@@ -1697,11 +1706,11 @@ ul {
 
 .funding-card-front, .funding-card-back {
   backface-visibility: hidden;
+  will-change: transform;
   border: 1px solid #f1f5f9;
   border-radius: 16px;
   width: 100%;
   height: 100%;
-  transition: border-color .2s, box-shadow .2s;
   position: absolute;
   box-shadow: 0 4px 6px -1px #00000005, 0 2px 4px -1px #00000003;
 }
@@ -1719,6 +1728,7 @@ ul {
   gap: 12px;
   padding: 20px;
   display: flex;
+  transform: translate3d(0, 0, 0);
 }
 
 .funding-card-back {
@@ -1727,7 +1737,7 @@ ul {
   justify-content: space-between;
   padding: 16px 20px;
   display: flex;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg)translate3d(0, 0, 0);
 }
 
 .funding-card-header {
