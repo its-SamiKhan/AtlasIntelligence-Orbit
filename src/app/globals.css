@@ -457,7 +457,7 @@ ul {
   position: absolute;
   top: -142px;
   right: 0px;
-  width: 940px;
+  width: 1000px;
   height: 700px;
   background-image: url('/assets/hero_globe_bg.png');
   background-size: contain;
@@ -498,21 +498,24 @@ ul {
 .search-container {
   display: flex;
   align-items: center;
-  background: white;
-  border: 1px solid var(--border-color-hover);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 12px;
   padding: 6px;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 16px -6px rgba(15, 23, 42, 0.02);
   margin-bottom: 24px;
-  transition: var(--transition-normal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   max-width: 980px; /* Expanded to use the space on the right and make category options visible */
   width: 100%;
   height: 58px;
 }
 
 .search-container:focus-within {
+  background: rgba(255, 255, 255, 0.85);
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px var(--primary-glow), var(--shadow-lg);
+  box-shadow: 0 0 0 4px var(--primary-glow), 0 20px 25px -5px rgba(242, 19, 93, 0.08);
 }
 
 .search-input-wrapper {
@@ -556,11 +559,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
-  border: 1px solid var(--border-color-hover);
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 12px;
   padding: 6px 16px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 16px -6px rgba(15, 23, 42, 0.02);
   max-width: 980px;
   width: 100%;
   overflow-x: auto;
