@@ -81,6 +81,7 @@ export default function HomePage() {
   const [currentFilter, setCurrentFilter] = useState("all");
   const [showingAllNews, setShowingAllNews] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [showAllStartups, setShowAllStartups] = useState(false);
   const [modalQuery, setModalQuery] = useState("");
   
@@ -101,6 +102,13 @@ export default function HomePage() {
       setToast({ show: false, message: "" });
     }, 3000);
   };
+
+  useEffect(() => {
+    const saved = localStorage.getItem("sidebar-collapsed");
+    if (saved === "true") {
+      setSidebarCollapsed(true);
+    }
+  }, []);
 
   useEffect(() => {
     return () => {
@@ -317,19 +325,58 @@ export default function HomePage() {
   });
 
   return (
-    <div className="app-container">
+    <div className={`app-container ${sidebarCollapsed ? "sidebar-collapsed" : ""}`}>
       {/* Sidebar Navigation */}
-      <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+      <aside className={`sidebar ${sidebarOpen ? "open" : ""} ${sidebarCollapsed ? "collapsed" : ""}`} style={{ position: 'fixed', insetY: 0, zIndex: 50 }}>
+        {/* Collapse/Expand Toggle Button sitting on the border, styled exactly like TalentDash */}
+        <button
+          onClick={() => {
+            const nextVal = !sidebarCollapsed;
+            setSidebarCollapsed(nextVal);
+            localStorage.setItem("sidebar-collapsed", String(nextVal));
+          }}
+          className="desktop-sidebar-toggle"
+          title={sidebarCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
+          style={{
+            position: 'absolute',
+            right: '-12px',
+            top: '28px',
+            height: '24px',
+            width: '24px',
+            borderRadius: '50%',
+            border: '1px solid var(--border-color)',
+            backgroundColor: '#ffffff',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+            zIndex: 100,
+            color: 'var(--text-muted)',
+            transition: 'all 0.2s'
+          }}
+        >
+          {sidebarCollapsed ? (
+            <svg width="12" height="12" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          ) : (
+            <svg width="12" height="12" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          )}
+        </button>
+
         <div className="sidebar-header">
-          <a href="#" className="logo-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("discover"); }}>
-            <div className="logo-icon">
+          <a href="#" className="logo-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("discover"); }} style={{ overflow: 'hidden' }}>
+            <div className="logo-icon" style={{ minWidth: '28px' }}>
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
                 <ellipse cx="12" cy="12" rx="3" ry="10" transform="rotate(-45 12 12)"/>
                 <ellipse cx="12" cy="12" rx="3" ry="10" transform="rotate(45 12 12)"/>
               </svg>
             </div>
-            <span className="logo-text">Atlas <span className="logo-weight-light">Intelligence</span></span>
+            {!sidebarCollapsed && <span className="logo-text" style={{ whiteSpace: 'nowrap' }}>Atlas <span className="logo-weight-light">Intelligence</span></span>}
           </a>
         </div>
 
@@ -415,7 +462,7 @@ export default function HomePage() {
           </ul>
         </nav>
 
-        <div className="sidebar-footer">
+        <div className="sidebar-footer" style={sidebarCollapsed ? { borderTop: 'none', padding: '16px 0 0' } : {}}>
           <a
             href="#"
             className="btn-signin"
@@ -471,19 +518,34 @@ export default function HomePage() {
       <div className="main-layout">
         {/* Top Header */}
         <header className="topbar">
-          <button className="btn-wishlist" onClick={() => showToast("Wishlist updated. Tracking 5 products.")}>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <span>Wishlist</span>
-          </button>
-          <button className="mobile-menu-toggle" aria-label="Toggle Navigation" onClick={() => setSidebarOpen(true)}>
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <button className="mobile-menu-toggle" aria-label="Toggle Navigation" onClick={() => setSidebarOpen(true)}>
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+            <a href="#" className="logo-link mobile-only-logo" onClick={(e) => { e.preventDefault(); handleSidebarClick("discover"); }} style={{ display: 'none' }}>
+              <div className="logo-icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                  <ellipse cx="12" cy="12" rx="3" ry="10" transform="rotate(-45 12 12)"/>
+                  <ellipse cx="12" cy="12" rx="3" ry="10" transform="rotate(45 12 12)"/>
+                </svg>
+              </div>
+              <span className="logo-text">Atlas <span className="logo-weight-light">Intelligence</span></span>
+            </a>
+          </div>
+
+          <div className="topbar-right">
+            <button className="btn-wishlist" onClick={() => showToast("Wishlist updated. Tracking 5 products.")}>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <span>Wishlist</span>
+            </button>
+          </div>
         </header>
 
         {/* Dashboard page container */}
@@ -636,7 +698,10 @@ export default function HomePage() {
                     <div
                       key={startup.id}
                       className="company-card"
-                      onClick={() => showToast(`Redirecting to ${startup.name} profile...`)}
+                      onClick={() => {
+                        showToast(`Opening ${startup.name} website...`);
+                        window.open(startup.website, "_blank", "noopener,noreferrer");
+                      }}
                     >
                       <div className="company-logo" dangerouslySetInnerHTML={{ __html: startup.logo }} />
                       <h3 className="company-name">{startup.name}</h3>
@@ -666,6 +731,15 @@ export default function HomePage() {
                   </a>
                 </div>
                 <div className="carousel-wrapper">
+                  <button
+                    className="carousel-nav-btn prev"
+                    onClick={() => handleScroll(marketsCarouselRef, "prev")}
+                    aria-label="Previous"
+                  >
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                  </button>
                   <div className="markets-carousel" ref={marketsCarouselRef}>
                     {MARKETS.map((market) => (
                       <div
@@ -673,7 +747,8 @@ export default function HomePage() {
                         className="market-item"
                         onClick={() => {
                           setQuery(market.name);
-                          showToast(`Filtering markets for ${market.name}`);
+                          setCurrentFilter("startups");
+                          showToast(`Showing startups in market: ${market.name}`);
                         }}
                       >
                         <div className="market-icon-wrapper" style={{ backgroundColor: market.bgColor, color: market.color, borderColor: market.bgColor }}>
@@ -700,19 +775,32 @@ export default function HomePage() {
                 <div className="section-header-group">
                   <div className="section-header">
                     <h2 className="section-title">Funding Intelligence</h2>
-                    <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); showToast("Viewing all funding deals..."); }}>
+                    <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("funding"); }}>
                       View all funding <span>&rarr;</span>
                     </a>
                   </div>
                   <p className="section-subtitle">Largest rounds this week</p>
                 </div>
                 <div className="carousel-wrapper">
+                  <button
+                    className="carousel-nav-btn prev"
+                    onClick={() => handleScroll(fundingCarouselRef, "prev")}
+                    aria-label="Previous"
+                  >
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                  </button>
                   <div className="funding-carousel" ref={fundingCarouselRef}>
                     {FUNDINGS.map((fund, idx) => (
                       <div
                         key={idx}
                         className="funding-card"
-                        onClick={() => showToast(`Viewing funding round details for ${fund.company}...`)}
+                        onClick={() => {
+                          setQuery(fund.company);
+                          setCurrentFilter("funding");
+                          showToast(`Showing funding round for ${fund.company}`);
+                        }}
                       >
                         <div className="funding-card-header">
                           <div className="fund-logo-wrapper" dangerouslySetInnerHTML={{ __html: fund.logo }} />
@@ -825,62 +913,399 @@ export default function HomePage() {
               </section>
 
               {/* AI Pulse */}
-              <section className="dashboard-section">
-                <div className="section-header-group">
-                  <div className="section-header">
-                    <h2 className="section-title">AI Pulse</h2>
-                    <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("news"); }}>
-                      View all news <span>&rarr;</span>
-                    </a>
+              <section className="dashboard-section" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                <div className="section-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
+                    <h2 className="section-title" style={{ fontSize: '20px', fontWeight: '800', margin: 0 }}>AI Pulse</h2>
+                    <span style={{ fontSize: '13px', color: '#94a3b8' }}>Latest news and product launches</span>
                   </div>
-                  <p className="section-subtitle">Latest news and product launches</p>
+                  <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("news"); }} style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    View all news <span style={{ fontSize: '14px' }}>&rarr;</span>
+                  </a>
                 </div>
-                <div className="pulse-list-wrapper">
-                  <div className="pulse-list">
-                    {newsList.map((item) => (
-                      <div
-                        key={item.id}
-                        className="pulse-item"
-                        onClick={() => showToast(`Opening article: "${item.title}"`)}
-                      >
-                        <div className="pulse-icon" dangerouslySetInnerHTML={{ __html: item.logo }} />
-                        <span className="pulse-time">{item.time}</span>
-                        <div className="pulse-tag-wrapper">
-                          <span className={`pulse-tag ${item.typeClass}`}>{item.type}</span>
-                        </div>
-                        <h3 className="pulse-title">{item.title}</h3>
-                        <div className="pulse-comments-wrapper">
-                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                          </svg>
-                          <span>{item.comments}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <button className="btn-show-more" onClick={() => handleSidebarClick("news")}>
-                    <span>View all news</span>
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="16"
-                      height="16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(4, 1fr)',
+                  gap: '20px',
+                  width: '100%'
+                }}>
+                  {newsList.slice(0, 4).map((item) => (
+                    <div
+                      key={item.id}
+                      onClick={() => showToast(`Opening article: "${item.title}"`)}
+                      style={{
+                        backgroundColor: '#ffffff',
+                        border: '1px solid var(--border-color)',
+                        borderRadius: '16px',
+                        padding: '20px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        minHeight: '150px',
+                        cursor: 'pointer',
+                        transition: 'all 0.2s',
+                        boxShadow: '0 2px 4px rgba(0,0,0,0.01)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)';
+                        e.currentTarget.style.boxShadow = '0 6px 15px -4px rgba(242, 19, 93, 0.06)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'none';
+                        e.currentTarget.style.borderColor = 'var(--border-color)';
+                        e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.01)';
+                      }}
                     >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </button>
+                      <div>
+                        {/* Upper row: Tag and Time */}
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                          <span style={{
+                            fontSize: '9px',
+                            fontWeight: '800',
+                            letterSpacing: '0.5px',
+                            padding: '3px 8px',
+                            borderRadius: '4px',
+                            backgroundColor: item.typeClass === 'partnership' ? '#ecfdf5' : '#fff0f3',
+                            color: item.typeClass === 'partnership' ? '#10b981' : '#f2135d'
+                          }}>
+                            {item.type}
+                          </span>
+                          <span style={{ fontSize: '11px', color: '#94a3b8' }}>
+                            {item.time}
+                          </span>
+                        </div>
+                        
+                        {/* Title */}
+                        <h3 style={{
+                          fontSize: '13.5px',
+                          fontWeight: '700',
+                          lineHeight: '1.5',
+                          color: 'var(--text-main)',
+                          margin: 0
+                        }}>
+                          {item.title}
+                        </h3>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </section>
             </div>
           )}
         </div>
 
+
+        {/* Why Atlas Intelligence Section */}
+        <section className="why-atlas-section" style={{
+          margin: '0 auto 80px',
+          maxWidth: '1280px',
+          width: '100%',
+          padding: '60px 24px',
+          textAlign: 'center',
+          position: 'relative',
+          backgroundColor: '#ffffff',
+          borderRadius: '24px',
+          boxShadow: '0 1px 3px rgba(0,0,0,0.03)',
+        }}>
+          {/* Exact background image from user — centered, covering full section */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: "url('/assets/why_atlas_bg.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            pointerEvents: 'none',
+            zIndex: 0,
+          }} />
+          {/* Content wrapper sits above the background */}
+          <div style={{ position: 'relative', zIndex: 1 }}>
+          {/* Red pill header */}
+          <div style={{ display: 'inline-block', marginBottom: '16px' }}>
+            <span style={{
+              fontSize: '11px',
+              fontWeight: '800',
+              color: '#f2135d',
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
+              border: '1.5px solid rgba(242, 19, 93, 0.2)',
+              borderRadius: '9999px',
+              padding: '6px 18px',
+              backgroundColor: 'rgba(242, 19, 93, 0.02)',
+              fontFamily: 'var(--font-heading)'
+            }}>
+              Why Atlas Intelligence?
+            </span>
+          </div>
+
+          {/* Headline */}
+          <h2 style={{
+            fontSize: '42px',
+            fontWeight: '900',
+            color: 'var(--text-main)',
+            lineHeight: '1.15',
+            letterSpacing: '-1.5px',
+            marginBottom: '16px',
+            fontFamily: 'var(--font-heading)'
+          }}>
+            Everything About AI. <span style={{ color: '#f2135d' }}>Connected.</span>
+          </h2>
+
+          {/* Subtitle description */}
+          <p style={{
+            fontSize: '15px',
+            color: 'var(--text-muted)',
+            maxWidth: '600px',
+            margin: '0 auto 56px',
+            lineHeight: '1.6'
+          }}>
+            Atlas Intelligence unifies every piece of the AI ecosystem so you can discover, track and stay ahead.
+          </p>
+
+          {/* Central Connected Hub Map */}
+          <div style={{
+            position: 'relative',
+            maxWidth: '1000px',
+            margin: '0 auto 64px',
+            height: '420px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            {/* SVG Connection Lines */}
+            <svg
+              viewBox="0 0 1000 420"
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                pointerEvents: 'none',
+                zIndex: 1,
+              }}
+            >
+              {/* Glow filter */}
+              <defs>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="2" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              {/* Startups Line */}
+              <line x1="500" y1="210" x2="500" y2="70" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
+              {/* Investors Line */}
+              <line x1="500" y1="210" x2="690" y2="126" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
+              {/* Funding Line */}
+              <line x1="500" y1="210" x2="690" y2="294" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
+              {/* Jobs Line */}
+              <line x1="500" y1="210" x2="500" y2="350" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
+              {/* Products Line */}
+              <line x1="500" y1="210" x2="310" y2="294" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
+              {/* Founders Line */}
+              <line x1="500" y1="210" x2="310" y2="126" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
+
+              {/* Decorative small network nodes on the lines */}
+              <circle cx="500" cy="140" r="3" fill="#f2135d" filter="url(#glow)" />
+              <circle cx="595" cy="168" r="3" fill="#f2135d" filter="url(#glow)" />
+              <circle cx="595" cy="252" r="3" fill="#f2135d" filter="url(#glow)" />
+              <circle cx="500" cy="280" r="3" fill="#f2135d" filter="url(#glow)" />
+              <circle cx="405" cy="252" r="3" fill="#f2135d" filter="url(#glow)" />
+              <circle cx="405" cy="168" r="3" fill="#f2135d" filter="url(#glow)" />
+            </svg>
+
+            {/* Center Atlas Brand Hub Logo */}
+            <div style={{
+              position: 'absolute',
+              zIndex: 10,
+              width: '84px',
+              height: '84px',
+              borderRadius: '50%',
+              backgroundColor: '#ffffff',
+              border: '2px solid rgba(242, 19, 93, 0.25)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 8px 30px rgba(242, 19, 93, 0.12), inset 0 2px 4px rgba(255,255,255,0.9)',
+              color: '#f2135d'
+            }}>
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                <ellipse cx="12" cy="12" rx="3" ry="10" transform="rotate(-45 12 12)"/>
+                <ellipse cx="12" cy="12" rx="3" ry="10" transform="rotate(45 12 12)"/>
+              </svg>
+            </div>
+
+            {/* Card 1: Startups (Top) */}
+            <div
+              onClick={() => handlePillClick("startups")}
+              style={{
+                position: 'absolute', top: '0%', left: '50%',
+                transform: 'translateX(-50%)', zIndex: 5, width: '210px',
+                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                alignItems: 'center', gap: '12px', textAlign: 'left',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(-50%) translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(-50%)'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+            >
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2" /><line x1="9" y1="22" x2="9" y2="16" /><line x1="15" y1="22" x2="15" y2="16" />
+                </svg>
+              </div>
+              <div>
+                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Startups</h4>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Discover &amp; track 25,000+ AI startups worldwide.</p>
+              </div>
+            </div>
+
+            {/* Card 2: Investors (Right Top) */}
+            <div
+              onClick={() => handlePillClick("investors")}
+              style={{
+                position: 'absolute', top: '20%', right: '10%', zIndex: 5, width: '210px',
+                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                alignItems: 'center', gap: '12px', textAlign: 'left',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+            >
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+              </div>
+              <div>
+                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Investors</h4>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Track 12,000+ investors and their AI portfolio companies.</p>
+              </div>
+            </div>
+
+            {/* Card 3: Funding (Right Bottom) */}
+            <div
+              onClick={() => handlePillClick("funding")}
+              style={{
+                position: 'absolute', bottom: '20%', right: '10%', zIndex: 5, width: '210px',
+                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                alignItems: 'center', gap: '12px', textAlign: 'left',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+            >
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="16" />
+                </svg>
+              </div>
+              <div>
+                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Funding</h4>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Monitor $500B+ in funding rounds and investment activity.</p>
+              </div>
+            </div>
+
+            {/* Card 4: Jobs (Bottom) */}
+            <div
+              onClick={() => handlePillClick("jobs")}
+              style={{
+                position: 'absolute', bottom: '0%', left: '50%',
+                transform: 'translateX(-50%)', zIndex: 5, width: '210px',
+                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                alignItems: 'center', gap: '12px', textAlign: 'left',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(-50%) translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(-50%)'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+            >
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+              </div>
+              <div>
+                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Jobs</h4>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Find 50,000+ AI jobs from the best companies in the world.</p>
+              </div>
+            </div>
+
+            {/* Card 5: Products (Left Bottom) */}
+            <div
+              onClick={() => handlePillClick("products")}
+              style={{
+                position: 'absolute', bottom: '20%', left: '10%', zIndex: 5, width: '210px',
+                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                alignItems: 'center', gap: '12px', textAlign: 'left',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+            >
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                </svg>
+              </div>
+              <div>
+                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Products</h4>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Discover the latest AI products and tools shaping the market.</p>
+              </div>
+            </div>
+
+            {/* Card 6: Founders (Left Top) */}
+            <div
+              onClick={() => handlePillClick("founders")}
+              style={{
+                position: 'absolute', top: '20%', left: '10%', zIndex: 5, width: '210px',
+                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                alignItems: 'center', gap: '12px', textAlign: 'left',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+            >
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
+                </svg>
+              </div>
+              <div>
+                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Founders</h4>
+                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>Explore 100,000+ founders building the future of AI.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Tagline */}
+          <div style={{
+            marginTop: '40px',
+            textAlign: 'center'
+          }}>
+            <div style={{
+              fontSize: '16px',
+              fontWeight: '900',
+              color: 'var(--text-main)',
+              fontFamily: 'var(--font-heading)',
+              letterSpacing: '-0.3px',
+              textTransform: 'uppercase',
+              letterSpacing: '1px'
+            }}>
+              All connected. All in <span style={{ color: '#f2135d' }}>one place.</span>
+            </div>
+          </div>
+          </div>
+        </section>
+
         {/* Footer layout aligned flat in one horizontal row */}
-        <footer className="footer">
+        <footer className="footer" style={{ marginTop: '16px' }}>
           <div className="footer-top">
             {/* Column 1: Logo Brand Description */}
             <div className="footer-brand">

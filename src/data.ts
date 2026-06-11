@@ -539,22 +539,8 @@ export const NEWS: NewsItem[] = [
     time: '2h ago',
     type: 'PRODUCT LAUNCH',
     typeClass: 'product-launch',
-    title: 'Anthropic releases Claude 3.7 Sonnet with hybrid reasoning and coding upgrades',
+    title: 'OpenAI launches GPT-4.5 with major reasoning and coding upgrades',
     comments: 142,
-    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="24" height="24" rx="5" fill="#EAD9C9" />
-      <g transform="translate(4, 4) scale(0.66)" fill="#191919">
-        <path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z" />
-      </g>
-    </svg>`
-  },
-  {
-    id: 2,
-    time: '5h ago',
-    type: 'PRODUCT LAUNCH',
-    typeClass: 'product-launch',
-    title: 'OpenAI introduces GPT-5 preview with advanced multi-step logic and planning',
-    comments: 289,
     logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
       <rect x="0" y="0" width="24" height="24" rx="5" fill="#10a37f" />
       <g transform="translate(4, 4) scale(0.66)" fill="#ffffff">
@@ -563,34 +549,43 @@ export const NEWS: NewsItem[] = [
     </svg>`
   },
   {
+    id: 2,
+    time: '4h ago',
+    type: 'FUNDING',
+    typeClass: 'funding',
+    title: 'Anthropic raises $2.5B in Series C at a $18B valuation',
+    comments: 289,
+    logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#EAD9C9" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#191919">
+        <path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z" />
+      </g>
+    </svg>`
+  },
+  {
     id: 3,
-    time: '8h ago',
+    time: '6h ago',
     type: 'PRODUCT LAUNCH',
     typeClass: 'product-launch',
-    title: 'Google DeepMind unveils Gemini 2.5 Flash and Pro with near-zero latency',
+    title: 'Perplexity unveils Comet, an AI-powered browser for research',
     comments: 94,
     logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="24" height="24" rx="5" fill="#0f172a" />
-      <path d="M12 4a8 8 0 0 0 8 8 8 8 0 0 0-8 8 8 8 0 0 0-8-8 8 8 0 0 0 8-8z" fill="url(#gemini-grad)" />
-      <defs>
-        <linearGradient id="gemini-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#93c5fd" />
-          <stop offset="50%" stop-color="#a855f7" />
-          <stop offset="100%" stop-color="#ec4899" />
-        </linearGradient>
-      </defs>
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#E2F6F3" />
+      <g transform="translate(4, 4) scale(0.66)" fill="#139D8C">
+        <path d="M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z" />
+      </g>
     </svg>`
   },
   {
     id: 4,
-    time: '12h ago',
-    type: 'PRODUCT LAUNCH',
-    typeClass: 'product-launch',
-    title: 'Meta open-sources Llama 3.3 70B matching closed models on core benchmarks',
+    time: '9h ago',
+    type: 'PARTNERSHIP',
+    typeClass: 'partnership',
+    title: 'NVIDIA and Microsoft expand AI infrastructure partnership',
     comments: 312,
     logo: `<svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="24" height="24" rx="5" fill="#0064E0" />
-      <path d="M16.5 8.5c-1.15 0-2.2.53-2.9 1.38-.7-.85-1.75-1.38-2.9-1.38-2.07 0-3.75 1.68-3.75 3.75s1.68 3.75 3.75 3.75c1.15 0 2.2-.53 2.9-1.38.7.85 1.75 1.38 2.9 1.38 2.07 0 3.75-1.68 3.75-3.75s-1.68-3.75-3.75-3.75zm-5.75 5.5c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.8 1.8-1.8 1.8zm5.75 0c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.8 1.8-1.8 1.8z" fill="#ffffff" />
+      <rect x="0.5" y="0.5" width="23" height="23" rx="5" fill="#76B900" />
+      <path d="M12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8c2.2 0 4.2-.9 5.7-2.3L15.3 15C14.4 15.6 13.2 16 12 16c-2.2 0-4-1.8-4-4s1.8-4 4-4c1.2 0 2.3.5 3.1 1.3l2.4-2.4C16 5.4 14.1 4 12 4z" fill="#ffffff" />
     </svg>`
   },
   {

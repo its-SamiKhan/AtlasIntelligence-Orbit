@@ -98,11 +98,11 @@ ul {
 
 /* Sidebar navigation */
 .sidebar {
+  display: flex;
   width: var(--sidebar-width);
   background-color: var(--bg-sidebar);
   border-right: 1px solid var(--border-color);
   padding: 24px 16px;
-  display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;
@@ -110,6 +110,43 @@ ul {
   left: 0;
   z-index: 100;
   transition: var(--transition-normal);
+}
+
+.sidebar.collapsed {
+  width: 76px;
+  padding: 24px 12px;
+}
+
+.sidebar.collapsed .logo-text,
+.sidebar.collapsed .nav-item span,
+.sidebar.collapsed .nav-badge,
+.sidebar.collapsed .btn-signin span,
+.sidebar.collapsed .btn-create-account,
+.sidebar.collapsed .sidebar-tagline,
+.sidebar.collapsed .sidebar-socials {
+  display: none !important;
+}
+
+.sidebar.collapsed .btn-signin {
+  padding: 10px 0;
+}
+
+.sidebar.collapsed .nav-item {
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.sidebar.collapsed .sidebar-header {
+  justify-content: center !important;
+  padding-left: 0;
+}
+
+.app-container.sidebar-collapsed .main-layout {
+  margin-left: 76px;
+}
+
+.app-container.sidebar-collapsed .topbar {
+  left: 76px;
 }
 
 .sidebar-header {
@@ -298,19 +335,45 @@ ul {
   min-width: 0; /* Prevents flex children from stretching */
 }
 
-/* Top bar styles */
+/* Sticky Header Navigation */
 .topbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding: 16px 40px;
-  height: 64px;
-  background-color: transparent;
-  position: absolute;
+  padding: 0 40px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
   top: 0;
-  right: 0;
   left: var(--sidebar-width);
-  z-index: 10;
+  right: 0;
+  z-index: 1000;
+}
+
+.topbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.topbar-nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: var(--transition-fast);
+}
+
+.topbar-nav-link:hover,
+.topbar-nav-link.active {
+  color: var(--primary);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
   gap: 16px;
 }
 
@@ -355,7 +418,7 @@ ul {
 
 /* Content Container styling */
 .content-container {
-  padding: 64px 40px 40px;
+  padding: 0px 40px 40px;
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
@@ -365,14 +428,14 @@ ul {
 /* Hero Section */
 .hero-section {
   position: relative;
-  padding: 40px 0 32px;
+  padding: 48px 0 32px;
   margin-bottom: 24px;
 }
 
 .orbital-background {
   position: absolute;
-  top: -160px;
-  right: -60px;
+  top: -142px;
+  right: -30px;
   width: 900px;
   height: 700px;
   background-image: url('/assets/hero_globe_bg.png');
@@ -535,7 +598,22 @@ ul {
 
 /* Dashboard Section Shared Styles */
 .dashboard-section {
-  margin-bottom: 48px;
+  margin-left: -40px;
+  margin-right: -40px;
+  padding: 40px;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  margin-bottom: 32px;
+  background-color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .dashboard-section {
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
 }
 
 .section-header-group {
@@ -608,8 +686,8 @@ ul {
 
 .company-card:hover {
   transform: translateY(-4px);
-  border-color: var(--border-color-hover);
-  box-shadow: var(--shadow-premium);
+  border-color: rgba(242, 19, 93, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(242, 19, 93, 0.08), 0 8px 16px -6px rgba(242, 19, 93, 0.05);
 }
 
 .company-logo {
@@ -720,8 +798,8 @@ ul {
 }
 
 .market-item:hover {
-  border-color: var(--border-color-hover);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(242, 19, 93, 0.3);
+  box-shadow: 0 8px 20px -6px rgba(242, 19, 93, 0.08);
   transform: translateY(-2px);
 }
 
@@ -778,6 +856,11 @@ ul {
   box-shadow: var(--shadow-lg);
 }
 
+.carousel-nav-btn.prev {
+  left: -16px;
+  right: auto;
+}
+
 /* Funding Intelligence Carousel */
 .funding-carousel {
   display: flex;
@@ -807,8 +890,8 @@ ul {
 
 .funding-card:hover {
   transform: translateY(-3px);
-  border-color: var(--border-color-hover);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(242, 19, 93, 0.35);
+  box-shadow: 0 8px 20px -5px rgba(242, 19, 93, 0.08), 0 6px 12px -5px rgba(242, 19, 93, 0.04);
 }
 
 .funding-card-header {
@@ -928,8 +1011,8 @@ ul {
 
 .spotlight-card:hover {
   transform: translateY(-4px);
-  border-color: var(--border-color-hover);
-  box-shadow: var(--shadow-premium);
+  border-color: rgba(242, 19, 93, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(242, 19, 93, 0.08), 0 8px 16px -6px rgba(242, 19, 93, 0.05);
 }
 
 .spotlight-photo-container {
@@ -1444,6 +1527,7 @@ ul {
 @media (max-width: 992px) {
   /* Move sidebar offscreen, add drawer toggle */
   .sidebar {
+    display: flex;
     transform: translateX(-100%);
     box-shadow: 10px 0 30px rgba(0,0,0,0.1);
   }
@@ -1463,6 +1547,10 @@ ul {
   .topbar {
     left: 0;
     padding: 16px 24px;
+  }
+  
+  .mobile-only-logo {
+    display: flex !important;
   }
   
   .mobile-menu-toggle {
