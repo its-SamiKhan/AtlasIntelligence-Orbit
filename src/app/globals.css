@@ -430,16 +430,15 @@ ul {
   position: relative;
 }
 
-/* Hero Section */
 .hero-section {
   position: relative;
   margin-left: -40px;
   margin-right: -40px;
-  padding: 48px 40px;
+  padding: 10px 40px;
   border: 1px solid rgba(242, 19, 93, 0.08);
   border-radius: 24px;
-  margin-top: 15px;
-  margin-bottom: 32px;
+  margin-top: 24px;
+  margin-bottom: 10px;
   background-color: #ffffff;
   box-shadow: 0 20px 40px -18px rgba(15, 23, 42, 0.08), 
               0 0 0 1px rgba(15, 23, 42, 0.02),
@@ -461,10 +460,10 @@ ul {
 
 .orbital-background {
   position: absolute;
-  top: -142px;
-  right: 0px;
-  width: 1000px;
-  height: 700px;
+  top: -158px;
+  right: -15px;
+  width: 1600px;
+  height: 800px;
   background-image: url('/assets/hero_globe_bg.png');
   background-size: contain;
   background-position: right center;
@@ -488,7 +487,8 @@ ul {
   line-height: 1.15;
   color: var(--text-main);
   letter-spacing: -1.5px;
-  margin-bottom: 16px;
+  margin-top: -12px;
+  margin-bottom: 8px;
   max-width: 780px;
 }
 
@@ -545,10 +545,11 @@ ul {
   font-size: 16px;
   font-weight: 400;
   background: transparent;
+  padding-right: 16px;
 }
 
 #main-search-input::placeholder {
-  color: var(--text-light);
+  color: var(--text-muted);
 }
 
 .btn-search {

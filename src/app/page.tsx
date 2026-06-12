@@ -687,92 +687,279 @@ export default function HomePage() {
           {/* Refined Hero section */}
           <section className="hero-section">
             <div className="orbital-background"></div>
-            <div className="hero-content">
-              <h1 className="hero-title">The <span style={{ color: '#f2135d' }}>Intelligence Layer</span><br />For The AI Economy</h1>
-              <p className="hero-subtitle">Track every AI company, founder, investor, funding round, product launch and market movement.</p>
-              
-              {/* Search Box */}
-              <div className="search-container">
-                <div className="search-input-wrapper">
-                  <svg viewBox="0 0 24 24" className="search-icon" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="11" cy="11" r="8" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                  </svg>
-                  <input
-                    type="text"
-                    id="main-search-input"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    onKeyPress={(e) => e.key === "Enter" && triggerSearch()}
-                    placeholder="Search startups, founders, investors, products, news, jobs..."
-                    autoComplete="off"
-                  />
+            <h1 className="hero-title" style={{ position: 'absolute', top: '20px', left: '40px', margin: 0, marginTop: 0 }}>The <span style={{ color: '#f2135d' }}>Intelligence Layer</span><br />For The AI Economy</h1>
+            <div className="hero-flex-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', position: 'relative', zIndex: 1, gap: '24px', paddingTop: '100px' }}>
+              <div className="hero-content" style={{ flex: 1, minWidth: 0 }}>
+                
+                {/* Search Box */}
+                <div className="search-container" style={{ marginBottom: '8px', marginTop: '175px' }}>
+                  <div className="search-input-wrapper">
+                    <svg viewBox="0 0 24 24" className="search-icon" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="11" cy="11" r="8" />
+                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <input
+                      type="text"
+                      id="main-search-input"
+                      value={query}
+                      onChange={(e) => setQuery(e.target.value)}
+                      onKeyPress={(e) => e.key === "Enter" && triggerSearch()}
+                      placeholder="Search startups, founders, investors, products, news, jobs..."
+                      autoComplete="off"
+                    />
+                  </div>
+                  <button className="btn-primary btn-search" onClick={triggerSearch}>Search</button>
                 </div>
-                <button className="btn-primary btn-search" onClick={triggerSearch}>Search</button>
+
+                {/* Secondary Tagline below search container */}
+                <div style={{
+                  fontSize: '15.5px',
+                  fontWeight: '700',
+                  color: 'var(--text-muted)',
+                  letterSpacing: '0.3px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '4px',
+                  fontFamily: 'var(--font-heading)',
+                  width: '100%',
+                  marginTop: '16px'
+                }}>
+                  Unifying the AI Economy in <span style={{ color: '#f2135d' }}>One Single Place.</span>
+                </div>
               </div>
 
-              {/* White rounded pill bar */}
-              <div className="search-pills">
-                {[
-                  { id: "all", label: "All", icon: (
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              {/* Connection Map on the right side of the hero section */}
+              <div className="hero-map-column" style={{ flexShrink: 0, width: '640px', display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '15px', marginTop: '-80px' }}>
+                {/* Section Header above the diagram */}
+                <div style={{ textAlign: 'center', marginBottom: '10px' }}>
+                  <div style={{ display: 'inline-block', marginBottom: '8px' }}>
+                    <span style={{
+                      fontSize: '9.5px',
+                      fontWeight: '800',
+                      color: '#f2135d',
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      border: '1.2px solid rgba(242, 19, 93, 0.2)',
+                      borderRadius: '9999px',
+                      padding: '4px 12px',
+                      backgroundColor: 'rgba(242, 19, 93, 0.02)',
+                      fontFamily: 'var(--font-heading)'
+                    }}>
+                      Why Atlas Intelligence?
+                    </span>
+                  </div>
+                  <h2 style={{
+                    fontSize: '26px',
+                    fontWeight: '900',
+                    color: 'var(--text-main)',
+                    lineHeight: '1.15',
+                    letterSpacing: '-0.8px',
+                    margin: '0',
+                    fontFamily: 'var(--font-heading)'
+                  }}>
+                    Everything About AI. <span style={{ color: '#f2135d' }}>Connected.</span>
+                  </h2>
+                </div>
+
+                <div className="hero-map-wrapper" style={{ width: '100%', height: '360px', position: 'relative', transform: 'scale(0.85)', transformOrigin: 'center center' }}>
+                  <div style={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    {/* SVG Connection Lines */}
+                    <svg
+                      viewBox="0 0 1000 360"
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        width: '100%',
+                        height: '100%',
+                        pointerEvents: 'none',
+                        zIndex: 1,
+                      }}
+                    >
+                      <defs>
+                        <filter id="hero-glow-map" x="-20%" y="-20%" width="140%" height="140%">
+                          <feGaussianBlur stdDeviation="2" result="blur" />
+                          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                      </defs>
+                      {/* Centered Atlas at (500, 180). Arranged as a 5-point star layout. */}
+                      <line x1="500" y1="180" x2="500" y2="30" stroke="rgba(242, 19, 93, 0.95)" strokeWidth="2" strokeDasharray="4 4" />
+                      <line x1="500" y1="180" x2="750" y2="150" stroke="rgba(242, 19, 93, 0.95)" strokeWidth="2" strokeDasharray="4 4" />
+                      <line x1="500" y1="180" x2="720" y2="310" stroke="rgba(242, 19, 93, 0.95)" strokeWidth="2" strokeDasharray="4 4" />
+                      <line x1="500" y1="180" x2="280" y2="310" stroke="rgba(242, 19, 93, 0.95)" strokeWidth="2" strokeDasharray="4 4" />
+                      <line x1="500" y1="180" x2="250" y2="150" stroke="rgba(242, 19, 93, 0.95)" strokeWidth="2" strokeDasharray="4 4" />
+
+                      <circle cx="500" cy="105" r="6" fill="#f2135d" filter="url(#hero-glow-map)" />
+                      <circle cx="625" cy="165" r="6" fill="#f2135d" filter="url(#hero-glow-map)" />
+                      <circle cx="610" cy="245" r="6" fill="#f2135d" filter="url(#hero-glow-map)" />
+                      <circle cx="390" cy="245" r="6" fill="#f2135d" filter="url(#hero-glow-map)" />
+                      <circle cx="375" cy="165" r="6" fill="#f2135d" filter="url(#hero-glow-map)" />
                     </svg>
-                  )},
-                  { id: "startups", label: "Startups", icon: (
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
-                      <line x1="9" y1="22" x2="9" y2="16" />
-                      <line x1="15" y1="22" x2="15" y2="16" />
-                    </svg>
-                  )},
-                  { id: "founders", label: "Founders", icon: (
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                      <circle cx="9" cy="7" r="4" />
-                    </svg>
-                  )},
-                  { id: "investors", label: "Investors", icon: (
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                    </svg>
-                  )},
-                  { id: "products", label: "Products", icon: (
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                    </svg>
-                  )},
-                  { id: "news", label: "News", icon: (
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    </svg>
-                  )},
-                  { id: "funding", label: "Funding", icon: (
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10" />
-                      <line x1="12" y1="8" x2="12" y2="16" />
-                    </svg>
-                  )},
-                  { id: "jobs", label: "Jobs", icon: (
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                    </svg>
-                  )}
-                ].map((pill) => (
-                  <button
-                    key={pill.id}
-                    className={`pill-btn ${currentFilter === pill.id ? "active" : ""}`}
-                    onClick={() => handlePillClick(pill.id)}
-                  >
-                    {pill.icon}
-                    <span>{pill.label}</span>
-                  </button>
-                ))}
+
+                    {/* Center Atlas Brand Hub Logo */}
+                    <div style={{
+                      position: 'absolute',
+                      zIndex: 10,
+                      width: '84px',
+                      height: '84px',
+                      borderRadius: '50%',
+                      backgroundColor: '#ffffff',
+                      border: '2px solid rgba(242, 19, 93, 0.25)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 8px 30px rgba(242, 19, 93, 0.12), inset 0 2px 4px rgba(255,255,255,0.9)',
+                      color: '#f2135d'
+                    }}>
+                      <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                        <ellipse cx="12" cy="12" rx="3" ry="10" transform="rotate(-45 12 12)"/>
+                        <ellipse cx="12" cy="12" rx="3" ry="10" transform="rotate(45 12 12)"/>
+                      </svg>
+                    </div>
+
+                    {/* Card 1: Investors (Top Center) */}
+                    <div
+                      onClick={() => { handlePillClick("investors"); showToast("Filtering early-stage AI agent startups..."); }}
+                      style={{
+                        position: 'absolute', top: '0%', left: '50%',
+                        transform: 'translateX(-50%)', zIndex: 5, width: '210px',
+                        backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                        borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                        alignItems: 'center', gap: '12px', textAlign: 'left',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(-50%) translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(-50%)'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+                    >
+                      <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Investors</h4>
+                        <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                          <strong>VC wants:</strong> Early-stage AI agent startups.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Card 2: Recruiters (Top Right) */}
+                    <div
+                      onClick={() => { handlePillClick("startups"); showToast("Highlighting fastest growing AI companies..."); }}
+                      style={{
+                        position: 'absolute', top: '32%', right: '2%', zIndex: 5, width: '210px',
+                        backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                        borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                        alignItems: 'center', gap: '12px', textAlign: 'left',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px) translateX(3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+                    >
+                      <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="3" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Recruiters</h4>
+                        <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                          <strong>wants:</strong> Fastest growing AI companies.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Card 3: Job Seekers (Bottom Right) */}
+                    <div
+                      onClick={() => { handlePillClick("jobs"); showToast("Searching startups hiring globally..."); }}
+                      style={{
+                        position: 'absolute', bottom: '2%', right: '15%', zIndex: 5, width: '210px',
+                        backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                        borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                        alignItems: 'center', gap: '12px', textAlign: 'left',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(3px) translateX(3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+                    >
+                      <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Job Seekers</h4>
+                        <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                          <strong>searching:</strong> AI engineer hiring globally.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Card 4: Researchers (Bottom Left) */}
+                    <div
+                      onClick={() => { handlePillClick("all"); showToast("Filtering top AI infrastructure startups..."); }}
+                      style={{
+                        position: 'absolute', bottom: '2%', left: '15%', zIndex: 5, width: '210px',
+                        backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                        borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                        alignItems: 'center', gap: '12px', textAlign: 'left',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(3px) translateX(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+                    >
+                      <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Researchers</h4>
+                        <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                          <strong>wants:</strong> Top AI infrastructure startups.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Card 5: Founders (Top Left) */}
+                    <div
+                      onClick={() => { handlePillClick("founders"); showToast("Querying recent AI coding funding rounds..."); }}
+                      style={{
+                        position: 'absolute', top: '32%', left: '2%', zIndex: 5, width: '210px',
+                        backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
+                        borderRadius: '16px', padding: '14px 18px', display: 'flex',
+                        alignItems: 'center', gap: '12px', textAlign: 'left',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px) translateX(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
+                    >
+                      <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Founders</h4>
+                        <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
+                          <strong>wants:</strong> Which AI coding startups raised money recently?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
           </section>
 
           {/* Dynamic Search Results Panel */}
