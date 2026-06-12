@@ -90,6 +90,62 @@ const MARKET_ICONS: Record<string, React.ReactNode> = {
   )
 };
 
+const jobLogos = {
+  OpenAI: (
+    <div style={{ backgroundColor: '#000000', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="#ffffff">
+        <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z" />
+      </svg>
+    </div>
+  ),
+  Anthropic: (
+    <div style={{ backgroundColor: '#EAD9C9', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="#191919">
+        <path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z" />
+      </svg>
+    </div>
+  ),
+  Meta: (
+    <div style={{ backgroundColor: '#ffffff', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="#0064e0">
+        <path d="M16.8 5c-1.3 0-2.6.7-3.4 1.7-.4.5-.8 1.1-1.1 1.7-.1.2-.4.2-.5 0-.3-.6-.7-1.2-1.1-1.7-.8-1-2.1-1.7-3.4-1.7C5 5 3 6.9 3 9.4c0 2.2 1.4 3.9 3.2 4.6 1.4.5 3 .2 4.1-.7.2-.2.5-.2.7 0 1.1.9 2.7 1.2 4.1.7 1.8-.7 3.2-2.4 3.2-4.6C19.7 6.9 17.7 5 16.8 5zm-9.5 7.4c-1.2 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3c.7 0 1.3.4 1.7.9.6.7.7 1.8.1 2.5-.4.5-1 1.2-1.8 1.2zm8 0c-.8 0-1.4-.7-1.8-1.2-.6-.7-.5-1.8.1-2.5.4-.5 1-.9 1.7-.9 1.2 0 2.3 1 2.3 2.3s-1.1 2.3-2.3 2.3z"/>
+      </svg>
+    </div>
+  ),
+  Perplexity: (
+    <div style={{ backgroundColor: '#1b132c', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <span style={{ color: '#22c55e', fontWeight: 'bold', fontSize: '18px', fontFamily: 'var(--font-heading)' }}>S</span>
+    </div>
+  )
+};
+
+const investorLogos = {
+  Sequoia: (
+    <div style={{ backgroundColor: '#ffffff', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <svg viewBox="0 0 24 24" width="22" height="22">
+        <path d="M12 2L4 18h6v4h4v-4h6z" fill="#008a47" />
+      </svg>
+    </div>
+  ),
+  a16z: (
+    <div style={{ backgroundColor: '#ff5a00', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <span style={{ color: '#ffffff', fontSize: '9px', fontWeight: '900', fontFamily: 'sans-serif' }}>a16z</span>
+    </div>
+  ),
+  Lightspeed: (
+    <div style={{ backgroundColor: '#ffffff', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <svg viewBox="0 0 24 24" width="22" height="22">
+        <path d="M3 21h18L15 3h-4z" fill="#ff3b30" />
+      </svg>
+    </div>
+  ),
+  YC: (
+    <div style={{ backgroundColor: '#ff6600', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <span style={{ color: '#ffffff', fontSize: '16px', fontWeight: 'bold', fontFamily: 'sans-serif' }}>Y</span>
+    </div>
+  )
+};
+
 export default function HomePage() {
   // States
   const [query, setQuery] = useState("");
@@ -1099,139 +1155,208 @@ export default function HomePage() {
                 </div>
               </section>
 
-              {/* Funding Intelligence */}
+              {/* Top AI Jobs & Funding Intelligence Section */}
               <section className="dashboard-section">
-                <div className="section-header-group">
-                  <div className="section-header">
-                    <h2 className="section-title">Funding Intelligence</h2>
-                    <a href="#" className="section-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("funding"); }}>
-                      View all funding <span>&rarr;</span>
-                    </a>
-                  </div>
-                  <p className="section-subtitle">Largest rounds this week</p>
-                </div>
-                <div className="funding-grid">
-                  {FUNDINGS.map((fund, idx) => (
-                    <div
-                      key={idx}
-                      className="funding-card-wrapper"
-                      onClick={() => {
-                        setQuery(fund.company);
-                        setCurrentFilter("funding");
-                        showToast(`Showing funding round for ${fund.company}`);
-                      }}
-                    >
-                      <div className="funding-card-inner">
-                        {/* Front Side */}
-                        <div className="funding-card-front" style={{ padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', height: '100%' }}>
-                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
-                            <div className="fund-logo-wrapper" style={{ width: '48px', height: '48px', borderRadius: '12px', border: '1px solid #e2e8f0', padding: '4px', backgroundColor: '#ffffff' }} dangerouslySetInnerHTML={{ __html: fund.logo }} />
-                            <h4 className="funding-company-name" style={{ fontSize: '15px', fontWeight: '800', margin: '8px 0 2px', color: '#0f172a' }}>{fund.company}</h4>
-                            <span style={{ fontSize: '11px', color: '#64748b', fontWeight: '500', display: 'block', minHeight: '16px' }}>
-                              {fund.company === 'Perplexity' ? 'Conversational AI Search' :
-                               fund.company === 'Scale AI' ? 'Data Infrastructure for AI' :
-                               fund.company === 'Mistral AI' ? 'Open Frontier Models' :
-                               fund.company === 'xAI' ? 'Frontier AGI & Infrastructure' : 'AI Technology'}
-                            </span>
+                <div className="jobs-investors-section">
+                  {/* Top AI Jobs Column */}
+                  <div>
+                    <div className="column-header-group">
+                      <h2 className="column-title">Top AI Jobs</h2>
+                      <a href="#" className="column-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("jobs"); }}>
+                        View all jobs <span>&rarr;</span>
+                      </a>
+                    </div>
+                    <div className="column-cards-grid">
+                      {/* Job 1 */}
+                      <div className="mini-row-card" onClick={() => { setQuery("OpenAI"); setCurrentFilter("jobs"); showToast("Searching jobs at OpenAI"); }}>
+                        <div className="card-logo-container">
+                          {jobLogos.OpenAI}
+                        </div>
+                        <div className="row-card-content">
+                          <div className="row-card-left">
+                            <h4 className="card-heading">Senior AI Engineer</h4>
+                            <span className="card-subheading">OpenAI • Posted 2h ago</span>
+                            <p className="card-portfolio-desc">Superalignment &bull; PyTorch, Large-scale training</p>
                           </div>
-                          
-                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', gap: '4px' }}>
-                            <span style={{ fontSize: '22px', fontWeight: '800', color: '#f2135d', letterSpacing: '-0.5px', lineHeight: 1.2 }}>
-                              {fund.amount}
-                            </span>
-                            <span style={{ fontSize: '9px', textTransform: 'uppercase', color: '#94a3b8', fontWeight: '700', letterSpacing: '0.5px' }}>
-                              Amount Raised
-                            </span>
-                          </div>
-
-                          <div style={{
-                            fontSize: '9.5px',
-                            fontWeight: '700',
-                            color: '#475569',
-                            backgroundColor: '#f1f5f9',
-                            padding: '3px 10px',
-                            borderRadius: '100px',
-                            border: '1px solid #e2e8f0'
-                          }}>
-                            {fund.stage} • {fund.date}
+                          <div className="row-card-right">
+                            <div className="card-meta-row">
+                              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+                                Remote
+                              </span>
+                              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                $250k - $400k
+                              </span>
+                            </div>
+                            <span className="card-badge-pill">Full-time</span>
                           </div>
                         </div>
+                      </div>
 
-                        {/* Back Side */}
-                        <div className="funding-card-back">
-                          <div className="funding-card-header" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            <div className="fund-logo-wrapper" style={{ width: '28px', height: '28px', borderRadius: '6px' }} dangerouslySetInnerHTML={{ __html: fund.logo }} />
-                            <div className="funding-company-details">
-                              <h4 className="funding-company-name" style={{ fontSize: '13px', margin: 0 }}>{fund.company}</h4>
-                              <span className="funding-stage" style={{ fontSize: '10px', marginTop: 0 }}>{fund.stage}</span>
-                            </div>
-                            <span className="funding-stage-pill" style={{ marginLeft: 'auto', fontSize: '9.5px', padding: '2px 8px', backgroundColor: '#f1f5f9', color: '#475569', borderRadius: '100px', fontWeight: '600' }}>{fund.amount}</span>
+                      {/* Job 2 */}
+                      <div className="mini-row-card" onClick={() => { setQuery("Anthropic"); setCurrentFilter("jobs"); showToast("Searching jobs at Anthropic"); }}>
+                        <div className="card-logo-container">
+                          {jobLogos.Anthropic}
+                        </div>
+                        <div className="row-card-content">
+                          <div className="row-card-left">
+                            <h4 className="card-heading">Machine Learning Engineer</h4>
+                            <span className="card-subheading">Anthropic • Posted 1d ago</span>
+                            <p className="card-portfolio-desc">Alignment Science &bull; PyTorch, Scaling, Safety</p>
                           </div>
-
-                          {/* Mini SVG Bar Chart */}
-                          <div style={{ height: '36px', width: '100%', margin: '6px 0', position: 'relative' }}>
-                            <svg viewBox="0 0 160 36" width="100%" height="100%">
-                              {/* Background lines */}
-                              <line x1="0" y1="9" x2="160" y2="9" stroke="#f1f5f9" strokeWidth="1" strokeDasharray="2 2" />
-                              <line x1="0" y1="18" x2="160" y2="18" stroke="#f1f5f9" strokeWidth="1" strokeDasharray="2 2" />
-                              <line x1="0" y1="27" x2="160" y2="27" stroke="#f1f5f9" strokeWidth="1" strokeDasharray="2 2" />
-                              {(() => {
-                                const barHeights = idx === 0 ? [8, 12, 16, 22, 28, 34] :
-                                                   idx === 1 ? [10, 14, 20, 18, 26, 32] :
-                                                   idx === 2 ? [6, 12, 18, 22, 24, 30] :
-                                                               [8, 10, 15, 20, 25, 33];
-                                const barWidth = 14;
-                                const spacing = 10;
-                                return barHeights.map((h, i) => {
-                                  const x = 12 + i * (barWidth + spacing);
-                                  const y = 36 - h;
-                                  return (
-                                    <rect
-                                      key={i}
-                                      x={x}
-                                      y={y}
-                                      width={barWidth}
-                                      height={h}
-                                      rx="2"
-                                      fill="#f2135d"
-                                      opacity={0.3 + (i / 5) * 0.7}
-                                    />
-                                  );
-                                });
-                              })()}
-                            </svg>
-                          </div>
-
-                          {/* Rich metadata row */}
-                          <div style={{ display: 'flex', justifyContent: 'space-between', margin: '2px 0 6px', fontSize: '10.5px', borderBottom: '1px solid #f1f5f9', paddingBottom: '6px' }}>
-                            <div>
-                              <span style={{ color: '#94a3b8', fontSize: '9px', display: 'block', textTransform: 'uppercase', fontWeight: '600' }}>Valuation</span>
-                              <span style={{ color: '#0f172a', fontWeight: '700' }}>
-                                {fund.company === 'Perplexity' ? '$3.0B Est.' :
-                                 fund.company === 'Scale AI' ? '$13.8B' :
-                                 fund.company === 'Mistral AI' ? '$6.0B' :
-                                 fund.company === 'xAI' ? '$24.0B' : '--'}
+                          <div className="row-card-right">
+                            <div className="card-meta-row">
+                              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+                                Remote
+                              </span>
+                              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                $200k - $300k
                               </span>
                             </div>
-                            <div style={{ textAlign: 'right' }}>
-                              <span style={{ color: '#94a3b8', fontSize: '9px', display: 'block', textTransform: 'uppercase', fontWeight: '600' }}>HQ Location</span>
-                              <span style={{ color: '#475569', fontWeight: '600' }}>
-                                {fund.company === 'Mistral AI' ? 'Paris, France' : 'San Francisco, CA'}
+                            <span className="card-badge-pill">Full-time</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Job 3 */}
+                      <div className="mini-row-card" onClick={() => { setQuery("Meta"); setCurrentFilter("jobs"); showToast("Searching jobs at Meta AI"); }}>
+                        <div className="card-logo-container">
+                          {jobLogos.Meta}
+                        </div>
+                        <div className="row-card-content">
+                          <div className="row-card-left">
+                            <h4 className="card-heading">Research Scientist</h4>
+                            <span className="card-subheading">Meta AI • Posted 2d ago</span>
+                            <p className="card-portfolio-desc">Llama Team &bull; PhD, PyTorch, LLMs architectures</p>
+                          </div>
+                          <div className="row-card-right">
+                            <div className="card-meta-row">
+                              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+                                London, UK
+                              </span>
+                              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                $180k - $250k
                               </span>
                             </div>
+                            <span className="card-badge-pill">Full-time</span>
                           </div>
+                        </div>
+                      </div>
 
-                          <div className="funding-investor-details" style={{ paddingTop: '8px', fontSize: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', borderTop: 'none' }}>
-                            <div className="funding-investor-info" style={{ display: 'flex', flexDirection: 'column' }}>
-                              <span className="funding-investor-label" style={{ fontSize: '9px', color: '#64748b' }}>Lead investor</span>
-                              <span className="funding-investor-name" style={{ fontWeight: '700', color: '#0f172a' }}>{fund.investor}</span>
+                      {/* Job 4 */}
+                      <div className="mini-row-card" onClick={() => { setQuery("Perplexity"); setCurrentFilter("jobs"); showToast("Searching jobs at Perplexity"); }}>
+                        <div className="card-logo-container" dangerouslySetInnerHTML={{ __html: FUNDINGS[0].logo }} />
+                        <div className="row-card-content">
+                          <div className="row-card-left">
+                            <h4 className="card-heading">Applied AI Manager</h4>
+                            <span className="card-subheading">Perplexity • Posted 3d ago</span>
+                            <p className="card-portfolio-desc">Search Core &bull; RAG, LLM Agents, Node/Python</p>
+                          </div>
+                          <div className="row-card-right">
+                            <div className="card-meta-row">
+                              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+                                Remote
+                              </span>
+                              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                $150k - $220k
+                              </span>
                             </div>
-                            <span className="funding-time" style={{ color: '#94a3b8' }}>{fund.date}</span>
+                            <span className="card-badge-pill">Full-time</span>
                           </div>
                         </div>
                       </div>
                     </div>
-                  ))}
+                  </div>
+
+                  {/* Funding Intelligence Column */}
+                  <div>
+                    <div className="column-header-group">
+                      <h2 className="column-title">Funding Intelligence</h2>
+                      <a href="#" className="column-link" onClick={(e) => { e.preventDefault(); handleSidebarClick("funding"); }}>
+                        View all funding <span>&rarr;</span>
+                      </a>
+                    </div>
+                    <div className="column-cards-grid">
+                      {/* Funding 1 */}
+                      <div className="mini-row-card" onClick={() => { setQuery("Perplexity"); setCurrentFilter("funding"); showToast("Showing funding round for Perplexity"); }}>
+                        <div className="card-logo-container" dangerouslySetInnerHTML={{ __html: FUNDINGS[0].logo }} />
+                        <div className="row-card-content">
+                          <div className="row-card-left">
+                            <h4 className="card-heading">Perplexity</h4>
+                            <span className="card-subheading">Series C • 2h ago</span>
+                            <p className="card-portfolio-desc">Lead Investor: Sequoia Capital</p>
+                          </div>
+                          <div className="row-card-right">
+                            <div className="card-meta-row">
+                              <span style={{ color: '#f2135d', fontWeight: '800', fontSize: '15px' }}>$250M</span>
+                            </div>
+                            <span className="card-badge-pill" style={{ color: '#f2135d', backgroundColor: 'rgba(242, 19, 93, 0.06)' }}>Raised</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Funding 2 */}
+                      <div className="mini-row-card" onClick={() => { setQuery("Scale AI"); setCurrentFilter("funding"); showToast("Showing funding round for Scale AI"); }}>
+                        <div className="card-logo-container" dangerouslySetInnerHTML={{ __html: FUNDINGS[1].logo }} />
+                        <div className="row-card-content">
+                          <div className="row-card-left">
+                            <h4 className="card-heading">Scale AI</h4>
+                            <span className="card-subheading">Series F • 1d ago</span>
+                            <p className="card-portfolio-desc">Lead Investor: Accel</p>
+                          </div>
+                          <div className="row-card-right">
+                            <div className="card-meta-row">
+                              <span style={{ color: '#f2135d', fontWeight: '800', fontSize: '15px' }}>$1.0B</span>
+                            </div>
+                            <span className="card-badge-pill" style={{ color: '#f2135d', backgroundColor: 'rgba(242, 19, 93, 0.06)' }}>Raised</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Funding 3 */}
+                      <div className="mini-row-card" onClick={() => { setQuery("Mistral AI"); setCurrentFilter("funding"); showToast("Showing funding round for Mistral AI"); }}>
+                        <div className="card-logo-container" dangerouslySetInnerHTML={{ __html: FUNDINGS[2].logo }} />
+                        <div className="row-card-content">
+                          <div className="row-card-left">
+                            <h4 className="card-heading">Mistral AI</h4>
+                            <span className="card-subheading">Series C • 2d ago</span>
+                            <p className="card-portfolio-desc">Lead Investor: Lightspeed</p>
+                          </div>
+                          <div className="row-card-right">
+                            <div className="card-meta-row">
+                              <span style={{ color: '#f2135d', fontWeight: '800', fontSize: '15px' }}>$600M</span>
+                            </div>
+                            <span className="card-badge-pill" style={{ color: '#f2135d', backgroundColor: 'rgba(242, 19, 93, 0.06)' }}>Raised</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Funding 4 */}
+                      <div className="mini-row-card" onClick={() => { setQuery("xAI"); setCurrentFilter("funding"); showToast("Showing funding round for xAI"); }}>
+                        <div className="card-logo-container" dangerouslySetInnerHTML={{ __html: FUNDINGS[3].logo }} />
+                        <div className="row-card-content">
+                          <div className="row-card-left">
+                            <h4 className="card-heading">xAI</h4>
+                            <span className="card-subheading">Series B • 3d ago</span>
+                            <p className="card-portfolio-desc">Lead Investor: Valor Equity Partners</p>
+                          </div>
+                          <div className="row-card-right">
+                            <div className="card-meta-row">
+                              <span style={{ color: '#f2135d', fontWeight: '800', fontSize: '15px' }}>$6.0B</span>
+                            </div>
+                            <span className="card-badge-pill" style={{ color: '#f2135d', backgroundColor: 'rgba(242, 19, 93, 0.06)' }}>Raised</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -1396,317 +1521,69 @@ export default function HomePage() {
               </section>
             </div>
           )}
+
+          {/* Feature Promotion Banner */}
+          <div className="promo-banner">
+            <div className="promo-banner-left">
+              <h2 className="promo-banner-title">Stay ahead in the AI economy.</h2>
+              <p className="promo-banner-desc">
+                Join thousands of founders, investors and researchers who rely on Atlas Intelligence for real-time AI insights.
+              </p>
+              <button className="promo-banner-btn" onClick={() => showToast("Registration modal: Opening account setup...")}>
+                Create account
+              </button>
+            </div>
+            
+            <div className="promo-banner-right">
+              <div className="promo-feature-card">
+                <div className="promo-feature-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M7 15l3-3 3 3 4-4" />
+                    <path d="M17 8h-3v3" />
+                  </svg>
+                </div>
+                <h3 className="promo-feature-title">Real-time Data</h3>
+                <p className="promo-feature-desc">Live updates on funding, companies and markets.</p>
+              </div>
+
+              <div className="promo-feature-card">
+                <div className="promo-feature-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                  </svg>
+                </div>
+                <h3 className="promo-feature-title">Advanced Filters</h3>
+                <p className="promo-feature-desc">Powerful search and custom analytics.</p>
+              </div>
+
+              <div className="promo-feature-card">
+                <div className="promo-feature-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                </div>
+                <h3 className="promo-feature-title">Global Coverage</h3>
+                <p className="promo-feature-desc">Comprehensive data across 98 countries.</p>
+              </div>
+
+              <div className="promo-feature-card">
+                <div className="promo-feature-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                  </svg>
+                </div>
+                <h3 className="promo-feature-title">Save & Track</h3>
+                <p className="promo-feature-desc">Bookmark, track and get alerts on what matters.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
 
-        {/* Why Atlas Intelligence Section */}
-        <section className="why-atlas-section">
-          {/* Exact background image from user — centered, covering full section */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: "url('/assets/why_atlas_bg.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center',
-            backgroundRepeat: 'no-repeat',
-            pointerEvents: 'none',
-            zIndex: 0,
-          }} />
-          {/* Content wrapper sits above the background */}
-          <div style={{ position: 'relative', zIndex: 1 }}>
-          {/* Red pill header */}
-          <div style={{ display: 'inline-block', marginBottom: '16px' }}>
-            <span style={{
-              fontSize: '11px',
-              fontWeight: '800',
-              color: '#f2135d',
-              letterSpacing: '1.5px',
-              textTransform: 'uppercase',
-              border: '1.5px solid rgba(242, 19, 93, 0.2)',
-              borderRadius: '9999px',
-              padding: '6px 18px',
-              backgroundColor: 'rgba(242, 19, 93, 0.02)',
-              fontFamily: 'var(--font-heading)'
-            }}>
-              Why Atlas Intelligence?
-            </span>
-          </div>
 
-          {/* Headline */}
-          <h2 style={{
-            fontSize: '42px',
-            fontWeight: '900',
-            color: 'var(--text-main)',
-            lineHeight: '1.15',
-            letterSpacing: '-1.5px',
-            marginBottom: '16px',
-            fontFamily: 'var(--font-heading)'
-          }}>
-            Everything About AI. <span style={{ color: '#f2135d' }}>Connected.</span>
-          </h2>
-
-          {/* Subtitle description */}
-          <p style={{
-            fontSize: '15px',
-            color: 'var(--text-muted)',
-            maxWidth: '600px',
-            margin: '0 auto 56px',
-            lineHeight: '1.6'
-          }}>
-            Atlas Intelligence unifies every piece of the AI ecosystem so you can discover, track and stay ahead.
-          </p>
-
-          {/* Central Connected Hub Map */}
-          <div style={{
-            position: 'relative',
-            maxWidth: '1000px',
-            margin: '0 auto 64px',
-            height: '420px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            {/* SVG Connection Lines */}
-            <svg
-              viewBox="0 0 1000 420"
-              style={{
-                position: 'absolute',
-                inset: 0,
-                width: '100%',
-                height: '100%',
-                pointerEvents: 'none',
-                zIndex: 1,
-              }}
-            >
-              {/* Glow filter */}
-              <defs>
-                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feGaussianBlur stdDeviation="2" result="blur" />
-                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                </filter>
-              </defs>
-              {/* Top Line */}
-              <line x1="500" y1="210" x2="500" y2="70" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-              {/* Right Top Line */}
-              <line x1="500" y1="210" x2="690" y2="126" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-              {/* Right Bottom Line */}
-              <line x1="500" y1="210" x2="690" y2="294" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-              {/* Bottom Line */}
-              <line x1="500" y1="210" x2="500" y2="350" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-              {/* Left Bottom Line */}
-              <line x1="500" y1="210" x2="310" y2="294" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-              {/* Left Top Line */}
-              <line x1="500" y1="210" x2="310" y2="126" stroke="rgba(242, 19, 93, 0.25)" strokeWidth="1.5" strokeDasharray="4 4" />
-
-              {/* Decorative small network nodes on the lines */}
-              <circle cx="500" cy="140" r="3" fill="#f2135d" filter="url(#glow)" />
-              <circle cx="595" cy="168" r="3" fill="#f2135d" filter="url(#glow)" />
-              <circle cx="595" cy="252" r="3" fill="#f2135d" filter="url(#glow)" />
-              <circle cx="500" cy="280" r="3" fill="#f2135d" filter="url(#glow)" />
-              <circle cx="405" cy="252" r="3" fill="#f2135d" filter="url(#glow)" />
-              <circle cx="405" cy="168" r="3" fill="#f2135d" filter="url(#glow)" />
-            </svg>
-
-            {/* Center Atlas Brand Hub Logo */}
-            <div style={{
-              position: 'absolute',
-              zIndex: 10,
-              width: '84px',
-              height: '84px',
-              borderRadius: '50%',
-              backgroundColor: '#ffffff',
-              border: '2px solid rgba(242, 19, 93, 0.25)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 8px 30px rgba(242, 19, 93, 0.12), inset 0 2px 4px rgba(255,255,255,0.9)',
-              color: '#f2135d'
-            }}>
-              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                <ellipse cx="12" cy="12" rx="3" ry="10" transform="rotate(-45 12 12)"/>
-                <ellipse cx="12" cy="12" rx="3" ry="10" transform="rotate(45 12 12)"/>
-              </svg>
-            </div>
-
-            {/* Card 1: Bloomberg for AI (Top) */}
-            <div
-              onClick={() => showToast("Product Vision: Bloomberg for AI")}
-              style={{
-                position: 'absolute', top: '0%', left: '50%',
-                transform: 'translateX(-50%)', zIndex: 5, width: '210px',
-                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
-                borderRadius: '16px', padding: '14px 18px', display: 'flex',
-                alignItems: 'center', gap: '12px', textAlign: 'left',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(-50%) translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(-50%)'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
-            >
-              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                </svg>
-              </div>
-              <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Bloomberg for AI</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
-                  "If I need info on an AI company, I go to Atlas."
-                </p>
-              </div>
-            </div>
-
-            {/* Card 2: Investors (Right Top) */}
-            <div
-              onClick={() => { handlePillClick("investors"); showToast("Filtering early-stage AI agent startups..."); }}
-              style={{
-                position: 'absolute', top: '20%', right: '10%', zIndex: 5, width: '210px',
-                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
-                borderRadius: '16px', padding: '14px 18px', display: 'flex',
-                alignItems: 'center', gap: '12px', textAlign: 'left',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
-            >
-              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                </svg>
-              </div>
-              <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Investors</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
-                  <strong>VC wants:</strong> Early-stage AI agent startups.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 3: Recruiters (Right Bottom) */}
-            <div
-              onClick={() => { handlePillClick("startups"); showToast("Highlighting fastest growing AI companies..."); }}
-              style={{
-                position: 'absolute', bottom: '20%', right: '10%', zIndex: 5, width: '210px',
-                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
-                borderRadius: '16px', padding: '14px 18px', display: 'flex',
-                alignItems: 'center', gap: '12px', textAlign: 'left',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
-            >
-              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="3" />
-                </svg>
-              </div>
-              <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Recruiters</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
-                  <strong>wants:</strong> Fastest growing AI companies.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4: Job Seekers (Bottom) */}
-            <div
-              onClick={() => { handlePillClick("jobs"); showToast("Searching startups hiring globally..."); }}
-              style={{
-                position: 'absolute', bottom: '0%', left: '50%',
-                transform: 'translateX(-50%)', zIndex: 5, width: '210px',
-                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
-                borderRadius: '16px', padding: '14px 18px', display: 'flex',
-                alignItems: 'center', gap: '12px', textAlign: 'left',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(-50%) translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(-50%)'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
-            >
-              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                </svg>
-              </div>
-              <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Job Seekers</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
-                  <strong>searching:</strong> AI engineer hiring globally.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 5: Researchers (Left Bottom) */}
-            <div
-              onClick={() => { handlePillClick("all"); showToast("Filtering top AI infrastructure startups..."); }}
-              style={{
-                position: 'absolute', bottom: '20%', left: '10%', zIndex: 5, width: '210px',
-                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
-                borderRadius: '16px', padding: '14px 18px', display: 'flex',
-                alignItems: 'center', gap: '12px', textAlign: 'left',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
-            >
-              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-                </svg>
-              </div>
-              <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Researchers</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
-                  <strong>wants:</strong> Top AI infrastructure startups.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 6: Founders (Left Top) */}
-            <div
-              onClick={() => { handlePillClick("founders"); showToast("Querying recent AI coding funding rounds..."); }}
-              style={{
-                position: 'absolute', top: '20%', left: '10%', zIndex: 5, width: '210px',
-                backgroundColor: '#ffffff', border: '1px solid var(--border-color)',
-                borderRadius: '16px', padding: '14px 18px', display: 'flex',
-                alignItems: 'center', gap: '12px', textAlign: 'left',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.03)', cursor: 'pointer', transition: 'all 0.25s'
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = 'rgba(242, 19, 93, 0.35)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(242, 19, 93, 0.05)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.03)'; }}
-            >
-              <div style={{ width: '32px', height: '32px', borderRadius: '8px', backgroundColor: 'rgba(242, 19, 93, 0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
-                </svg>
-              </div>
-              <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'var(--text-main)', margin: '0 0 3px' }}>Founders</h4>
-                <p style={{ fontSize: '10.5px', color: 'var(--text-muted)', margin: 0, lineHeight: '1.3' }}>
-                  <strong>wants:</strong> Which AI coding startups raised money recently?
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Tagline */}
-          <div style={{
-            marginTop: '40px',
-            textAlign: 'center'
-          }}>
-            <div style={{
-              fontSize: '16px',
-              fontWeight: '900',
-              color: 'var(--text-main)',
-              fontFamily: 'var(--font-heading)',
-              letterSpacing: '-0.3px',
-              textTransform: 'uppercase',
-              letterSpacing: '1px'
-            }}>
-              Unifying the AI Economy in <span style={{ color: '#f2135d' }}>One Single Place.</span>
-            </div>
-          </div>
-          </div>
-        </section>
 
         {/* Footer layout aligned flat in one horizontal row */}
         <footer className="footer" style={{ marginTop: '16px' }}>
