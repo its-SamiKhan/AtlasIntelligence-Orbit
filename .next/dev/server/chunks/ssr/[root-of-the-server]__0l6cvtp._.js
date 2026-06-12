@@ -72,7 +72,7 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$o
 ;
 ;
 const metadata = {
-    title: "Atlas Intelligence - The Intelligence Layer For The AI Economy",
+    title: "Graph One - The Intelligence Layer For The AI Economy",
     description: "Track every AI company, founder, investor, funding round, product launch and market movement. Replicating Crunchbase and Product Hunt focused entirely on AI.",
     keywords: [
         "AI startups",

@@ -1,3 +1,36 @@
-{"timestamp":"00:00:00.561","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:04.147","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:00:42.415","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:00.730","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:02.826","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:01:59.187","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload when ./Projects/Orbit-Internship/src/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload"}
+{"timestamp":"00:01:59.195","source":"Server","level":"LOG","message":"✓ Compiled in 427ms"}
+{"timestamp":"00:01:59.319","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:03:33.534","source":"Server","level":"LOG","message":"✓ Compiled in 104ms"}
+{"timestamp":"00:04:19.773","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"00:05:57.168","source":"Server","level":"LOG","message":"✓ Compiled in 61ms"}
+{"timestamp":"00:09:00.527","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload when ./Projects/Orbit-Internship/src/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload"}
+{"timestamp":"00:09:00.529","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
+{"timestamp":"00:09:00.724","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:11:09.842","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload when ./Projects/Orbit-Internship/src/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload"}
+{"timestamp":"00:11:09.844","source":"Server","level":"LOG","message":"✓ Compiled in 44ms"}
+{"timestamp":"00:11:09.964","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:16:32.170","source":"Server","level":"LOG","message":"✓ Compiled in 83ms"}
+{"timestamp":"00:17:22.202","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"00:17:25.320","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:17:31.443","source":"Server","level":"LOG","message":"✓ Compiled in 47ms"}
+{"timestamp":"00:17:41.908","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"00:17:51.176","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
+{"timestamp":"00:17:58.983","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:18:03.256","source":"Server","level":"LOG","message":"✓ Compiled in 78ms"}
+{"timestamp":"00:18:04.475","source":"Server","level":"LOG","message":"✓ Compiled in 42ms"}
+{"timestamp":"00:18:10.177","source":"Server","level":"LOG","message":"✓ Compiled in 39ms"}
+{"timestamp":"00:18:14.348","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:18:19.171","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
+{"timestamp":"00:18:27.698","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:18:34.183","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
+{"timestamp":"00:18:39.188","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"00:19:08.189","source":"Server","level":"LOG","message":"✓ Compiled in 43ms"}
+{"timestamp":"00:20:23.715","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload when ./Projects/Orbit-Internship/src/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload"}
+{"timestamp":"00:20:23.721","source":"Server","level":"LOG","message":"✓ Compiled in 74ms"}
+{"timestamp":"00:20:23.927","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:20:36.864","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload when ./Projects/Orbit-Internship/src/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload"}
+{"timestamp":"00:20:36.869","source":"Server","level":"LOG","message":"✓ Compiled in 66ms"}
+{"timestamp":"00:20:36.996","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}

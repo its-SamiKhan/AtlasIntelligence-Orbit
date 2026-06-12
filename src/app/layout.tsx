@@ -15,7 +15,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Atlas Intelligence - The Intelligence Layer For The AI Economy",
+  title: "Graph One - The Intelligence Layer For The AI Economy",
   description: "Track every AI company, founder, investor, funding round, product launch and market movement. Replicating Crunchbase and Product Hunt focused entirely on AI.",
   keywords: ["AI startups", "AI founders", "AI investors", "AI funding", "AI products", "AI jobs", "AI research"],
 };
