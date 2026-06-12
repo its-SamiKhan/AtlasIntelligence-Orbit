@@ -315,6 +315,62 @@ export const STARTUPS: Startup[] = [
         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
       </g>
     </svg>`
+  },
+  {
+    id: 'harvey',
+    name: 'Harvey',
+    description: 'Generative AI platform custom-built for law firms and professional services.',
+    funding: '$106M',
+    founded: '2022',
+    category: 'AI Legal',
+    categoryClass: 'legal',
+    website: 'https://www.harvey.ai',
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#0f172a" />
+      <text x="12" y="16" font-family="monospace" font-weight="bold" font-size="14" fill="#ffffff" text-anchor="middle">H</text>
+    </svg>`
+  },
+  {
+    id: 'sanalabs',
+    name: 'Sana Labs',
+    description: 'AI-powered learning platform that helps organizations find, share, and harness knowledge.',
+    funding: '$130M',
+    founded: '2016',
+    category: 'AI Education',
+    categoryClass: 'education',
+    website: 'https://sanalabs.com',
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#10b981" />
+      <text x="12" y="16" font-family="monospace" font-weight="bold" font-size="14" fill="#ffffff" text-anchor="middle">S</text>
+    </svg>`
+  },
+  {
+    id: 'gong',
+    name: 'Gong',
+    description: 'Revenue intelligence platform that analyzes customer interactions to provide sales insights.',
+    funding: '$584M',
+    founded: '2015',
+    category: 'AI Sales',
+    categoryClass: 'sales',
+    website: 'https://www.gong.io',
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#f97316" />
+      <text x="12" y="16" font-family="monospace" font-weight="bold" font-size="14" fill="#ffffff" text-anchor="middle">G</text>
+    </svg>`
+  },
+  {
+    id: 'jasper',
+    name: 'Jasper',
+    description: 'AI content writing platform that helps marketing teams create high-quality content.',
+    funding: '$125M',
+    founded: '2021',
+    category: 'AI Marketing',
+    categoryClass: 'marketing',
+    website: 'https://www.jasper.ai',
+    logo: `<svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="24" height="24" rx="5" fill="#2563eb" />
+      <text x="12" y="16" font-family="monospace" font-weight="bold" font-size="14" fill="#ffffff" text-anchor="middle">J</text>
+    </svg>`
   }
 ];
 

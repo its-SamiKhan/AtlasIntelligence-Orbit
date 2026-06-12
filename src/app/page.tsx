@@ -191,6 +191,11 @@ export default function HomePage() {
     };
   }, []);
 
+  // Scroll to top of the page when search query or filter category changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentFilter, query]);
+
   // Carousel Scroll Controllers
   const handleScroll = (ref: React.RefObject<HTMLDivElement | null>, direction: "next" | "prev") => {
     const container = ref.current;
@@ -212,6 +217,7 @@ export default function HomePage() {
   const handlePillClick = (filter: string) => {
     setCurrentFilter(filter);
     showToast(`Switched category to: ${filter.toUpperCase()}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Sync sidebar navigation clicking
@@ -234,6 +240,7 @@ export default function HomePage() {
     } else {
       setCurrentFilter(tab);
       showToast(`Navigating to ${tab.toUpperCase()} section...`);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -273,6 +280,9 @@ export default function HomePage() {
       if (searchTerms === "ai agents") {
         return cat.includes("agent") || cls.includes("agents") || cat.includes("safety");
       }
+      if (searchTerms === "generative ai") {
+        return cat.includes("generative") || cls.includes("generative") || cat.includes("video") || cls.includes("video");
+      }
       if (searchTerms === "ai coding") {
         return cat.includes("coding") || cls.includes("coding");
       }
@@ -285,11 +295,23 @@ export default function HomePage() {
       if (searchTerms === "ai infrastructure") {
         return cat.includes("foundation") || cls.includes("foundation") || cat.includes("infrastructure");
       }
+      if (searchTerms === "ai security") {
+        return cat.includes("security") || cls.includes("security");
+      }
       if (searchTerms === "ai healthcare") {
         return cat.includes("healthcare") || cls.includes("healthcare");
       }
-      if (searchTerms === "ai security") {
-        return cat.includes("security") || cls.includes("security");
+      if (searchTerms === "ai legal") {
+        return cat.includes("legal") || cls.includes("legal");
+      }
+      if (searchTerms === "ai education") {
+        return cat.includes("education") || cls.includes("education");
+      }
+      if (searchTerms === "ai sales") {
+        return cat.includes("sales") || cls.includes("sales");
+      }
+      if (searchTerms === "ai marketing") {
+        return cat.includes("marketing") || cls.includes("marketing");
       }
       if (searchTerms === "ai robotics") {
         return cat.includes("robotics") || cls.includes("robotics");
@@ -1017,6 +1039,87 @@ export default function HomePage() {
             </div>
 
           </section>
+
+          {/* Stats Dashboard Banner */}
+          <div className="stats-banner">
+            {/* Card 1: AI Startups */}
+            <div className="stats-card" style={{ cursor: 'pointer' }} onClick={() => { handlePillClick("startups"); showToast("Viewing AI Startups database..."); }}>
+              <div className="stats-icon-wrapper" style={{ backgroundColor: 'rgba(242, 19, 93, 0.06)' }}>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f2135d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                  <line x1="12" y1="22.08" x2="12" y2="12" />
+                </svg>
+              </div>
+              <div className="stats-content">
+                <span className="stats-number">25,000+</span>
+                <span className="stats-title">AI Startups</span>
+                <span className="stats-desc">Tracked globally</span>
+              </div>
+            </div>
+
+            {/* Card 2: Founders */}
+            <div className="stats-card" style={{ cursor: 'pointer' }} onClick={() => { handlePillClick("founders"); showToast("Viewing Founders database..."); }}>
+              <div className="stats-icon-wrapper" style={{ backgroundColor: 'rgba(124, 58, 237, 0.06)' }}>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#7c3aed" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+              <div className="stats-content">
+                <span className="stats-number">100,000+</span>
+                <span className="stats-title">Founders</span>
+                <span className="stats-desc">Across the world</span>
+              </div>
+            </div>
+
+            {/* Card 3: Investors */}
+            <div className="stats-card" style={{ cursor: 'pointer' }} onClick={() => { handlePillClick("investors"); showToast("Viewing Investors database..."); }}>
+              <div className="stats-icon-wrapper" style={{ backgroundColor: 'rgba(16, 185, 129, 0.06)' }}>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#10b981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+              </div>
+              <div className="stats-content">
+                <span className="stats-number">12,000+</span>
+                <span className="stats-title">Investors</span>
+                <span className="stats-desc">VCs & Angels</span>
+              </div>
+            </div>
+
+            {/* Card 4: Jobs */}
+            <div className="stats-card" style={{ cursor: 'pointer' }} onClick={() => { handlePillClick("jobs"); showToast("Viewing AI Jobs board..."); }}>
+              <div className="stats-icon-wrapper" style={{ backgroundColor: 'rgba(249, 115, 22, 0.06)' }}>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f97316" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                  <path d="M12 11v6" />
+                  <path d="M9 14h6" />
+                </svg>
+              </div>
+              <div className="stats-content">
+                <span className="stats-number">50,000+</span>
+                <span className="stats-title">Jobs</span>
+                <span className="stats-desc">AI job opportunities</span>
+              </div>
+            </div>
+
+            {/* Card 5: Funding Tracked */}
+            <div className="stats-card" style={{ cursor: 'pointer' }} onClick={() => { handlePillClick("funding"); showToast("Viewing Funding database..."); }}>
+              <div className="stats-icon-wrapper" style={{ backgroundColor: 'rgba(37, 99, 235, 0.06)' }}>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M12 8v8" />
+                  <path d="M9 11h6" />
+                </svg>
+              </div>
+              <div className="stats-content">
+                <span className="stats-number">$500B+</span>
+                <span className="stats-title">Funding Tracked</span>
+                <span className="stats-desc">Across 10,000+ rounds</span>
+              </div>
+            </div>
+          </div>
 
           {/* Dynamic Search Results Panel */}
           {isSearchActive ? (
