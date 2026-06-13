@@ -1,0 +1,1 @@
+I will check the original styling for the sidebar, its header, nav items, and footer in `src/app/globals.css` from the last commit (`a107a08`). This will ensure we restore the visual appearance exactly as it was.

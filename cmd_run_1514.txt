@@ -1,0 +1,1 @@
+I will run a command to view the original CSS properties for the spotlight cards in `src/app/globals.css` from commit `2ac6635`.

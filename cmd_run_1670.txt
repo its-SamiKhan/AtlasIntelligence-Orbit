@@ -1,0 +1,1 @@
+I will run a command to see the sidebar diff in `src/app/page.tsx` relative to `HEAD` so that we can restore the exact original layout and text.

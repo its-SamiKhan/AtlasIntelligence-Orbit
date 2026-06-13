@@ -1,0 +1,83 @@
+Created At: 2026-06-13T15:09:01Z
+Completed At: 2026-06-13T15:09:01Z
+
+				The command completed successfully.
+				Output:
+				diff --git a/src/app/page.tsx b/src/app/page.tsx
+index 7da0dd4..82dff5b 100644
+--- a/src/app/page.tsx
++++ b/src/app/page.tsx
+@@ -119,6 +119,8 @@ const jobLogos = {
+   )
+ };
+ 
++import { FOUNDERS_DETAILS, FounderDetails } from "./founderData";
++
+ const investorLogos = {
+   Sequoia: (
+     <div style={{ backgroundColor: '#ffffff', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+@@ -155,6 +157,7 @@ export default function HomePage() {
+   const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
+   const [showAllStartups, setShowAllStartups] = useState(false);
+   const [modalQuery, setModalQuery] = useState("");
++  const [selectedFounder, setSelectedFounder] = useState<FounderDetails | null>(null);
+   
+   const [toast, setToast] = useState({ show: false, message: "" });
+   const toastTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+@@ -191,10 +194,10 @@ export default function HomePage() {
+     };
+   }, []);
+ 
+-  // Scroll to top of the page when search query or filter category changes
++  // Scroll to top of the page when search query or filter category changes or selected founder changes
+   useEffect(() => {
+     window.scrollTo({ top: 0, behavior: "smooth" });
+-  }, [currentFilter, query]);
++  }, [currentFilter, query, selectedFounder]);
+ 
+   // Carousel Scroll Controllers
+   const handleScroll = (ref: React.RefObject<HTMLDivElement | null>, direction: "next" | "prev") => {
+@@ -215,6 +218,7 @@ export default function HomePage() {
+ 
+   // Sync pill clicking to filter state
+   const handlePillClick = (filter: string) => {
++    setSelectedFounder(null);
+     setCurrentFilter(filter);
+     showToast(`Switched category to: ${filter.toUpperCase()}`);
+     window.scrollTo({ top: 0, behavior: "smooth" });
+@@ -223,6 +227,7 @@ export default function HomePage() {
+   // Sync sidebar navigation clicking
+   const handleSidebarClick = (tab: string) => {
+     setSidebarOpen(false);
++    setSelectedFounder(null);
+     
+     if (tab === "discover") {
+       setQuery("");
+@@ -246,6 +251,7 @@ export default function HomePage() {
+ 
+   // Search execution
+   const triggerSearch = () => {
++    setSelectedFounder(null);
+     showToast(`Searching for "${query}" in category "${currentFilter}"`);
+   };
+ 
+@@ -1656,9 +1662,15 @@ export default function HomePage() {
+                         key={idx}
+                         className="founder-spotlight-card"
+                         onClick={() => {
+-                          setQuery(founder.name);
+-                          setCurrentFilter("founders");
+-                          showToast(`Viewing profile for ${founder.name}...`);
++                          const details = FOUNDERS_DETAILS[founder.name];
++                          if (details) {
++                            setSelectedFounder(details);
++                            showToast(`Loading profile for ${founder.name}...`);
++                          } else {
++                            setQuery(founder.name);
++                            setCurrentFilter("founders");
++                            showToast(`Viewing search results for ${founder.name}...`);
++                          }
+                         }}
+                         style={{ 
+                           backgroundColor: 'transparent', 
+

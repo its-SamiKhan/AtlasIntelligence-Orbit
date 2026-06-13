@@ -1,0 +1,1 @@
+I will inspect the diff between commit `2ac6635` and `a28e9b1` to see the changes made to the Founder Spotlight cards. This will tell us exactly how to revert them back to their original design.

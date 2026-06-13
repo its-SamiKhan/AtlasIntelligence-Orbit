@@ -1,0 +1,1 @@
+I will view the CSS differences for the spotlight classes between commit `2ac6635` and `a28e9b1`.

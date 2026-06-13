@@ -1,0 +1,1 @@
+I will run `git diff` to see all the changes in the current working directory compared to the last commit. This will let us see exactly what we changed for settings, help, and the sidebar layout.

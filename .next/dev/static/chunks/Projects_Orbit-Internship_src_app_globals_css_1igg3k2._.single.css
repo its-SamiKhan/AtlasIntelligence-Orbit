@@ -290,6 +290,10 @@
 @layer components;
 
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
+
   .absolute {
     position: absolute;
   }
@@ -340,6 +344,10 @@
     display: block;
   }
 
+  .contents {
+    display: contents;
+  }
+
   .flex {
     display: flex;
   }
@@ -358,6 +366,10 @@
 
   .inline-flex {
     display: inline-flex;
+  }
+
+  .flex-shrink {
+    flex-shrink: 1;
   }
 
   .transform {
